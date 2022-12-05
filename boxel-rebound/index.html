@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport' />
+        <link href="css/materia-icons.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="icon" type="image/png" href="img/icons/icon.png">
+        <title>Boxel Rebound</title>
+    </head>
+    <body oncontextmenu="return false;">
+        <div class="app" id="app">
+            <div id="content">
+                <canvas id="gameCanvas" width="360" height="640"></canvas>
+            </div>
+        </div>
+
+        <form id="id-options" class="options" style="display: none;">
+            <div class="banner">
+                <img src="img/banner.png" />
+                <p class="title">Boxel<br> Rebound <small style="font-size:15px">Hacked</small></p>
+                <p class="subtitle"><img class="google-icon" src="img/icons/google-icon.svg" />Welcome!</p>
+            </div>
+            <span id="version"></span>
+            <div class="wrapper">
+                <input id="id-audio" type="checkbox" class="switch-input">
+                <label for="id-audio" class="switch-label">Audio</label>
+                <input id="id-fullscreen" type="checkbox" class="switch-input">
+                <label for="id-fullscreen" class="switch-label">Fullscreen</label>
+                <input id="id-fastmode" type="checkbox" class="switch-input">
+                <label for="id-fastmode" class="switch-label">Fast Mode</label>
+                <div class="buttons">
+                    <button id="id-browse" type="button" class="md-btn" autofocus><i class="material-icons">language</i></button>
+                    <button id="id-play" type="button" class="md-btn" autofocus>play</button>
+                </div>
+                <div class="social"><span id="id-social"><i class="material-icons">favorite</i> Write a review</span></div>
+            </div>
+        </form>
+
+        <div id="browser" class="browser" style="display: none;">
+            <div class="wrapper">
+                <img class="icon" src="img/icons/icon.png">
+                <h1>Boxel Rebound Community</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html?browse=true&filter=recent">Recent</a></li>
+                        <li><a href="index.html?browse=true&filter=hot">Hot</a></li>
+                        <li><a href="index.html?browse=true&filter=popular">Popular</a></li>
+                        <li><a href="index.html?browse=true&filter=easy">Easy</a></li>
+                        <li><a href="index.html?browse=true&filter=expert">Expert</a></li>
+                        <li>
+                            <form id="search-form">
+                                <input id="search-box" type="text" placeholder="ex: #aabbcc">
+                                <button>Search</button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="row">
+                    <div id="levels" class="levels col-9 row loading"></div>
+                    <div class="col-3" id="app-container"></div>
+                </div>
+                <p class="disclaimer">All levels are temporary, and are subject to deletion at any time.</p>
+            </div>
+        </div>
+
+        <!--Game foundation-->
+        <script src="js/lz-string.min.js"></script>
+        <script src="js/preloadjs-NEXT.min.js"></script>
+        <script src="js/soundjs-NEXT.min.js"></script>
+        <script src="js/easeljs-NEXT.min.js"></script>
+        <script src="js/tweenjs-NEXT.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+
+        <!-- Game 'Classes'  -->
+        <script type="text/javascript" src="js/AssetManager.js"></script>
+        <script type="text/javascript" src="js/Theme.js"></script>
+        <script type="text/javascript" src="js/Home.js"></script>
+        <script type="text/javascript" src="js/Interface.js"></script>
+        <script type="text/javascript" src="js/DialogWindow.js"></script>
+        <script type="text/javascript" src="js/Timer.js"></script>
+        <script type="text/javascript" src="js/LevelMap.js"></script>
+        <script type="text/javascript" src="js/LevelEditor.js"></script>
+        <script type="text/javascript" src="js/StorageManager.js"></script>
+        <script type="text/javascript" src="js/Tiles.js"></script>
+        <script type="text/javascript" src="js/Player.js"></script>
+        <script type="text/javascript" src="js/Gravity.js"></script>
+        <script type="text/javascript" src="js/Particles.js"></script>
+        <script type="text/javascript" src="js/Button.js"></script>
+        <script type="text/javascript" src="js/LunchBox.js"></script>
+        <script type="text/javascript" src="js/Game.js"></script>
+        <script type="text/javascript" src="js/FileSaver.min.js"></script>
+        <script type="text/javascript" src="js/buy.js"></script>
+        <script type="text/javascript" src="js/Extension.js"></script>
+        <script type="text/javascript" src="js/hack.js"></script>
+    </body>
+</html>

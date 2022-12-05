@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Blocky Snakes</title>
+    <link rel="shortcut icon" href="style/favicon.ico">
+    <link rel="stylesheet" href="style/style.css">
+	<script src="/adinLoader.js"></script>
+	<script src="UnityLoader.js"></script>
+    <script src="UnityProgress.js"></script>
+    <script>
+	   var adInitialized = false;
+	   var gameInstance = UnityLoader.instantiate("gameContainer", "build.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+      var showAdsCalled = false;
+      window["GD_OPTIONS"] = {
+          "gameId": "776fa37ed20743b18e38c4e6ecc178bf",
+          "advertisementSettings": {
+              "autoplay": false,
+          },
+          "onEvent": function(event) {
+              switch (event.name) 
+              {
+                  case "SDK_GAME_START":
+                  console.log("Game Resumed");
+                  if(showAdsCalled)
+                  {
+                    showAdsCalled = false;
+                    gameInstance.SendMessage('AdsManager', 'onAdServed');
+                    document.querySelector("canvas").focus();
+                  }
+                  break;
+                  case "SDK_GAME_PAUSE":
+                  console.log("Game Paused");
+                 
+                  break;
+                  case "SDK_READY":
+                  console.log("GD SDK Ready");
+                  adInitialized = true;
+                  break;
+                  case "SDK_ERROR":
+                  break;
+              }
+          },
+      };
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = '//lablockedgames.com/main.min.js';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'gamedistribution-jssdk'));
+      function ShowAds()
+      {
+        console.log("Show Ads Called");
+        if(adInitialized)
+        {
+          showAdsCalled = true;
+          console.log("<Game Distribution> Show Ads Called");
+          window["gdsdk"]["showBanner"]();
+        }
+        else
+        {
+          gameInstance.SendMessage('AdsManager', 'onAdServed');
+          document.querySelector("canvas").focus();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 95%; margin: auto;"></div>
+	  <div class="footer">
+	            <div class="webgl-logo"></div>
+	            <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+	            <div class="title">Blocky Snakes</div>
+	        </div>
+    </div>
+		<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+
+<section id="levelSelect" class="screen show">
+	<button class="menu scale scale-top-right">
+	</button>
+
+	<div class="wrapper scale scale-top-center">
+		<div class="center frame color02 page selectContainer">
+			<div class="hideScrollbar">
+				<div class="scrollInsides">
+					<div class="levelSelectMap">
+						<div class="levelBtnContainer">
+							<div class="levelBtn odd">
+
+								<div class="levelNumber"></div>
+
+								<div class="levelStars">
+									<div class="levelStarsTop">
+										<button class="levelStarBG">
+											<div class="levelStar"></div>
+										</button>
+										<button class="levelStarBG">
+											<div class="levelStar"></div>
+										</button>
+									</div>
+
+									<div class="levelStarsBottom">
+										<button class="levelStarBG">
+											<div class="levelStar"></div>
+										</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="levelLabelContainer">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,13 @@
+{
+"companyName": "BrawniestLine25",
+"productName": "Baldi's Basics Field Trip Camping Remake",
+"dataUrl": "WebGL.data.unityweb",
+"wasmCodeUrl": "WebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebGL.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#087F0B",
+"cacheControl": {"default": "must-revalidate"}
+}

@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Create_idle",
+"productVersion": "0.1",
+"dataUrl": "AI_armor.data.unityweb",
+"wasmCodeUrl": "AI_armor.wasm.code.unityweb",
+"wasmFrameworkUrl": "AI_armor.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.17f1"
+}

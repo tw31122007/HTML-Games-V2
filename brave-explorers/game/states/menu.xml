@@ -1,0 +1,16 @@
+
+<section id="menu" class="screen show">
+	<div id="mute" class="scale scale-top-left">
+		<button></button>
+	</div>
+
+	<div class="wrapper scale scale-top-center">
+		<div class="menuTitle"></div>
+		<div class="menuDeco" ></div>
+		<div class="buttons">
+			<button class="tutorial"></button>
+			<button class="play"></button>
+			<button class="credits"></button>
+		</div>
+	</div>
+</section>

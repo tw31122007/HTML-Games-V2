@@ -1,0 +1,12 @@
+{
+"companyName": "Backflip Dive 3D 6",
+"productName": "Backflip Dive 3D",
+"dataUrl": "BackflipDive3D_4_0.data.unityweb",
+"wasmCodeUrl": "BackflipDive3D_4_0.wasm.code.unityweb",
+"wasmFrameworkUrl": "BackflipDive3D_4_0.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

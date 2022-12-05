@@ -1,0 +1,13 @@
+{
+"companyName": "Alien Invaders io",
+"productName": "Alien Invaders io GD",
+"dataUrl": "AlienInvaders_io_5.data.unityweb",
+"wasmCodeUrl": "AlienInvaders_io_5.wasm.code.unityweb",
+"wasmFrameworkUrl": "AlienInvaders_io_5.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

@@ -1,0 +1,12 @@
+{
+"companyName": "BasketBall.io",
+"productName": "BasketBall.io",
+"dataUrl": "basketball_io_v2.data.unityweb",
+"wasmCodeUrl": "basketball_io_v2.wasm.code.unityweb",
+"wasmFrameworkUrl": "basketball_io_v2.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000"
+}

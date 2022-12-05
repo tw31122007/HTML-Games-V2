@@ -1,0 +1,422 @@
+:root {
+    --color-text-game: #3f3e66;
+}
+
+@keyframes rotate-device {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+body {
+    background-color: var(--color-sky);
+}
+
+.logo {
+    position: relative;
+    padding: 3rem;
+    text-align: center;
+    background-color: var(--color-sky);
+    opacity: 0;
+}
+
+.logo img {
+    height: 54px;
+}
+
+.logo .language-select {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    margin-top: -8px;
+    color: var(--color-light);
+}
+
+.language-select {
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.language-select .selected {
+    padding-right: 18px;
+}
+
+.language-select .selected::after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 7.2px;
+    top: 4.4px;
+    right: 0;
+    background-image: url(../assets/buttons/arrow-down1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 60;
+}
+
+.language-select .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -8px;
+    padding: 0 8px 8px 8px;
+    background-color: var(--color-sky);
+}
+
+.language-select .dropdown p {
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+.language-select.shown .dropdown {
+    display: block;
+}
+
+.language-select.shown .selected::after {
+    transform: rotate(180deg);
+}
+
+main {
+    display: none;
+}
+
+.game-wrapper {
+    position: relative;
+}
+
+#game {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 20;
+}
+
+#controls {
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    z-index: 30;
+}
+
+.control {
+    display: none;
+    width: 100px;
+    height: 68px;
+    opacity: .5;
+}
+
+.control.active {
+    opacity: .7;
+}
+
+.control#left {
+    margin-left: 20px;
+    background-image: url(../assets/controls/left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.control#right {
+    margin-left: 5px;
+    background-image: url(../assets/controls/right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.control#up {
+    width: 104px;
+    margin-left: auto;
+    margin-right: 20px;
+    background-image: url(../assets/controls/up.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.info {
+    padding: 0 2rem 2rem 2rem;
+    font-size: 13px;
+    text-align: center;
+    line-height: 2;
+    max-width: 580px;
+    margin: 0 auto;
+    color: var(--color-text);
+}
+
+.info .title {
+    margin-top: 3rem;
+    font-size: 20px;
+}
+
+.info .separator {
+    width: 40%;
+    margin: 2rem auto 0 auto;
+    height: 2px;
+    background-color: var(--color-text);
+}
+
+.info .description {
+    margin-top: 2rem;
+}
+
+.info .donate {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.info .donate a {
+    display: flex;
+    margin: 0 auto;
+}
+
+.info .donate img {
+    height: 40px;
+}
+
+.info .sponsors-text {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+.info .sponsors a {
+    display: inline-block;
+    margin: 1rem .5rem 0;
+}
+
+.info .sponsors .wrapper {
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info .sponsors a img {
+    display: block;
+    max-height: 80px;
+    max-width: 160px;
+}
+
+.info .sponsors a p {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.info .share-text {
+    margin-top: 2rem;
+    color: var(--color-text-dark);
+    font-size: 13px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto 0 auto;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.info .contacts {
+    margin-top: 2rem;
+    color: var(--color-text-dark);
+    font-size: 11px;
+}
+
+.info .contacts a {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid;
+}
+
+.warning {
+    display: none;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    max-width: 400px;
+    color: var(--color-light);
+    font-size: 22px;
+    text-align: center;
+    line-height: 2;
+}
+
+.warning p {
+    margin-bottom: 32px;
+}
+
+.warning img {
+    height: 96px;
+    animation: rotate-device 3s ease-in-out infinite;
+}
+
+body.loaded {
+    background-color: var(--color-ground);
+}
+
+body.loaded main {
+    display: block;
+}
+
+body.loaded .logo {
+    opacity: 1;
+}
+
+body.rotate main {
+    display: none;
+}
+
+body.rotate .warning {
+    display: block;
+}
+
+body.mobile {
+    overflow: hidden;
+    user-select: none;
+    touch-action: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+body.mobile .control {
+    display: block;
+}
+
+body.mobile .info {
+    display: none;
+}
+
+#modalInfo {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#modalInfo .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .6;
+}
+
+#modalInfo .content {
+    margin-top: -2rem;
+    position: relative;
+    padding: 1.5rem 2.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#modalInfo .language {
+    color: var(--color-text-game);
+    margin-bottom: 1.5rem;
+}
+
+#modalInfo .language > * {
+    display: inline-block;
+}
+
+#modalInfo .language-select {
+    position: relative;
+    margin-left: 6px;
+}
+
+#modalInfo .language-select .selected::after {
+    top: 5px;
+    background-image: url(../assets/buttons/arrow-down2.png);
+}
+
+#modalInfo .language-select .dropdown {
+    background-color: #f9f9f9;
+}
+
+#modalInfo .donate {
+    margin-bottom: 1.5rem;
+}
+
+#modalInfo .donate a {
+    display: inline-block;
+}
+
+#modalInfo .donate img {
+    height: 40px;
+}
+
+#modalInfo .text {
+    font-size: 12px;
+    color: var(--color-text-game);
+    margin-bottom: .5rem;
+}
+
+#modalInfo .mail {
+    font-size: 12px;
+    color: var(--color-text-game);
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-height: 560px) {
+    .logo {
+        padding: 2rem;
+    }
+
+    .logo img {
+        height: 48px;
+    }
+}
+
+@media screen and (max-height: 420px) {
+    .logo {
+        padding: 1.5rem;
+    }
+
+    .logo img {
+        height: 44px;
+    }
+}
+
+@media screen and (max-height: 350px) {
+    .logo {
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 36px;
+    }
+}

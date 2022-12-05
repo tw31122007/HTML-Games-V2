@@ -1,0 +1,75 @@
+/* control left margin */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+}
+
+body {
+  margin: 1vw;
+  background-color: #1c1c1c;
+}
+
+/* 16:9 */
+#game {
+  width: 98vw; /* 100 - (body margin * 2) */
+  height: 54.25vw; /* 56.25 - (body margin * 2) */
+  position: relative;
+  background: black;
+}
+
+#game:after {
+  content:"";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 0.75vw dotted white;
+}
+
+.paddle {
+  position: absolute;
+  width: 1vw;
+  height: 5vw;
+  background: white; /* default color */
+}
+
+.ball {
+  position: absolute;
+  width: 1vw;
+  height: 1vw;
+  background: white;
+  /* default position to center court */
+  top: 50%;
+  left: 50%;
+}
+
+.blink {
+  animation: blink 0.5s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.0; }
+}
+
+.score {
+  font-family: 'Small 5x3 Regular';
+  font-size: 8vw; /* not perfect, but close */
+  color: white;
+  position: absolute;
+}
+
+#a.score {
+  left: 40vw
+}
+
+#b.score {
+  left: 51.6vw;
+}

@@ -1,0 +1,7 @@
+
+<div id="progress" class="center">
+	<div class="loadingBG">
+		<img class="loadingRotate" src="textures/ui/label/loading/arrow.png" />
+	</div>
+	<div class="percent">0%</div>
+</div>

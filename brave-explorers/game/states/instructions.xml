@@ -1,0 +1,24 @@
+<section id="instructions" class="screen">
+	<button class="menu scale scale-top-right">
+	</button>
+	<div class="wrapper scale scale-top-center">
+		<div class="center frame color02 page instructionsContainer">
+
+			<div class="headerContainer">
+				Tutorial
+			</div>
+			<div class="image i00"></div>
+
+
+			<p class="text"></p>
+			<div class="buttons">
+				<button class="prev"></button>
+				<button class="playButton">
+					Play
+				</button>
+				<button class="next"></button>
+			</div>
+		</div>
+	</div>
+
+</section>

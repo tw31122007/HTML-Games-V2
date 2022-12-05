@@ -1,0 +1,16 @@
+<section id="intro" class="screen">
+	<button class="menu scale scale-top-right">
+	</button>
+	<div class="wrapper scale scale-top-center">
+			<div class="image i00"></div>
+			<div class="buttons">
+				<button class="prev"></button>
+				<button class="playButton">
+					<div class="skip">Skip</div>
+					<div class="play">Play</div>
+				</button>
+				<button class="next"></button>
+			</div>
+	</div>
+
+</section>

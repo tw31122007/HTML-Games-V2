@@ -1,0 +1,98 @@
+
+<section id="game" class="screen">
+	<div class="backgroundOverlay"></div>
+	<div id="content">
+		<div id="ingameUI">
+			<div class="scale scale-top-left uiWrapper">
+				<button id="settingsOpen" class="settings frame normal">
+				</button>
+				<div id="timer">00:00
+				</div>
+
+				<div id="collected">00
+				</div>
+			</div>
+
+		</div>
+
+		<div class="wrapper scale scale-center">
+			<div class="settings center frame color02">
+				<button id="settingsClose"></button>
+				<div class="settingsLabel">
+					<div class="text settingsTxt">Options</div>
+				</div>
+				<div class="buttons">
+					<button id="settingsMute" class="settings">
+					</button>
+					<button id="settingsRepeat" class="settings">
+					</button>
+					<button id="settingsSelectLevel" class="settings">
+					</button>
+				</div>
+			</div>
+
+			<div class="instructions invisible center">
+				<button id="instructionsClose"></button>
+				<div class="frame color02">
+					<div class="instructionsLabel">
+						<div class="text instructionsTxt">Controls</div>
+					</div>
+					<div class="center instructionsImage">
+						<img class="invisible"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="levelEnd center frame color02 invisible">
+				<div class="center" id="notLast">
+					<div id="levelEndStars">
+						<button class="starBG">
+							<div class="star"></div>
+						</button>
+						<button class="starBG">
+							<div class="star"></div>
+						</button>
+						<button class="starBG">
+							<div class="star"></div>
+						</button>
+					</div>
+					<div class="pointsTxtLbl">
+						<div class="text pointsTxt">00000</div>
+					</div>
+					<div class="levelEndLbl">
+						<div class="timeTxtLbl">
+							<div class="text timeTxt color01">00:00</div>
+						</div>
+						<div class="extrasTxtLbl">
+							<div class="text extrasTxt color01">000</div>
+						</div>
+					</div>
+					<div id="levelEndButtons">
+						<button id="levelEndSelectLevel" class="levelEndBtn frame normal">
+						</button>
+						<button id="levelEndRepeat" class="levelEndBtn frame normal">
+						</button>
+						<button id="levelEndNext" class="levelEndBtn frame normal">
+						</button>
+					</div>
+				</div>
+				<div class="centerLast notLast" id="last">
+					<div class="levelEndTitle">
+						<div class="text titleText">CONGRATS!</div>
+					</div>
+					<img class="levelEndImage" src="textures/ui/instructions/image.png" />
+					<p class="levelEndText">
+						You mastered all the levels. More adventures will follow soon...
+					</p>
+					<div id="levelEndButtons">
+						<button class="levelEndBtn levelEndMainMenu">
+							Main Menu
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section>

@@ -1,0 +1,234 @@
+<div style="position:absolute; width:100%; pointer-events: auto;">
+	<div id="editorBtn" class="button">
+		<span class="tooltiptext">Run</span>
+	</div>
+	<div id="lastLap" style="color:white;">
+	</div>
+	<div id="targetLap" style="color:white;">
+	</div>
+</div>
+
+<div id="content">
+	<div id="tools">
+		<div id="tool_select" class="button" style="background-image: url('./textures/editor/icon_selection_tool.svg')">
+			<span class="tooltiptext">Draw/Select[Q]</span>
+		</div>
+
+		<div id="tool_rotate" class="button" style="background-image: url('./textures/editor/icon_rotation_tool.svg')">
+			<span class="tooltiptext">Rotate[W]</span>
+		</div>
+
+		<div id="tool_erase" class="button" style="background-image: url('./textures/editor/icon_erase_tool.svg')">
+			<span class="tooltiptext">Erase[E]</span>
+		</div>
+
+	</div>
+
+	<div id="pages">
+		<div id="page_home" class="button" style="background-image: url('./textures/editor/icon_home_page.svg')">
+			<span class="tooltiptext">File</span>
+		</div>
+
+		<div id="page_tiles" class="button" style="background-image: url('./textures/editor/icon_tiles_page.svg')">
+			<span class="tooltiptext">Tiles[A]</span>
+		</div>
+
+		<div id="page_logic" class="button" style="background-image: url('./textures/editor/icon_logic_page.svg')">
+			<span class="tooltiptext">Logic[S]</span>
+		</div>
+
+		<div id="page_objects" class="button" style="background-image: url('./textures/editor/icon_objects_page.svg')">
+			<span class="tooltiptext">Decoration[D]</span>
+		</div>
+
+	</div>
+
+	<div id="cat_home" class="catalogue" page="page_home">
+
+		<div id="home_new" class="button" style="background-image: url('./textures/editor/icon_new.svg')">
+			<span class="tooltiptext">New</span>
+		</div>
+
+		<div id="home_load" class="button" style="background-image: url('./textures/editor/icon_load.svg')">
+			<span class="tooltiptext">Load</span>
+		</div>
+
+		<div id="home_save" class="button" style="background-image: url('./textures/editor/icon_save.svg')">
+			<span class="tooltiptext">Save</span>
+		</div>
+
+		<div id="home_timer" class="button" style="background-image: url('./textures/editor/icon_timer.svg')">
+			<span class="tooltiptext">Take Time</span>
+		</div>
+
+	</div>
+
+	<div id="cat_tiles" class="catalogue" page="page_tiles">
+
+		<div id="tile_ground" class="button" style="background-image: url('./textures/editor/icon_ground_tile.svg')">
+			<span class="tooltiptext">Ground</span>
+		</div>
+
+		<div id="tile_gate" class="button" style="background-image: url('./textures/editor/icon_ground_rooted.svg')">
+			<span class="tooltiptext">Rooted</span>
+		</div>
+
+		<div id="tile_bridge" class="button" style="background-image: url('./textures/editor/icon_bridge_tile.svg')">
+			<span class="tooltiptext">Bridge</span>
+		</div>
+
+		<div id="tile_wall" class="button" style="background-image: url('./textures/editor/icon_wall_tile.svg')">
+			<span class="tooltiptext">Wall</span>
+		</div>
+
+		<div id="tile_pillar" class="button" style="background-image: url('./textures/editor/icon_ground_pillar.svg')">
+			<span class="tooltiptext">Pillar</span>
+		</div>
+
+	</div>
+
+	<div id="cat_logic" class="catalogue" page="page_logic">
+
+		<div id="logic_start" class="button" style="background-image: url('./textures/editor/icon_start_tile.svg')">
+			<span class="tooltiptext">Spawnpoint</span>
+		</div>
+
+		<div id="logic_end" class="button" style="background-image: url('./textures/editor/icon_end_tile.svg')">
+			<span class="tooltiptext">Goal</span>
+		</div>
+
+		<div id="logic_pickupSmall" class="button" style="background-image: url('./textures/editor/icon_waypoint.svg')">
+			<span class="tooltiptext">Coin</span>
+		</div>
+
+		<div id="logic_switch" class="button" style="background-image: url('./textures/editor/icon_ground_logic_switch.svg')">
+			<span class="tooltiptext">Switch</span>
+		</div>
+
+		<div id="logic_teleporter" class="button" style="background-image: url('./textures/editor/icon_ground_logic_teleport.svg')">
+			<span class="tooltiptext">Teleporter</span>
+		</div>
+
+		<div id="logic_gate" class="button" style="background-image: url('./textures/editor/icon_ground_logic_gate.svg')">
+			<span class="tooltiptext">Gate</span>
+		</div>
+
+		<div id="logic_trapSpikes" class="button" style="background-image: url('./textures/editor/icon_ground_trap.svg')">
+			<span class="tooltiptext">SpikeTrap</span>
+		</div>
+
+		<div id="logic_trapMovingSmall" class="button" style="background-image: url('./textures/editor/icon_ground_movetrap.svg')">
+			<span class="tooltiptext">MovingTrap</span>
+		</div>
+
+	</div>
+
+	<div id="cat_objects" class="catalogue" page="page_objects">
+
+		<div id="object_corner" class="button" style="background-image: url('./textures/editor/icon_ground_corner_deco.svg')">
+			<span class="tooltiptext">CornerDeco</span>
+		</div>
+
+		<div id="object_side" class="button" style="background-image: url('./textures/editor/icon_ground_side_deco.svg')">
+			<span class="tooltiptext">EdgeDeco</span>
+		</div>
+
+	</div>
+
+	<div id="properties" class="panel" selected="false" style="color:white;">
+
+		<div class="head">
+		Properties
+		</div>
+		<div class="subpanel">
+		Name:
+		</div>
+		<div class="output" id="output_alias">
+
+		</div>
+		</br>
+
+		<div class="subpanel">
+		Variant:
+		</div>
+		<div class="output">
+			<div id="variant_down" class="button" style="background-image: url('./textures/editor/icon_prev.svg')">
+			</div>
+			<div class="output" id="output_variant">
+
+			</div>
+			<div id="variant_up" class="button" style="background-image: url('./textures/editor/icon_next.svg')">
+			</div>
+		</div>
+		</br>
+
+		<div id="data_activated" class="datapanel" selected="true">
+			<div class="subpanel">
+			Activated:
+			</div>
+			<div class="output">
+				<div id="activated_down" class="button" style="background-image: url('./textures/editor/icon_prev.svg')">
+				</div>
+				<div class="output" id="output_activated">
+				</div>
+				<div id="activated_up" class="button" style="background-image: url('./textures/editor/icon_next.svg')">
+				</div>
+			</div>
+			</br>
+		</div>
+
+		<div id="data_speed" class="datapanel" selected="true">
+			<div class="subpanel">
+			Speed:
+			</div>
+			<div class="output">
+				<div id="speed_down" class="button" style="background-image: url('./textures/editor/icon_prev.svg')">
+				</div>
+				<div class="output" id="output_speed">
+
+				</div>
+				<div id="speed_up" class="button" style="background-image: url('./textures/editor/icon_next.svg')">
+				</div>
+			</div>
+			</br>
+		</div>
+
+		<div id="data_delay" class="datapanel" selected="true">
+			<div class="subpanel">
+			Delay:
+			</div>
+			<div class="output">
+				<div id="delay_down" class="button" style="background-image: url('./textures/editor/icon_prev.svg')">
+				</div>
+				<div class="output" id="output_delay">
+
+				</div>
+				<div id="delay_up" class="button" style="background-image: url('./textures/editor/icon_next.svg')">
+				</div>
+			</div>
+			</br>
+		</div>
+
+		<div id="data_waypoint" class="datapanel" selected="true">
+			<div class="subpanel" style="height:26px; line-height:26px;">
+			Waypoint:
+			</div>
+			<div class="output" style="height:26px;">
+				<div id="toggle_waypoint" class="button" style="background-image: url('./textures/editor/icon_waypoint.svg'); height:26px; width:26px;">
+				</div>
+
+				<div id="clear_waypoint" class="button" style="background-image: url('./textures/editor/icon_cancel.svg'); height:26px; width:26px;">
+				</div>
+			</div>
+			</br>
+		</div>
+
+	</div>
+
+	<div id="mapinfo">
+
+	</div>
+
+</div>
+
+<input id="mapLoader" type="file" accept=".json, .map">
