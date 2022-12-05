@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Package IgnorableNamespaces="uap mp build" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build">
+  <Identity Name="43141EngleSoft.FireboyWatergirlinTheForestTemple" Version="1.1.3.0" Publisher="CN=B8F2CC9A-98C8-4780-984F-8EF0D59F87E7" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="6f6dded1-4253-48ac-b328-a3ad7e8535fb" PhonePublisherId="a4f1e95c-2866-413d-8f93-c16436377eb1" />
+  <Properties>
+    <DisplayName>Fireboy &amp; Watergirl in The Forest Temple</DisplayName>
+    <PublisherDisplayName>EngleSoft</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10586.0" MaxVersionTested="10.0.16299.0" />
+    <PackageDependency Name="Microsoft.Advertising.JavaScript" MinVersion="10.1707.2.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.25426.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="EN" />
+    <Resource uap:Scale="200" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="index.html">
+      <uap:VisualElements DisplayName="Fireboy &amp; Watergirl in The Forest Temple" Description="Fireboy Watergirl" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="images\splashscreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+  <build:Metadata>
+    <build:Item Name="VisualStudio" Version="15.0" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2017" />
+    <build:Item Name="OperatingSystem" Version="10.0.14393.0 (rs1_release.160715-1616)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.27128.1" />
+    <build:Item Name="ProjectGUID" Value="5f13a09f-05ea-4604-8135-94311a4c17ea" />
+    <build:Item Name="ilc.exe" Version="1.4.24211.00 built by: PROJECTNGDR2" />
+    <build:Item Name="OptimizingToolset" Value="ilc.exe" />
+    <build:Item Name="UseDotNetNativeSharedAssemblyFrameworkPackage" Value="True" />
+    <build:Item Name="UniversalGenericsOptOut" Value="false" />
+    <build:Item Name="MakePri.exe" Version="10.0.16299.15 (WinBuild.160101.0800)" />
+  </build:Metadata>
+</Package>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg"
+><metadata
+></metadata
+><defs
+><font horiz-adv-x="512"
+><font-face font-family="Arial" units-per-em="1024" ascent="745" descent="0"
+></font-face
+><missing-glyph horiz-adv-x="512" d="M0 683V0H438V683H0ZM365 610V73H73V610H365Z"
+></missing-glyph
+><glyph unicode=" " d=""
+></glyph
+><glyph unicode="?" horiz-adv-x="573" d="M231 0H333V102H231V0V0ZM236 180h87q1 54 7 78q7 24 20 43q14 18 58 57q65 58 88 99q22 40 22 88q0 83 -64 142q-64 58 -171 58Q181 745 120 691Q58 636 45 534l93 -11q12 76 50 112q39 36 96 36q60 0 101 -40q41 -39 41 -92q0 -29 -14 -53Q398 461 351 420Q304 379 286 357Q262 328 251 299Q236 260 236 207q0 -9 0 -27v0Z"
+></glyph
+></font
+></defs
+><g style="font-family: &quot;Arial&quot;; font-size:50;fill:black"
+><text x="20" y="50"
+>!&quot;#$%&amp;&#39;()*+,-./0123456789:;&#229;&lt;&gt;?</text
+><text x="20" y="100"
+>@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_</text
+><text x="20" y="150"
+>` abcdefghijklmnopqrstuvwxyz|{}~</text
+></g
+></svg
+>
