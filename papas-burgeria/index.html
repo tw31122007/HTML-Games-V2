@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<!--Made with love by Quester#0378-->
+<link href="../css/waflash.css" rel="stylesheet" type="text/css">
+<title>Papa's Burgeria - Bigfoot's Game Shack</title>
+</head><body dir="ltr">
+<script>
+		var gameConfig = {
+			swfUrl: 'swf/papasburgeria.swf'
+		}
+</script>
+<div id="waflashContainer">
+<canvas class="waflashCanvas" id="canvas" tabindex="1"></canvas>
+<div id="waflashStatus" style="display: none;">Playing...</div>
+<script>
+		var ua = navigator.userAgent.toLowerCase();
+		if ( (navigator.appName =='Netscape' && ua.indexOf('trident') != -1) || (ua.indexOf("msie") != -1)) {
+    		var waf = document.getElementById('waflashStatus');
+			waf.style.display ='block';
+			waf.innerText ='??? ?????(IE) ??? ??? ???? ???? !\n??, ???? ?? ????? ??????.';
+			gtag('event', 'connect_from_ie', {'event_category': 'error', 'event_label': ua });
+		}
+	</script>
+<script crossorigin="anonymous" type="module">
+		let is_mobile = /Mobi/i.test(window.navigator.userAgent);
+		if (is_mobile) {
+			function scrollToSubject() {
+				try {
+					window.scrollTo({
+						top: 100,
+						left: 0,
+						behavior: 'smooth'
+					});
+				} catch (e) {}
+			}
+			scrollToSubject();
+			window.addEventListener("orientationchange", function() {
+				setTimeout(scrollToSubject, 100);
+			});
+		} else {
+			document.getElementById('canvas').focus();
+		}
+		document.getElementById('canvas').addEventListener("keydown", function(ev) {
+			ev.preventDefault();
+			ev.stopPropagation();
+		});
+		document.getElementById('canvas').addEventListener("click", function() {
+			document.getElementById('canvas').focus();
+		});
+		document.addEventListener("mousedown", (function() {
+			const canvasElement = document.getElementById('canvas');
+			let focused = false;
+			return function(ev) {
+				if (ev.target == canvasElement) {
+					if (!focused) {
+						canvasElement.focus();
+						focused = true;
+					}
+				} else {
+					if (focused) {
+						focused = false;
+					}
+				}
+				return true;
+			}
+		})());
+		import {
+			createWaflash
+		} from 'https://cdn.jsdelivr.net/gh/AndreajnRcm4/b398dl2h74v@3f0db6b9a0bed7641e3ed167fc07070b891b72fb/js/waflash-player.min.js';
+		createWaflash(gameConfig.swfUrl, window.wafOptions || {});
+	</script>
+</div>
+</body></html>

@@ -1,0 +1,84 @@
+<html>
+  <head><script async src="https://arc.io/widget.min.js#AhhMHcMM"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7257238324060789" crossorigin="anonymous"></script>
+    <title>TwitchTetris</title>
+    <link href="//fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" />
+    
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="scoreScreen.js"></script>
+    <script src="json-minified.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6V3QXEWMB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P6V3QXEWMB');
+</script>
+
+</head><script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '829117322223812658', // Bigfoot's Game Shack
+        channel: '1035597205354057789' // #school
+    })
+</script>
+  <body onload="scoreScreenOnLoad()">
+
+    <table border="0" class="mainTable">
+      <tr>
+	<td class="menuCell">
+	  <div class="menu">
+	    <img class="menuLogo" src="media/background/logo.png"></img>
+	    <br/><br/>
+
+	    <a href="index.html" class="bareLink">
+	      <div class="menuItem">Play TwitchTetris</div>
+	    </a>
+	    <br/>
+	    <a href="controls.html" class="bareLink">
+	      <div class="menuItem">Controls Options</div>
+	    </a>
+	    <br/>
+	    <a href="highScores.html" class="bareLink">
+	      <div class="menuItem selectedMenuItem">High Scores</div>
+	    </a>
+	    <br/>
+	    <a href="about.html" class="bareLink">
+	      <div class="menuItem">About TwitchTetris</div>
+	    </a>
+	    <br/>
+	    <a href="http://www.leighpauls.com" class="bareLink">
+	      <div class="menuItem">About the Developer</div>
+	    </a>
+	    <br/>
+
+	    <div class="instructions">
+	      <b> &gt TwitchTetris --help </b>
+	      <p>Use the keyboard controls to rotate and move the blocks as they fall</p>
+	      <p>Place the blocks to form horizontal lines, which will be removed and make all the blocks above fall down. If the blocks reach the top of the screen, the game is over!</p>
+	      <p>Clear multiple lines at a time, or clear lines in consective moves to earn more points.</p>
+	    </div>
+
+	  </div>
+	</td>
+	<td class="contentCell">
+	  <div class="scoreArea" id="scoreDiv"></div>
+	  <div id="applyNameDiv" class="applyNameHidden">
+	    Congratulations! You have made a top Score!<br/>
+	    Enter your name and hit ENTER to submit your name!</br>
+	    <label for="nameInput">Name: </label>
+	    <input type="text" id="nameInput" onkeydown="nameKeyDown(event)" />
+	  </div>
+	  <br/><br/>
+	  <a href="index.html" class="bareLink" onclick="trySubmitName()">
+	    <div class="playAgainButton">
+	      Play Again
+	    </div>
+	  </a>
+
+	</td>
+      </tr>
+    </table>
+  </body>
+</html>
