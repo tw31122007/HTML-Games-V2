@@ -1,0 +1,74 @@
+com.DyadGames
+0
+coinsboost10
+0
+Coin Boost - 10 Waves!
+coinsboost22
+0
+Coin Boost - 22 Waves!
+coinsboost50
+0
+Coin Boost - 50 Waves!
+coinsboost80
+0
+Coin Boost - 80 Waves!
+coinsboost140
+0
+Coin Boost - 140 Waves!
+coinsboost300
+0
+Coin Boost - 300 Waves!
+coinsboost800
+0
+Coin Boost - 800 Waves!
+coinsboost1750
+0
+Coin Boost - 1750 Waves!
+expboost10
+0
+Exp Boost - 10 Waves!
+expboost22
+0
+Exp Boost - 22 Waves!
+expboost50
+0
+Exp Boost - 50 Waves!
+expboost80
+0
+Exp Boost - 80 Waves!
+expboost140
+0
+Exp Boost - 140 Waves!
+expboost300
+0
+Exp Boost - 300 Waves!
+expboost800
+0
+Exp Boost - 800 Waves!
+expboost1750
+0
+Exp Boost - 1750 Waves!
+gemboost10
+0
+Diamonds Boost - 10 Waves!
+gemboost22
+0
+Diamonds Boost - 22 Waves!
+gemboost50
+0
+Diamonds Boost - 50 Waves!
+gemboost80
+0
+Diamonds Boost - 80 Waves!
+gemboost140
+0
+Diamonds Boost - 140 Waves!
+gemboost300
+0
+Diamonds Boost - 300 Waves!
+gemboost800
+0
+Diamonds Boost - 800 Waves!
+gemboost1750
+0
+Diamonds Boost - 1750 Waves!

@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background: #000000;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+canvas {
+  height: 100vh;
+  margin: auto;
+  display: inline;
+}

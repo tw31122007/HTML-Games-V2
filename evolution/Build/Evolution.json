@@ -1,0 +1,12 @@
+{
+  "companyName": "Keiwan Donyagard",
+  "productName": "Evolution",
+  "dataUrl": "Evolution.data.unityweb",
+  "wasmCodeUrl": "Evolution.wasm.code.unityweb",
+  "wasmFrameworkUrl": "Evolution.wasm.framework.unityweb",
+  "TOTAL_MEMORY": 402653184,
+  "graphicsAPI": ["WebGL 1.0"],
+  "webglContextAttributes": { "preserveDrawingBuffer": false },
+  "splashScreenStyle": "Dark",
+  "backgroundColor": "#1E1F1E"
+}

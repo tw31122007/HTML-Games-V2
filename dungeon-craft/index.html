@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dungeon Craft</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<link rel="stylesheet" type="text/css" href="styles.css?v3"/>	  
+
+	<script type="text/javascript" src="game-min.js"></script>
+</head>
+
+<body id="xibalba" class="desktop webgl">
+	<div id="game" class="webgl-only">
+		<canvas id="canvas" class="landscape-only"></canvas>
+
+    <canvas id="canvasmap" style="display:none;"></canvas>
+    
+    <div id="overlay">
+      <div id="hud"></div>
+      <div id="info"></div>
+      <div id="levelup"></div>
+      <div id="menu"></div>
+      <div id="preload_div"><div style="width:300px;height:250px;margin-left:170px;margin-top:30px;"><SCRIPT language="Javascript">var cpmstar_rnd=Math.round(Math.random()*999999);var cpmstar_pid=71337;document.writeln("<SCR"+"IPT language='Javascript' src='//server.cpmstar.com/view.aspx?poolid="+cpmstar_pid+"&script=1&rnd="+cpmstar_rnd+"'></SCR"+"IPT>");</SCRIPT></div><br><span id="preload_continue" onclick="preload_hide();">LOADING...</span><script src="../preload.js"></script></div>
+    </div>
+
+		<div id="rotate-to-play" class="mobile-only portrait-only">
+			<div><img src="media/rotate.png"/></div>
+			Rotate to Landscape to play!
+		</div>
+	</div>
+
+	<div class="no-webgl-only">
+		<div id="no-webgl-notice" class="panel">
+			<p>
+				Your browser does not support WebGL. Try 
+				<a href="http://www.google.com/chrome">Chrome</a> or
+				<a href="http://www.mozilla.com/firefox/">Firefox</a>.
+			</p>
+			<p>
+				Mobile Safari has WebGL support in iOS 8
+			</p>
+		</div>
+	</div>
+
+<script src="../ga.js"></script>
+
+</body>
+</html>

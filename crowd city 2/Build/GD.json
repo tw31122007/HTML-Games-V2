@@ -1,0 +1,14 @@
+{
+"companyName": "NotOutGame",
+"productName": "CrowdCity",
+"dataUrl": "GD.data.unityweb",
+"wasmCodeUrl": "GD.wasm.code.unityweb",
+"wasmFrameworkUrl": "GD.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "GD.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"}
+}

@@ -1,0 +1,436 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dodge | Artridge</title>
+				<!-- <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" /> -->
+        <meta name="description" content="">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="preload" href="DodgeSoundOff.png" as="image">
+        <link rel="preload" href="DodgeSoundOn.png" as="image">
+        <link rel="preload" href="DodgePlay.png" as="image">
+        <link rel="preload" href="DodgeSwitch.png" as="image">
+        <link rel="preload" href="DodgeXButton.png" as="image">
+        <link rel="preload" href="DodgeOButton.png" as="image">
+        <link rel="preload" href="DodgePause.png" as="image">
+        <link rel="preload" href="DodgeUp.png" as="image">
+        <link rel="preload" href="DodgeDown.png" as="image">
+        <link rel="preload" href="cursor.png" as="image">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script src="https://kit.fontawesome.com/cbebc4ac70.js"></script>
+  <link rel="stylesheet" href="style.css"></link>
+</head>
+<body bgcolor=#111> <!--Default : #303030-->
+  <button onclick="toggleSound(this)" class="show-if-not-touch fullscreen mute"><i class="fas fa-volume-mute"></i></button>
+  <button onclick="goInFullscreen(document.getElementById('canvas_container'))" class="fullscreen show-if-not-touch"><i class="fas fa-compress"></i></button>
+  <div class="trackpad show-if-touch" id="trackpad"><img class="show-if-touch" id="touch-cursor" src="cursor.png"></img><span id="move-indicator">MOVE HERE</span></div>
+	<div id="touch-buttons" class="touch-buttons show-if-touch">
+    <button style="background-size: 17% !important; border-right-width: calc(var(--border-size) / 2); border-bottom-width: calc(var(--border-size) / 2);" class="pico-btn" id="btn-p"><b></b></button>
+    <button style="border-left-width: calc(var(--border-size) / 2); border-bottom-width: calc(var(--border-size) / 2);" class="pico-btn" id="switch"></button><br>
+		<button style="border-right-width: calc(var(--border-size) / 2); border-top-width: calc(var(--border-size) / 2);"class="pico-btn" id="btn-x"></button>
+		<button style="border-left-width: calc(var(--border-size) / 2); border-top-width: calc(var(--border-size) / 2);"class="pico-btn" id="btn-o"></button>
+  </div>
+	<!--<br><br><br>-->
+	<center><div id="canvas_container" style="width:512px;">
+  <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+  <script>
+    function toggleSound(element) {
+      Module.pico8ToggleSound();
+      element.children[0].classList.toggle("fa-volume-mute");
+      element.children[0].classList.toggle("fa-volume-up");
+    }
+  </script>
+  <script type="text/javascript">
+
+		var canvas = document.getElementById("canvas");
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		// show Emscripten environment where the canvas is
+		// arguments are passed to PICO-8
+		
+		var Module = {};
+		Module.canvas = canvas;
+		
+		/*
+			// When pico8_buttons is defined, PICO-8 takes each int to be a live bitfield
+			// representing the state of each player's buttons
+			
+			var pico8_buttons = [0, 0, 0, 0, 0, 0, 0, 0]; // max 8 players
+			pico8_buttons[0] = 2 | 16; // example: player 0, RIGHT and Z held down
+			
+			// when pico8_gpio is defined, reading and writing to gpio pins will
+			// read and write to these values */
+			var pico8_gpio = new Array(128);
+      pico8_gpio[0] = 64;
+      pico8_gpio[1] = 64;
+		
+	</script>
+		
+	<!-- <script async type="text/javascript" src="dodge.js"></script> -->
+	<script id="dodge-script" src="ios-sound.js" data-original-file="dodge.js"></script>
+	  
+	<script>
+		// key blocker. prevent cursor keys from scrolling page while playing cart.
+		
+		function onKeyDown_blocker(event) {
+			event = event || window.event;
+			var o = document.activeElement;
+			if (!o || o == document.body || o.tagName == "canvas" || o.id == "trackpad")
+			{
+				if ([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1)
+				{
+					if (event.preventDefault) event.preventDefault();
+				}
+			}
+		}
+		document.addEventListener('keydown', onKeyDown_blocker, false);
+         
+	</script>
+        
+	<br>
+      <!--<div class="pico8_el_container">
+	<div onclick="backToSite()" class=pico8_el alt="Back to site" width=12 height=12>
+	      <a>Back to site</a>
+	</div>
+	<br>
+	<div class=pico8_el onclick="Module.pico8Reset();">
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dOwoAMQhE15A+rfc/3bZ7AlMnQfywCkKsfcgMM9ZP+QHtIn0vLeBAFduiFdQ/0DmvtR5LXJ6CPSXe2ZXcFNlTxFbemKrbZPs35XogeS9xeQr+anT6LzoOwEDwZJ7jwhXUnwkTTiDQ2Ja34AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Reset" width=12 height=	12/>
+	Reset</div>
+        <br>
+	<div class=pico8_el onclick="Module.pico8TogglePaused();">
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAPUlEQVR4Ae3doQ0AIAxEUWABLPtPh2WCq26DwFSU/JPNT166QSu/Hg86W9dwLte+diP7AwAAAAAAgD+A+jM2ZAgo84I0PgAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Pause" width=12 height=12/>
+	Pause</div>
+	<br>
+	<div class=pico8_el onclick="Module.requestFullScreen(true, false);">
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dsQ1AIQhExfze1v2ns3UCrfgFhmgUUAoGgHscp21wX9BqaZoDojbB96OkDJKNcTN2BHTyYNYmoT2BlPL7BKgcPfHjAVXKKadkHOn9K1r16N0czN6a95N8mnA7Aq2fTZ3Af3UKmCSMazL8HwAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Fullscreen" width=12 height=12/>
+	Fullscreen</div>
+	<br>
+	<div class=pico8_el onclick="Module.pico8ToggleSound();">
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXklEQVR4Ae2doQ4AIQxD4YLH8v9fh+ULhjpxxSwLg2uyapr1JRu1iV5Z+1BGl4+xNpX38SYo2uRvYiT5LwEmt+ocgXVLrhPEgBiw8Q5w7/kueSkK+D2tJO4E/I3GrwkqQCBabEj/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Toggle Sound" width=12 height=12/>
+	
+	Sound</div>
+	<br>
+	<div class=pico8_el ><a target="_new" href="http://www.lexaloffle.com/bbs/?cat=7&sub=2">
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlElEQVR4Ae2dMQ5FQBCGh6jcwAkkateg3DiAa+iQUGqVKi95FQfAJRQOoHeBUf8JyQqKjZ1uMzuz2e/LTE3KhyF7kSlgLOykas23f6D+A9Yp84aAOYU15pcJnfji0Il2ID8HzC4y38ZrnfIBGxeRoR3c3EWrACdsV5BOsx7OSRnrOXh4F5HzA6bevwUn8wlz7eCDsQM99B3ks0s/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="More Carts" width=12 height=12/>
+	Carts</a></div>
+	<br>
+      </div>-->
+	<br>	
+	</div></center>
+	<br><br>
+       <script>
+        if (navigator.userAgent.match(/Android/i)) {
+          ScreenOrientation.lock("portrait-primary");
+        }
+       </script>
+	<script>
+		function backToSite() {
+			window.location.assign("https://artridgegames.github.io#games");
+    }
+    
+    function isLandscape() {
+      return window.innerWidth > window.innerHeight;
+    }
+
+    function reloadCss() {
+      /* var links = document.getElementsByTagName("link");
+      for (var cl in links) {
+        var link = links[cl];
+        if (link.rel === "stylesheet") {
+          link.href += "";
+        }
+      } */
+      for (var link of document.querySelectorAll("link[rel=stylesheet]")) {
+        link.href = link.href.replace(/\?.*|$/, "?ts=" + new Date().getTime())
+      }
+    }
+
+    function isDevMobile() {
+      return window.location.href.indexOf("?touch") !== -1     // to test on not-touch devices: add "?touch" to the URL
+	    ||window.location.href.indexOf("&touch") !== -1
+	    || navigator.userAgent.match(/Android/i)
+	    || navigator.userAgent.match(/webOS/i)
+	    || navigator.userAgent.match(/iPhone/i)
+	    || navigator.userAgent.match(/iPad/i)
+	    || navigator.userAgent.match(/iPod/i)
+	    || navigator.userAgent.match(/BlackBerry/i)
+	    || navigator.userAgent.match(/Windows Phone/i)
+    }
+		
+		var canvasContainer = document.getElementById("canvas");
+		var rect = canvasContainer.getBoundingClientRect();
+		var distance = rect.right / (isLandscape() && 4.85 || 2.2);
+
+    function getPageTopLeft(el) {
+    var rect = el.getBoundingClientRect();
+    var docEl = document.documentElement;
+    return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+        };
+    }
+
+		function updateBtns() {
+      //reloadCss()
+
+			var canvasContainer = document.getElementById("canvas");
+			var rect = canvasContainer.getBoundingClientRect();
+			var distance = rect.right / (isLandscape() && 4.85 || 2.2);
+
+      if (isLandscape() && navigator.userAgent.match(/iPhone/i)) {
+        distance = rect.right / 3.6;
+      }
+
+      var trackpad = document.getElementById("trackpad");
+      var btnO = document.getElementById("btn-o");
+      var btnX = document.getElementById("btn-x");
+      var btnP = document.getElementById("btn-p");
+      var btnS = document.getElementById("switch");
+      var touchBtns = document.getElementById("touch-buttons")
+
+      document.documentElement.style.setProperty("--move-indicator-size", (distance / 18) + "px")
+
+      touchBtns.style.width = distance;
+      touchBtns.style.height = distance;
+
+      /* btnO.style.width = distance / 2;
+      btnO.style.height = distance / 2;
+      btnX.style.width = distance / 2;
+      btnX.style.height = distance / 2;
+      btnP.style.width = distance / 2;
+      btnP.style.height = distance / 2;
+      btnS.style.width = distance / 2;
+      btnS.style.height = distance / 2; */
+
+      btnO.style.width = "50%";
+      btnO.style.height = "50%";
+      btnX.style.width = "50%";
+      btnX.style.height = "50%";
+      btnP.style.width = "50%";
+      btnP.style.height = "50%";
+      btnS.style.width = "50%";
+      btnS.style.height = "50%";
+      trackpad.style.width = distance;
+      trackpad.style.height = distance;
+
+      if (!isLandscape()) {
+        document.documentElement.style.setProperty('--text-size', '40px');
+      } else {
+        document.documentElement.style.setProperty('--text-size', '20px');
+      }
+			
+			// ----------------- DISPLAY TOUCH CONTROLS? ----------------- %>
+	  if(isDevMobile()) {
+	    document.body.className = " touch-supported";
+	    window.TOUCH = true;
+      var size = isLandscape() && "150px" || "27.7px";
+      var offset = isLandscape() && "80px" || "10px";
+      if (isLandscape() && navigator.userAgent.match(/iPhone/i)) {
+        size = "85px";
+        offset = "30px";
+        document.documentElement.style.setProperty('--canvas-size', size);
+      }
+      document.documentElement.style.setProperty("--pico-display", "block")
+      document.documentElement.style.setProperty('--canvas-size', size);
+      document.documentElement.style.setProperty('--canvas-border', '0px');
+      document.documentElement.style.setProperty('--canvas-offset', offset);
+      var isMobile = true;
+	  } else {
+      //document.documentElement.setProperty("--pico-display", "none")
+	    document.body.className = " touch-not-supported";
+      document.documentElement.style.setProperty('--canvas-size', '0px');
+      document.documentElement.style.setProperty('--canvas-border', '0px');
+      document.getElementById("canvas").style.border = "none";
+      document.documentElement.style.setProperty('--canvas-offset', '0px');
+      var isMobile = false;
+	  }
+
+      if (isMobile) {
+        var element = document.getElementById('canvas');
+        var positionInfo = element.getBoundingClientRect();
+        var width = positionInfo.width;
+        var border = width / 128;
+        if (navigator.userAgent.match(/iPad/i)) {
+          document.documentElement.style.setProperty('--border-size', border * 0.9 + "px");
+        } else {
+          document.documentElement.style.setProperty('--border-size', border * 0.9 + "px");
+        }
+      } else {
+        document.documentElement.style.setProperty('--border-size', "0px");
+      }
+		}
+		
+		window.onorientationchange = updateBtns();
+		window.onload = updateBtns();
+		updateBtns();
+		
+		trackpad.ontouchmove = updateTrackpad;
+    trackpad.ontouchstart = updateTrackpad;
+
+    function updateTrackpad(e) {
+      e.preventDefault();
+      document.getElementById("move-indicator").style.display = "none";
+			var x = e.touches[0].clientX - this.offsetLeft; 
+			var y = e.touches[0].clientY - this.offsetTop;
+
+      var touch_cursor_size = getComputedStyle(document.documentElement).getPropertyValue('--border-size').slice(0, -2) * 10;
+      var touch_cursor = document.getElementById("touch-cursor")
+      touch_cursor.style.display = "block";
+      touch_cursor.style.top = y - touch_cursor_size / 2 + "px";
+      touch_cursor.style.left = x - touch_cursor_size / 2 + "px";
+			
+			x = x * (isLandscape() && 1.2 || 1.2)
+			y = y * (isLandscape() && 1.2 || 1.2)
+      x = x - 15
+      y = y - 15
+			x = x * 128
+			x = x / distance
+			y = y * 128
+			y = y / distance
+			if (x>-500 && x<628 && y>-500 && y<628) {
+				pico8_gpio[0] = x;
+				pico8_gpio[1] = y;
+			}
+		}
+    
+		window.addEventListener("resize", function() {
+      window.setTimeout(updateBtns, 500);
+      //alert("test")
+		}, false);
+    
+    var startedGame = false;
+    var btnX = document.getElementById("btn-x");
+    setInterval(function() {
+      if (pico8_gpio[2]==1 && !startedGame) {
+        btnX.style.animation = "flash 1s infinite"
+      } else {
+        btnX.style.animation = "none"
+      }
+
+      var canvasIsDone = false;
+      if (pico8_gpio[2]==1 && !canvasIsDone) {
+        canvasIsDone = true;
+        var picoCanvas = document.getElementById("canvas");
+        picoCanvas.style.backgroundColor =  "#FFF1E8";
+      }
+    }, 50)
+	</script>
+	<script type="text/javascript">
+		var pico8_buttons = [0, 0, 0, 0, 0, 0, 0, 0];
+		var btnO = document.getElementById("btn-o");
+    var btnS = document.getElementById("switch");
+    btnS.style.backgroundImage = "url(DodgeSwitch.png)"
+    btnO.style.backgroundImage = "url(DodgeOButton.png)"
+      btnO.addEventListener("touchstart", (e)=>{
+        e.preventDefault()
+        startedGame = true;
+				if (isPaused) {
+          pico8_buttons[0] = 8
+				} else {
+					pico8_buttons[0] = 16
+				}
+        setTimeout(()=>{
+          pico8_buttons[0] = 0
+        },100)
+      })
+		
+		var btnX = document.getElementById("btn-x");
+    btnX.style.backgroundImage = "url(DodgeXButton.png)"
+      btnX.addEventListener("touchstart", (e)=>{
+        e.preventDefault()
+        startedGame = true;
+        if (!isPaused) {
+          pico8_buttons[0] = 32
+          setTimeout(()=>{
+            pico8_buttons[0] = 0
+          },100)
+        } else {
+          Module.pico8ToggleSound();
+          isMuted = !isMuted;
+          btnX.style.backgroundImage = isMuted && "url(DodgeSoundOff.png)" || "url(DodgeSoundOn.png)"
+        }
+      })
+		  var isMuted = false;
+      var isPaused = false;
+      var btnP = document.getElementById("btn-p");
+      btnP.style.backgroundImage = "url(DodgePause.png)"
+      btnP.addEventListener("touchstart", (e)=>{
+	      if (pico8_gpio[2]==1) {
+          e.preventDefault()
+          pico8_buttons[0] = 64
+          setTimeout(()=>{
+              pico8_buttons[0] = 0
+          },100)
+          startedGame = true;
+          isPaused = !isPaused; // Ã or http://xahlee.info/comp/unicode_arrows.html
+          if (isPaused) {
+            btnX.style.backgroundImage = isMuted && "url(DodgeSoundOff.png)" || "url(DodgeSoundOn.png)"
+            btnO.style.backgroundImage = "url(DodgeDown.png)"
+            btnS.style.backgroundImage = "url(DodgeUp.png)"
+            btnP.style.backgroundImage = "url(DodgePlay.png)"
+          } else {
+            btnX.style.backgroundImage = "url(DodgeXButton.png)"
+            btnO.style.backgroundImage = "url(DodgeOButton.png)"
+            btnS.style.backgroundImage = "url(DodgeSwitch.png)"
+            btnP.style.backgroundImage = "url(DodgePause.png)"
+          }
+        }
+      })
+
+      function goInFullscreen(element) {
+        if(element.requestFullscreen)
+          element.requestFullscreen();
+        else if(element.mozRequestFullScreen)
+          element.mozRequestFullScreen();
+        else if(element.webkitRequestFullscreen)
+          element.webkitRequestFullscreen();
+        else if(element.msRequestFullscreen)
+          element.msRequestFullscreen();
+      }
+
+      document.getElementById("switch").addEventListener("touchstart", switchInput);
+
+      var trackpad = document.getElementById("trackpad");
+      var buttons = document.getElementById("touch-buttons");
+      var trackIsRight = true
+      function switchInput() {
+        if (isPaused) {
+          pico8_buttons[0] = 4
+					setTimeout(()=>{
+						pico8_buttons[0] = 0
+					},100)
+        } else {
+          trackIsRight = !trackIsRight;
+          if (trackIsRight) {
+            buttons.style.left = "11px"
+            trackpad.style.right = "11px"
+            buttons.style.right = "unset"
+            trackpad.style.left = "unset"
+          } else {
+            trackpad.style.left = "11px"
+            buttons.style.right = "11px"
+            trackpad.style.right = "unset"
+            buttons.style.left = "unset"
+          }
+        }
+      }
+
+      /* KEY = { L: 1, R: 2, U: 4, D: 8, O: 16, X: 32, P: 64 }, */
+      var picoButtons = document.getElementsByClassName("pico-btn")
+      for (i=0; i<picoButtons.length; i++) {
+        picoButtons[i].ontouchstart = function() {
+          this.style.transform = "scale(0.9)"
+          setTimeout(()=>{
+            this.style.transform = "scale(1)"
+          },150)
+        }
+      }
+
+      /* document.body.ontouchstart = function(e) {
+        e.preventDefault();
+      } */
+  </script>
+  <!-- iOS Zoom on rotation bug fix -->
+  <script>(function(a){function j(){c.setAttribute("content",f),document.body.innerHTML=document.body.innerHTML,g=!0}function k(){c.setAttribute("content",e),g=!1}function l(b){h=Math.abs(a.orientation),i=Math.abs(b.accelerationIncludingGravity.x),i>8&&h===0?g&&k():g||j()}var b=a.document;if(!b.querySelectorAll)return;var c=b.querySelectorAll("meta[name=viewport]")[0],d=c&&c.getAttribute("content"),e=d+", maximum-scale=1.0",f=d+", maximum-scale=10.0",g=!0,h=a.orientation,i=0;if(!c)return;a.addEventListener("orientationchange",j,!1),a.addEventListener("devicemotion",l,!1)})(this);</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</body></html><script defer src="https://static.itch.io/htmlgame.js" type="text/javascript"></script>

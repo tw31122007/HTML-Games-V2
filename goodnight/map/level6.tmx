@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="31" tilewidth="8" tileheight="8" nextobjectid="27">
+ <tileset firstgid="1" name="tileset" tilewidth="8" tileheight="8" tilecount="200" columns="8">
+  <image source="../img/tileset.gif" width="64" height="200"/>
+  <tile id="0">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="climbable" type="bool" value="true"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="climbable" type="bool" value="true"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="true"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="climbable" type="bool" value="true"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="72">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="78">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="79">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="true"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="94">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="98">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="99">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="100">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="106">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="107">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="108">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="110">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="112">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="114">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="115">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="116">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="118">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="127">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="128">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="129">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="130">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="131">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="132">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="133">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="134">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="135">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="136">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="137">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="138">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="139">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="140">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="141">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="142">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="143">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="144">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="145">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="146">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="147">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="148">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="149">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="150">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="151">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="152">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="153">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="154">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="155">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="156">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="157">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="158">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="159">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="160">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="161">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="162">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="163">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="164">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="165">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="166">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="167">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="true"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="168">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="169">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="170">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="171">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="172">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="173">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="174">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="175">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="176">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="177">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="178">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="179">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="180">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="181">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="182">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="183">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="184">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="185">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="186">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="187">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="188">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="189">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="190">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="191">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="192">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="193">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="194">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="195">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="true"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="196">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="197">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="198">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="199">
+   <properties>
+    <property name="climbable" type="bool" value="false"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="couch" type="bool" value="false"/>
+    <property name="flower" type="bool" value="false"/>
+    <property name="gorge" type="bool" value="false"/>
+    <property name="water" type="bool" value="false"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Black" width="38" height="31">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer name="World" width="38" height="31">
+  <data encoding="csv">
+49,48,47,48,47,48,48,47,48,48,47,48,48,48,47,48,47,48,48,56,0,0,0,0,0,0,0,0,0,0,35,62,48,48,61,48,48,49,
+49,47,48,48,48,48,46,46,54,46,54,46,54,46,56,48,48,48,56,0,0,0,181,182,183,184,0,0,0,0,35,62,48,47,48,47,48,49,
+49,48,47,48,56,54,0,0,0,0,0,0,0,0,0,56,47,54,0,0,0,177,193,191,191,194,180,0,0,0,35,62,48,48,48,48,48,49,
+49,47,48,54,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,185,186,178,179,187,188,0,0,0,35,62,48,48,61,48,48,49,
+49,48,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,62,56,48,48,48,48,49,
+49,61,0,0,0,0,60,46,52,0,0,0,0,0,0,0,0,0,0,0,0,0,38,39,0,0,0,0,0,0,35,62,39,48,48,61,48,49,
+49,39,38,32,31,40,48,48,56,39,0,0,0,0,0,0,39,0,0,0,0,61,48,48,47,0,0,0,0,0,35,62,48,48,48,0,56,49,
+49,48,48,48,48,47,48,47,48,47,48,48,47,48,48,47,48,47,48,47,48,48,47,48,47,48,48,56,0,0,35,62,47,54,0,0,0,49,
+49,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,48,48,47,0,35,62,61,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,48,48,0,35,62,48,0,32,0,0,49,
+49,0,0,0,0,0,0,0,39,0,0,0,0,0,39,0,0,0,0,0,0,0,39,0,0,0,0,48,56,0,35,62,47,49,49,49,49,49,
+49,48,47,48,48,47,48,48,47,48,48,48,47,48,48,48,47,48,47,48,48,48,48,0,0,0,0,48,0,0,35,62,56,48,49,49,49,49,
+49,48,48,48,47,48,55,55,56,0,0,56,55,0,0,56,55,55,0,0,56,55,54,0,0,32,47,47,0,0,35,62,0,48,49,49,49,49,
+49,56,56,56,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,48,0,0,35,62,0,48,48,49,49,49,
+49,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,48,56,0,0,35,62,0,54,48,49,49,49,
+49,0,0,0,0,0,0,0,0,0,0,47,48,48,56,48,48,48,48,48,48,48,48,56,48,48,48,0,0,0,35,62,0,39,48,48,49,49,
+49,0,0,0,0,0,0,0,0,0,0,54,56,0,0,56,55,56,48,48,48,48,56,0,0,56,0,0,0,0,35,62,0,61,56,61,48,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,54,0,0,0,0,0,0,0,0,0,0,0,35,62,0,48,55,55,48,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,46,46,46,49,
+49,0,0,0,0,0,0,0,0,0,0,0,177,191,180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,49,
+49,45,45,45,45,45,92,0,0,0,0,0,185,197,188,0,0,0,0,43,14,14,14,14,14,14,43,0,0,0,0,0,0,0,0,0,0,49,
+49,1,53,53,1,59,92,0,0,0,0,0,0,0,0,0,0,0,0,43,14,14,14,14,14,14,43,0,0,0,0,0,0,0,0,0,0,49,
+49,91,91,94,1,1,45,45,92,0,0,0,0,0,0,0,0,0,0,43,14,14,14,14,14,14,43,0,0,0,47,48,56,48,48,47,48,49,
+49,0,0,90,1,53,1,1,92,0,0,0,0,0,0,0,0,0,0,43,14,14,14,14,14,14,43,0,0,0,0,0,0,47,55,47,47,49,
+49,0,0,0,91,91,91,91,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,48,48,49,
+49,0,0,0,0,0,0,181,182,183,184,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,126,195,125,0,0,0,0,47,61,49,
+49,0,0,0,0,177,180,193,191,191,191,180,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,177,191,180,0,0,0,0,0,56,49,
+49,0,0,0,0,185,186,174,187,186,187,188,0,0,0,38,37,0,38,57,0,0,0,0,0,0,0,0,185,197,188,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,60,46,46,46,46,46,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,40,48,56,0,0,0,56,47,173,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,
+49,0,0,0,0,0,0,0,0,0,0,0,0,0,49,49,49,49,49,49,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49
+</data>
+ </layer>
+ <objectgroup name="Objects">
+  <object id="8" type="player" x="24" y="80">
+   <properties>
+    <property name="faceRight" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" type="znake" x="160" y="112"/>
+  <object id="23" type="znake" x="280" y="168"/>
+  <object id="24" type="znake" x="88" y="80"/>
+  <object id="26" type="npc" x="112" y="224">
+   <properties>
+    <property name="dialog">if you ever need a break,
+just press B to chill out
+(you have to be on a platform)</property>
+    <property name="faceRight" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

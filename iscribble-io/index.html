@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>iScribble.IO</title>
+<meta name="description" content="iScribble.IO is an entertaining io game. In this game, you can release stress easily by drawing lines freely while competing with other players to survive." />
+<meta name="title" content="iScribble.IO" />
+<meta name="keywords" content="iScribble.IO, scribble, iscribble io" />
+<meta name="news_keywords" content="iScribble.IO, scribble, iscribble io" />
+<link rel="canonical" href="https://iscribble.io/" />
+<link rel="icon" href="/rs/logo-iscribble-io.jpg" />
+
+<meta property="og:title" content="iScribble.IO" itemprop="headline" />
+<meta property="og:type" content="website" />
+<meta property="og:url" itemprop="url" content="https://iscribble.io/" />
+<meta property="og:image" itemprop="thumbnailUrl" content="/rs/banner-iscribble-io.jpg" />
+<meta property="og:description" content="iScribble.IO is an entertaining io game. In this game, you can release stress easily by drawing lines freely while competing with other players to survive." itemprop="description" />
+<meta property="og:site_name" content="iScribble.IO" />
+<link rel="apple-touch-icon" href="/rs/logo-iscribble-io.jpg" />
+
+<meta name="twitter:title" content="iScribble.IO" />
+<meta name="twitter:url" content="https://iscribble.io/" />
+<meta name="twitter:image" content="/rs/banner-iscribble-io.jpg" />
+<meta name="twitter:description" content="iScribble.IO is an entertaining io game. In this game, you can release stress easily by drawing lines freely while competing with other players to survive." />
+<meta name="twitter:card" content="summary" />
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-95KBVF280N"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-95KBVF280N");
+    </script>
+<link rel="stylesheet" href="/rs/style.css?v=2.2">
+<style>
+      html {
+                box-sizing: border-box;
+            }
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+            body {
+                margin: 0;                
+				background-image: linear-gradient(#ffffff, #24c9f2);
+            }
+            #gameContainer {
+                width: 100vw;
+                height: 100vh;
+            }
+            canvas {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            canvas + * {
+                z-index: 2;
+            }
+            .container{
+                //max-width: 1600px;
+                position:  relative;
+				width: 100%;
+                height: 100%;
+            }
+            .posImg{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .logo {
+                display: block;
+				position: absolute;
+                max-width: 85%;
+                max-height: 100%;
+                width: auto  !important;
+                height: auto;
+				margin-left: auto;
+				margin-right: auto;
+				top:50px;
+				left: 0;
+				right: 0;
+				text-align: center;
+            }   
+			.circleBot{			
+                display: block;
+				position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto  !important;
+                height: auto;
+				margin-left: auto;
+				margin-right: auto;
+				bottom:0;
+				left: 0;
+				text-align: center;
+			}
+			.Item_1{			
+                display: block;
+				position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto  !important;
+                height: auto;
+				margin-left: auto;
+				margin-right: auto;
+				bottom:0;
+				right: 0;
+				text-align: center;
+			}
+			.Item_2{			
+                display: block;
+				position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto  !important;
+                height: auto;
+				margin-left: auto;
+				margin-right: auto;
+				top:0;
+				left: 50px;
+				text-align: center;
+			}
+            .pos_progress{
+                position: absolute;
+                bottom : 15%;
+                width: 100%;
+            }
+            .progress {
+                margin: 1.5em auto;
+                max-width: 436px;
+                height:  auto;
+                display: none;
+                position: relative;
+            }
+            .full {
+                width: 98%;
+                transform-origin: top left;
+            }
+            .box_process{
+                width: 100%;
+            }
+            .process{
+                width: 98%;
+            }
+            .progress .posfull,.progress .posbox{ 
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .progress .posfull{
+                top: 1px;
+                z-index: 3;
+                width: 100%
+            }
+            .progress .posbox{
+                top: 0;
+                z-index: 2;
+            }
+            #loader {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+               //background-color:white;
+				background-image: linear-gradient(#ffffff, #24c9f2);
+            }
+            .pos_spinner{
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-30%, -50%);
+            }
+            .spinner,
+            .spinner:after {
+                border-radius: 50%;
+                width: 5em;
+                height: 5em;
+            }
+            .spinner {
+                margin: 10px;
+                font-size: 10px;
+                position: relative;
+                text-indent: -9999em;
+                border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+                border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+                border-left: 1.1em solid #ffffff;
+                transform: translateZ(0);
+                animation: spinner-spin 1.1s infinite linear;
+            }
+
+            @keyframes spinner-spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+    </style>
+</head>
+<body>
+<div class="main-panel">
+<button type="button" class="btn btn-default hide-main-panel" title="Show/hide">
+<i class="">Info</i>
+</button>
+<div class="main-panel-content">
+<h1>iScribble</h1>
+<p><span style="font-weight: 400;"><strong>iScribble.IO</strong> is an entertaining io game. In this game, you can release stress easily by drawing lines freely while competing with other players to survive.</span></p>
+<p><span style="font-weight: 400;">Are you tired of the busy life in which you go to study or work in the morning and you come back home in the evening? You are looking for an entertaining game to help you relax and release stress after a long workday, right? Come to this game, iScribble.IO, to beat stress and make your desire come true!</span></p>
+<p><span style="font-weight: 400;">Unlike other games with adventurous gameplay, iScribble.IO brings you entertainment thanks to simple mechanics, easy control, the ability when drawing according to your interest, and excitement when competing with other players. In this game, you can participate in a multiplayer competition to choose a person having the largest land and being able to survive as long as possible. Let's join and enjoy iScribble.IO!</span></p>
+<p><span style="font-weight: 400;">Your mission is to control your square to draw a line-shaped tail and mark your area. You need to create closed circles to make these playing fields belong to your own. To attack other players, you can crash into their tails when they have not finished drawing a closed circle. In contrast, be careful when other players approach you. They can trap you to crash into your tail and eliminate you.</span></p>
+<p><span style="font-weight: 400;">Use the minimap to follow other players on the playing field. Besides that, there is a game leaderboard on the top-right screen for you to check your rank and the people in the top rank. Try to expand your land as big as possible to create an admirable record! Moreover, after each round, you can go after your achievements and playing time to see your controlling ability and competing bravery.</span></p>
+<p><span style="font-weight: 400;">iScribble.IO has eye-catching graphics, superb effects, and highly competitive gameplay. Besides that, you can type your name and select your favorite color for your character. All these features will bring you wonderful moments to get rid of boredom and stress. Have a great time!</span></p>
+<p><strong>Features of iScribble.IO</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Colorful, vivid graphics and cool art animations</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Use the minimap and leaderboard to increase your rank easily</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Competitive drawing game with multiplayer</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Simple mechanics and easy controls</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Select the favorite color and name for your character</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Freedom to draw closed circles before being attacked</span></li>
+</ul>
+<p><strong>Platform</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">iScribble.IO is available on both PC and mobile on our website browser.</span></li>
+</ul>
+<p><strong>How to control</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Slide your mouse to move your character.</span></li>
+</ul>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="CE23aKSM"></script>
+<div class="fb-comments" data-href="https://iscribble.io" data-width="" data-numposts="5"></div>
+</div>
+<div class="main-panel-ads">
+</div>
+</div>
+<div id="gameContainer"></div>
+<div id="loader">
+<img class="circleBot" src="image/circleBot.png">
+<img class="Item_1" src="image/item 1.png">
+<img class="Item_2" src="image/item 2.png">
+<img class="logo" src="image/logo.png">
+<div class="pos_spinner">
+<div class="spinner"></div>
+</div>
+<div class=" pos_progress">
+<div class="progress">
+<div class="posfull">
+<img class="full" src="image/process 2.png">
+</div>
+<div class="posbox">
+<img class="box_process" src="image/process 1.png">
+</div>
+</div>
+</div>
+</div>
+</body>
+<script src="Build/UnityLoader.js"></script>
+<script>
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/iscribble_io.json", {onProgress: UnityProgress});
+  function UnityProgress(gameInstance, progress) {
+    if (!gameInstance.Module) {
+      return;
+    }
+    const loader = document.querySelector("#loader");
+    if (!gameInstance.progress) {
+      const progress = document.querySelector("#loader .progress");
+      progress.style.display = "block";
+      gameInstance.progress = progress.querySelector(".full");
+      loader.querySelector(".spinner").style.display = "none";
+    }
+    gameInstance.progress.style.transform = `scaleX(${progress})`;
+    if (progress === 1 && !gameInstance.removeTimeout) {
+      gameInstance.removeTimeout = setTimeout(function() {
+          loader.style.display = "none";
+      }, 2000);
+    }
+  }
+  </script>
+<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		 let buttondiv = document.getElementsByTagName('button');
+		 for (let i = 0; i < buttondiv.length; i++) {
+			if(buttondiv[i].innerHTML=="OK"){
+				buttondiv[i].click();
+			 }
+		  }
+		 setTimeout(function(){ 
+			let buttonok = document.getElementsByTagName('button');
+			 for (let i = 0; i < buttondiv.length; i++) {
+				if(buttonok[i].innerHTML=="OK"){
+					buttonok[i].click();
+				 }
+			  }
+		}, 1000); 
+		});	
+	</script>
+<script src="/rs/jquery-3.4.1.min.js"></script>
+<script> 
+	$('button.hide-main-panel').click(function () {
+		if ($("div.main-panel").css('width') != '0px') {
+			$("div.main-panel").css('width', '0px');
+			$("div.main-panel-ads").css('display', 'none');     
+			$("div.main-panel-content").css('display', 'none');   			
+			$(this).children('i').html('Info');
+		} else {
+			$("div.main-panel").css('width', $("div.main-panel").css('max-width'));
+			$("div.main-panel-ads").css('display', 'block');  
+			$("div.main-panel-content").css('display', 'block'); 
+			$(this).children('i').html('>>');
+		}
+	});
+	</script>
+</html>

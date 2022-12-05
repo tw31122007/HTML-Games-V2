@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'PICO-8';
+  src: URL('https://artridgegames.github.io/assets/fonts/PICO-8.ttf') format('truetype');
+}
+:root {
+  --canvas-size: 0px;
+  --canvas-border: 0px;
+  --canvas-offset: 0px;
+	--text-size: 16px;
+  --border-size: 1px;
+  --move-indicator-size: 13px;
+  --pico-display: none;
+}
+/* @media only screen and (max-width: 760px) {
+  .pico-btn {
+    display: none !important;
+  }
+  .trackpad {
+    display: none !important;
+  }
+} */
+canvas#canvas { width: 512px; height: 512px; }
+.pico8_el {
+	float:left;
+	width: calc(100vw/3); /*92px
+	display:inline-block;*/
+  margin: 0px;
+	padding: 0px;
+	text-align: center;
+	color:#fff;
+	background-color:#777;
+	font-family : verdana;
+	font-size: 32px;
+	height: 100%;
+	cursor: pointer;
+	cursor: hand;
+	box-sizing: border-box;
+	white-space: normal;
+	vertical-align: middle;
+}
+.pico8_el a{
+	text-decoration: none;
+	color:#fff;
+}
+.pico8_el:hover{
+	background-color:#aaa;
+}
+.pico8_el:link{
+	background-color:#aaa;
+}
+canvas{
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    border-left: calc(var(--border-size) - 0px) solid #FFF1E8;
+    border-top: calc(var(--border-size) - 0px) solid #FFF1E8;
+    border-right: calc(var(--border-size) + 0.2px) solid #FFF1E8;
+    border-bottom: calc(var(--border-size) + 0.2px) solid #FFF1E8;
+}
+body {
+    margin: 0;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   position: relative;
+ }
+  
+ /*body br {
+   display: none;
+ }*/
+  
+ center div[style] {
+   width: 100% !important;
+ }
+center > div > canvas#canvas {
+    position: fixed;
+    transform: translate(-50%, var(--canvas-offset));
+    width: calc(100vw - var(--canvas-size));
+    padding: var(--canvas-border);
+    height: calc(100vw - var(--canvas-size));
+    cursor: none;
+}
+.fullscreen-only:fullscreen {
+		display: block;
+}
+.fullscreen-only:not(:fullscreen) {
+		display: none;
+}
+img {
+    display: none;
+}
+.pico8_el_container {
+  position: absolute;
+  top: 100vw;
+  left: 0px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-size: 0;
+  width: 100%;
+}
+#touch-cursor {
+  position: absolute;
+  border-radius: 50%;
+  background-color: none;
+  width: calc(var(--border-size) * 9);
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Chrome                         */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+  height: calc(var(--border-size) * 9);
+  z-index: 200000;
+  transform-origin: center;
+  display: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-touch-callout:none;
+  pointer-events: none;
+}
+.trackpad {
+	background-color: #555;
+	width: 250px;
+	height: 250px;
+	position: fixed;
+	right: 11px;
+	bottom: 10px;
+	border: var(--border-size) solid #FFF1E8;
+	z-index: 200;
+  touch-action: none;
+  float: left;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+.touch-buttons {
+	position: fixed;
+	left: 11px;
+	bottom: 10px;
+  padding: 0px;
+  margin: 0px;
+	z-index: 200;
+  display: inline-block;
+  border: var(--border-size) solid #FFF1E8;
+  background-color: #292929;
+}
+.pico-btn {
+	font-family: "PICO-8" !important;
+	background-color: #555;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 29%;
+	color: #FFF1E8;
+	width: 112px;
+	height: 112px;
+  border-color: #292929;
+  border-style: solid;
+  border-width: 0px;
+	z-index: 200;
+	font-size: var(--text-size);
+  touch-action: none;
+  float: left;
+  display: var(--pico-display);
+  transform-origin: center;
+  transition: transform 0.25s;
+}
+.fullscreen {
+  position: fixed;
+  bottom: 17px;
+  right: 10px;
+  background-color: #111;
+  border: none;
+  color: #FFF1E8;
+  font-size: 24px;
+  /* cursor: pointer; */
+}
+.mute {
+  transform: translateY(-40px);
+}
+#move-indicator {
+  font-size: var(--move-indicator-size);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "PICO-8";
+  color: #FFF1E8;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  white-space: nowrap;
+}
+#switch {
+  font-size: var(--font-size);
+  margin: 0px;
+  padding: 0px;
+}
+@keyframes flash {
+  0%   {
+    background-color: #555;
+  }
+  50%  {
+    background-color: #bbb;
+  }
+  100% {
+    background-color: #555;
+  }
+}
+.touch-not-supported .show-if-touch { display: none !important; }
+.touch-supported .show-if-not-touch { display: none !important; }
+
+ @media only screen and (orientation: landscape) {
+  center > div > canvas#canvas {
+    width: auto;
+    height: calc(100vh - var(--canvas-size));
+  }
+  .pico8_el_container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    border: 1px solid white;
+  }
+  
+  .pico8_el {
+    font-size: 9pt;
+    display: block;
+    height: auto;
+    width: 92px;
+  }
+	 
+  img {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .pico-btn {
+    font-size: 10px !important;
+  }
+}

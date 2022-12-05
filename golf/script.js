@@ -1,0 +1,1 @@
+function js_Dogfire_ScrollHome(){setTimeout(function(){window.scrollTo(0,1)},0)}window.famobi=window.famobi?window.famobi:{},window.famobi.localStorage=window.famobi.localStorage?window.famobi.localStorage:window.localStorage,window.famobi.sessionStorage=window.famobi.sessionStorage?window.famobi.sessionStorage:window.sessionStorage,window.famobi_onload();

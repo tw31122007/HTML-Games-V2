@@ -1,0 +1,16 @@
+{
+"companyName": "Trickshot Labs",
+"productName": "Grey-Box Testing",
+"productVersion": "0.1.5",
+"dataUrl": "v0_1_5.data.unityweb",
+"wasmCodeUrl": "v0_1_5.wasm.code.unityweb",
+"wasmFrameworkUrl": "v0_1_5.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.0f3"
+}

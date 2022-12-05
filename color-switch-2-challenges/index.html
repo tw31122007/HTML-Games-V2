@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>COLOR SWITCH 2 CHALLENGES | Free HTML5 Games on FunkyPotato.com</title>
+    <script type="text/javascript">document.domain='funkypotato.com'</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: black;
+      }
+
+      canvas.emscripten {
+        border: 0px none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      canvas.emscripten.visible {
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+        transition-delay: 1s;
+      }
+
+      .canvas-container-outer {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+      }
+
+      .canvas-container {
+        position: relative;
+        margin: auto;
+        background-image: url("splash.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .progress {
+        position: absolute;
+        top: 84%;
+        left: 0;
+        right: 0;
+        width: 90%;
+        height: 28px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        overflow: hidden;
+        border-radius: 2px;
+        background-color: #F7F7F7;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .progress-bar {
+          float: left;
+          width: 0;
+          min-width: 2%;
+          height: 100%;
+          font-size: 20px;
+          font-family: monospace;
+          line-height: 28px;
+          color: #AAA;
+          text-align: center;
+          transition: width .1s ease;
+          background-color: #292929;
+      }
+
+      .touchLayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="poki-sdk.js"></script>
+  </head>
+  <body>
+    <script>
+      window.pokiGameTracker = 'UA-00000000-0';
+    </script>
+
+    <div id="canvas-container-outer" class="canvas-container-outer">
+      <div id="canvas-container" class="canvas-container">
+        <!-- onclick="void(0)" -->
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" ></canvas>
+        <div id="progress" class="progress">
+          <div id="progress-bar" class="progress-bar" style="width: 0%">0%</div>
+        </div>
+
+ 
+
+   
+  
+        <div id="poki-sdk-container" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+      </div>
+    </div>
+
+
+    <script type='text/javascript'>
+
+      // connect to canvas
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: function() {
+            console.log(Array.prototype.slice.call(arguments).join(" "));
+        },
+        printErr: function() {
+            console.warn(Array.prototype.slice.call(arguments).join(" "));
+        },
+        canvas: document.getElementById('canvas'),
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+          //console.log('Downloading...', (100*(this.totalDependencies-left)/this.totalDependencies) + '%');
+          //console.log(Module);
+          // console.log('monitorRunDependencies', left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+        }
+      }
+
+
+      window.addEventListener("keydown", function(e) {
+        // space and arrow keys
+        if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+      }, false);
+
+      function addEvent(elementId, evnt, funct){
+        var element = document.getElementById(elementId);
+        if (element.attachEvent)
+          return element.attachEvent('on'+evnt, funct);
+        else
+          return element.addEventListener(evnt, funct, false);
+      }
+ 
+
+      function setupCanvasTouchEvents(){
+        var canvas = document.getElementById("canvas");
+        var el = document.getElementById("canvas"); // "touch"
+        function adjustX(x){
+          return x * canvas.width / parseInt(getComputedStyle(el).width, 10);
+        }
+        function adjustY(y){
+          return y * canvas.height / parseInt(getComputedStyle(el).height, 10);
+        }
+
+        el.addEventListener("touchstart", function(evt){
+          evt.preventDefault();
+          var touches = evt.changedTouches;
+          for(var i=0; i<touches.length; i++){
+            var touch = touches[i];
+            //console.log('_pInput_TouchStart', _pInput_TouchStart);
+            _pInput_TouchStart(touch.identifier%10, adjustX(touch.clientX), adjustY(touch.clientY));
+          }
+        }, false);
+        el.addEventListener("touchend", function(evt){
+          evt.preventDefault();
+          var touches = evt.changedTouches;
+          for(var i=0; i<touches.length; i++){
+            var touch = touches[i];
+            _pInput_TouchEnd(touch.identifier%10);
+          }
+        }, false);
+        el.addEventListener("touchmove", function(evt){
+          evt.preventDefault();
+          var touches = evt.changedTouches;
+          for(var i=0; i<touches.length; i++){
+            var touch = touches[i];
+            _pInput_TouchMove(touch.identifier%10, adjustX(touch.clientX), adjustY(touch.clientY));
+          }
+        }, false);
+      }
+
+      var progressBar = document.getElementById("progress-bar");
+      var interval = setInterval(function(){
+        if(Module.dataFileDownloads && Module.dataFileDownloads["game.data"]){
+          var data = Module.dataFileDownloads["game.data"];
+          //console.log(data.loaded, '/', data.total)
+          var percent = Math.round(data.loaded*100 / data.total);
+          progressBar.style.width = percent + '%';
+          progressBar.innerHTML = percent + '%';
+          if (data.loaded >= data.total) {
+            document.getElementById("progress").style.display = "none";
+            document.getElementById("canvas").className += " visible";
+            setupCanvasTouchEvents();
+            clearInterval(interval);
+          }
+        }
+      }, 100);
+
+      /*
+       Resizing behaviour.
+       Note that we don't update the canvas: the rendering engine seems to treat its default dimensions 540x720 as magic numbers,
+       so we'll let the default scaling do its magic.
+       */
+      var resizingCallback = function(e) {
+        var containerOuter = document.getElementById("canvas-container-outer");
+        var container = document.getElementById("canvas-container");
+
+        var newHeight = containerOuter.offsetHeight;
+        var newWidth = newHeight * 0.75;
+        container.style.height = newHeight + "px";
+        container.style.width = newWidth + "px";
+
+        /*
+         var canvas = document.getElementById("canvas");
+         canvas.setAttribute("width", newWidth);
+         canvas.setAttribute("height", newHeight);
+         */
+        // POKI_ADS.resize(newWidth, newHeight);
+      };
+
+      /*
+        Because the Poki SDK will not be initialised the first time the resizing function is called and will not resize,
+        we add a separate resizing that happens the first time an ad is ready.
+       */
+      var resizePokiAdWindowOnReady = true;
+      POKI_DISPATCHER.addEventListener(poki.ready, function() {
+        if (resizePokiAdWindowOnReady === false) return;
+        resizePokiAdWindowOnReady = false;
+        resizingCallback(null);
+      });
+
+      window.addEventListener("resize", resizingCallback);
+      resizingCallback(null);
+
+    </script>
+    <script async type="text/javascript" src="game.js"></script>
+
+</body>
+</html>

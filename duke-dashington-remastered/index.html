@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+
+    <script
+        id="gamebridge-sdk"
+        src="//sdk.enjoy4fun.com/v1/gamebridge-sdk.js"
+        data-ad-frequency="30s"
+        data-gameid="cc2cq5mrsfeq90747ub0">
+    </script>
+
+	<script type="text/javascript" src="./Duke Dashington Remastered.js"></script>
+    <script>
+		// 2s 后再进行钩子挂载
+		setTimeout(() => {
+			window.gamebridge_pause = function () {
+				// setTimeout(() => {
+					if (typeof window.__pause === 'function') {
+						document.querySelector('canvas').focus();
+						console.log('window.__pause', window.__pause);
+						window.__pause();
+					}
+				// })
+			}
+			window.gamebridge_resume = function () {
+				// setTimeout(() => {
+					if (typeof window.__unpause === 'function') {
+						console.log('window.__resume', window.__unpause);
+						window.__unpause();
+					}
+				// })
+			}
+		}, 2000);
+    </script>
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('noncontent', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
+
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+
+		/* use this for normal stretching*/
+        #noncontent { background: #000000; width: 100%; height: 100%; }
+
+        /* or uncomment the following 2 lines for full stretch */
+        /*
+        #noncontent { width: 100%; height:100%; }
+        #noncontent canvas { width: 100% !important; height:100% !important; }
+		*/
+
+	</style>
+
+</head>
+<body>
+
+
+	<div id="noncontent"></div>
+
+	<script type="text/javascript">
+		lime.embed ("Duke Dashington Remastered", "noncontent", 852, 480);
+	</script>
+
+</body>
+</html>

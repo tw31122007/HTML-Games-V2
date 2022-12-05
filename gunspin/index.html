@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Gunspin</title>
+    <link rel="shortcut icon" href="style/favicon.ico">
+    <link rel="stylesheet" href="style/style.css">
+	<script src="UnityLoader.js"></script>
+    <script src="UnityProgress.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "build.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 800px; height: 533px;"></div>
+    </div>
+  </body>
+</html>

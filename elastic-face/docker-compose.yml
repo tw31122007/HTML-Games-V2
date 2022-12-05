@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  carita-web:
+    image: nginx:alpine
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    ports:
+      - "80:80"
+      
+# O simplemente corre esto wachin
+# docker run --name carita -p 80:80 -v /home/{{ tu carpeta }}/projects/carita:/usr/share/nginx/html:ro -d nginx:alpine
