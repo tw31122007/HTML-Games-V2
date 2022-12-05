@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta charset="utf-8"/>
+
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>Tunnelz</title>
+
+<link rel="stylesheet" href="files/game.css" type="text/css" />
+<link rel="shortcut icon" href="files/favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="files/favicon.png"  type="image/png"/>
+<link rel="apple-touch-icon-precomposed" href="files/favicon.png"  type="image/png"/>
+<link rel="apple-touch-startup-image" href="files/favicon.png" type="image/png"/>
+</head>
+
+<body>
+<div id="sg-orient-screen"></div>
+<div id="sg-loading-screen"></div>
+<div id="sg-loading-bar-back"><div id="sg-loading-bar"></div></div>
+<div class="gm4html5_div_class" id="gm4html5_div_id">
+<canvas id="canvas" width="960" height="1280">
+<p>Your browser doesn't support HTML5 canvas.</p>
+</canvas>
+</div>
+<script type="text/javascript">
+splash_w = 960;
+splash_h = 1280;
+bar_img_w = 400;
+bar_img_h = 44;
+bar_img_x = (splash_w-bar_img_w)/2;
+bar_img_y = 1160;
+canvasobj = document.getElementById("canvas");
+loadbarobj = document.getElementById("sg-loading-bar");
+loadbarbackobj = document.getElementById("sg-loading-bar-back");
+orientobj = document.getElementById("sg-orient-screen");
+loadingobj = document.getElementById("sg-loading-screen");
+document.addEventListener("touchmove", function (e) { e.preventDefault(); }, false);
+</script>
+
+<script>
+window["GD_OPTIONS"] = {
+    "gameId": "a18d2cbf4a2e4685afd2a2746d275245",
+    "onEvent": function(event) {
+        switch (event.name) {
+            case "SDK_GAME_START":
+
+
+
+                break;
+            case "SDK_GAME_PAUSE":
+
+
+                break;
+            case "SDK_GDPR_TRACKING":
+                // this event is triggered when your user doesn't want to be tracked
+                break;
+            case "SDK_GDPR_TARGETING":
+                // this event is triggered when your user doesn't want personalised targeting of ads and such
+                break;
+        }
+    },
+};
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'main.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'gamedistribution-jssdk'));
+</script>
+<script type="text/javascript" src="files/TunnelzWeb.js?AJSBC=6728137325"></script>
+<script>window.onload = GameMaker_Init;</script>
+</body>
+</html>

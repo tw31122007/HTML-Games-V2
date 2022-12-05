@@ -1,0 +1,148 @@
+{
+  "listing" : [
+    {
+      "title" : "Super Mario World",
+      "filename" : "world.smc",
+      "thumb" : "super-mario-world.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Earthbound",
+      "filename" : "earthbound.sfc",
+      "thumb" : "earthbound.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Final Fantasy (#1, NES)",
+      "filename" : "finalfantasy.nes",
+      "thumb" : "finalfantasy.webp",
+      "system" : "nes"
+    },
+    {
+      "title" : "The Legend of Zelda - A Link to the Past",
+      "filename" : "linktothepast.smc",
+      "thumb" : "linktothepast.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Super Mario Bros. (the original!)",
+      "filename" : "mario.nes",
+      "thumb" : "mario.jpg",
+      "system" : "nes"
+    },
+    {
+      "title" : "Super Metroid",
+      "filename" : "metroid.sfc",
+      "thumb" : "supermetroid.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Earthbound Zero (Mother 1)",
+      "filename" : "mother.nes",
+      "thumb" : "mother.jpg",
+      "system" : "nes"
+    },
+    {
+      "title" : "Super Mario Kart",
+      "filename" : "smk.smc",
+      "thumb" : "smk.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Super Mario RPG",
+      "filename" : "smrpg.smc",
+      "thumb" : "smrpg.webp",
+      "system" : "snes"
+    },
+    {
+      "title" : "Sonic <i>[gameboy]</i> Advance",
+      "filename" : "sonic-advance.gba",
+      "thumb" : "sonic-advance.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Mario & Luigi - Superstar Saga",
+      "filename" : "superstar-saga.gba",
+      "thumb" : "superstar-saga.jpg",
+      "system" : "gba"
+    },
+    {
+      "title" : "Wario Land 4",
+      "filename" : "warioland4.gba",
+      "thumb" : "warioland4.png",
+      "system" : "gba"
+    },
+    {
+      "title" : "Kirby - Superstar",
+      "filename" : "kirbo.smc",
+      "thumb" : "kirbo.jpg",
+      "system" : "snes"
+    },
+    {
+      "title" : "Mother 3 (no crying until the end)",
+      "filename" : "mother3.zip",
+      "thumb" : "mother3.png",
+      "system" : "gba"
+    },
+    {
+      "title" : "Super Mario 64",
+      "filename" : "sm64.z64",
+      "thumb" : "sm64.jpg",
+      "system" : "n64"
+    },
+    {
+      "title" : "Paper Mario 64",
+      "filename" : "pm64.zip",
+      "thumb" : "pm64.jpg",
+      "system" : "n64"
+    },
+    {
+      "title" : "Mario Kart 64",
+      "filename" : "mk64.z64",
+      "thumb" : "mk64.jpg",
+      "system" : "n64"
+    },
+    {
+      "title" : "Mario Kart DS",
+      "filename" : "mkds.zip",
+      "thumb" : "mkds.jpg",
+      "system" : "ds"
+    },
+    {
+      "title" : "New Super Mario Bros.",
+      "filename" : "nsmb.zip",
+      "thumb" : "nsmb.jpg",
+      "system" : "ds"
+    },
+    {
+      "title" : "The Legend of Zelda - Link's Awakening",
+      "filename" : "LinksAwakeningDX.gbc",
+      "thumb" : "linksawakeningdx.jpg",
+      "system" : "gbc"
+    },
+    {
+      "title" : "The Legend of Zelda - The Minish Cap",
+      "filename" : "minish-cap.gba",
+      "thumb" : "minish-cap.jpg",
+      "system" : "gba"
+    },
+    {
+      "title" : "Pokemon Sapphire",
+      "filename" : "pokemon-sapphire.gba",
+      "thumb" : "pokemon-sapphire.jpg",
+      "system" : "gba"
+    },
+    {
+      "title" : "Crash Bandicoot - The Huge Adventure",
+      "filename" : "CrashBandicootTheHugeAdventure.gba",
+      "thumb" : "crashbandicootthehugeadventure.png",
+      "system" : "gba"
+    },
+    {
+      "title" : "Upload your own ROM!",
+      "filename" : "",
+      "thumb" : "richard.gif",
+      "system" : "n/a"
+    }
+  ]
+}

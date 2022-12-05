@@ -1,0 +1,92 @@
+{
+	"audio": [
+		{
+			"id": "music",
+			"urls": [
+				"assets/snd/music.ogg",
+				"assets/snd/music.m4a"
+			]
+		},
+		{
+			"id": "click",
+			"urls": [
+				"assets/snd/click.ogg",
+				"assets/snd/click.m4a"
+			]
+		}
+	],
+	"json": [
+		{
+			"id": "config",
+			"url": "data/config.json"
+		},
+		{
+			"id": "preload_game",
+			"url": "data/preload_game.json"
+		}
+	],
+	"text": [
+		{
+			"id": "tpl_menu",
+			"url": "tpl/menu.tpl"
+		},
+		{
+			"id": "tpl_game",
+			"url": "tpl/game.tpl"
+		},
+		{
+			"id": "tpl_highscore",
+			"url": "tpl/highscore.tpl"
+		},
+		{
+			"id": "tpl_instructions",
+			"url": "tpl/instructions.tpl"
+		},
+		{
+			"id": "tpl_gameOver",
+			"url": "tpl/gameOver.tpl"
+		},
+		{
+			"id": "tpl_levelSelect",
+			"url": "tpl/levelSelect.tpl"
+		},
+		{
+			"id": "tpl_inbetween",
+			"url": "tpl/inbetween.tpl"
+		},
+		{
+			"id": "tpl_credits",
+			"url": "tpl/credits.tpl"
+		}
+	],
+	"threeTexture": [
+		{
+			"id": "cssBg_00",
+			"url": "assets/img/bg/background.jpg"
+		},
+		{
+			"id": "cssBg_01",
+			"url": "assets/img/bg/background_01.jpg"
+		},
+		{
+			"id": "cssImg_01",
+			"url": "assets/img/labels.png"
+		},
+		{
+			"id": "cssImg_02",
+			"url": "assets/img/instructions.png"
+		},
+		{
+			"id": "cssImg_03",
+			"url": "assets/img/joystickBG.png"
+		},
+		{
+			"id": "cssImg_04",
+			"url": "assets/img/joystickRed.png"
+		},
+		{
+			"id": "cssImg_05",
+			"url": "assets/img/buttons.png"
+		}
+	]
+}

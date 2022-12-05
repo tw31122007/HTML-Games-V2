@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--start screen for current Interact-->
+<game>
+
+	<objectives>
+		<phase>
+			<obj>
+				<title>Survivor</title>
+				<desciption>Survive for 2 minutess</desciption>
+				<value>120</value>
+			</obj>
+			<obj>
+				<title>Get Fat</title>
+				<desciption>Gain a wright of 100 grams</desciption>
+				<value>100</value>
+			</obj>
+
+			<obj>
+				<title>Worm of the Match</title>
+				<desciption>Kill 10 worms in a single match</desciption>
+				<value>10</value>
+			</obj>
+			<obj>
+				<title>Progressor</title>
+				<desciption>Reach 10th level</desciption>
+				<value>10</value>
+			</obj>
+		</phase>
+
+		<phase>
+			
+			<obj>
+				<title>Giant Hunter</title>
+				<desciption>Kill 20 giant worms</desciption>
+				<value>20</value>
+			</obj>
+
+			<obj>
+				<title>Flash Worm</title>
+				<desciption>Collect 15 flash powerups</desciption>
+				<value>15</value>
+			</obj>
+
+			<obj>
+				<title>Freeze Lover</title>
+				<desciption>Collect 20 freeze power ups</desciption>
+				<value>20</value>
+			</obj>
+
+			<obj>
+				<title>Promoter</title>
+				<desciption>Reach 20th level</desciption>
+				<value>20</value>
+			</obj>
+		</phase>
+
+		<phase>
+			<obj>
+				<title>Survival Master</title>
+				<desciption>Survive for 10 minutess</desciption>
+				<value>600</value>
+			</obj>
+			<obj>
+				<title>Protection Seeker</title>
+				<desciption>Collect 25 shields</desciption>
+				<value>25</value>
+			</obj>
+			<obj>
+				<title>Magnetio</title>
+				<desciption>Collect 30 magnets</desciption>
+				<value>30</value>
+			</obj>
+
+			<obj>
+				<title>Advancer</title>
+				<desciption>Reach 30th level</desciption>
+				<value>30</value>
+			</obj>
+		</phase>
+	</objectives>
+
+</game>

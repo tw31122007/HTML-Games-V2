@@ -1,0 +1,804 @@
+@color1: #2A363B;
+@color2: #E84A5F;
+@color3: #9BDF46;
+@color4: #E9F679;
+@colorShadow: rgba(50, 50, 50, .5);
+
+#ui {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    
+    
+    
+    &.gameOver {
+        > .gameOver {
+            transform: scale(1, 1);
+            opacity: 1;
+            visibility: visible;
+        }
+        > .share {
+            bottom: 48px;
+            visibility: visible;
+        }
+        > .score {
+            left: -320px;
+            visibility: hidden;
+        }
+        > .speed {
+            left: -320px;
+            visibility: hidden;
+        }
+        > .button.restart {
+            bottom: 48px;
+            visibility: visible;
+        }
+        > .poweredBy {
+            display: block;
+        }
+    }
+    
+    > .powered {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: #283538;
+        opacity: 1;
+        transition: opacity 200ms;
+        
+        &.hidden {
+            opacity: 0;
+        }
+        > .middle {
+            position: absolute;
+            top: ~"calc(50% - 210px)";
+            left: ~"calc(50% - 120px)";
+            width: 240px;
+            
+            > .logo {
+                display: block;
+                width: 240px;
+            }
+            > .playcanvas {
+                display: block;
+                width: 240px;
+                margin-top: 32px;
+            }
+        }
+    }
+    
+    > .introduce {
+        pointer-events: none;
+        width: 228px;
+        height: 80px;
+        position: absolute;
+        top: ~"calc(70% - 40px)";
+        left: ~"calc(50% - 114px)";
+        opacity: 0;
+        visibility: visible;
+        transition: opacity 200ms, visibility 200ms;
+        
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        > .shadow {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            width: auto;
+            height: 80px;
+
+            > .left {
+                position: absolute;
+                left: 0;
+                height: 0;
+                bottom: 0;
+                border-bottom: 4px solid @colorShadow;
+                border-left: 1px solid transparent;
+            }
+            > .text {
+                position: absolute;
+                left: 1px;
+                right: 24px;
+                bottom: 0;
+                width: auto;
+                height: 4px;
+                background-color: @colorShadow;
+            }
+            > .right {
+                position: absolute;
+                right: 0;
+                height: 0;
+                border-top: 80px solid @colorShadow;
+                border-left: 4px solid @colorShadow;
+                border-right: 20px solid transparent;
+            }
+        }
+        > .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            border-bottom: 80px solid @color3;
+            border-left: 20px solid transparent;
+        }
+        > .text {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 180px;
+            padding: 12px 0;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: @color1;
+            background-color: @color3;
+        }
+        > .right {
+            position: absolute;
+            top: 0;
+            left: 200px;
+            height: 0;
+            border-top: 80px solid @color3;
+            border-right: 20px solid transparent;
+        }
+    }
+    
+    > .mute {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background-image: url("{asset[4233255].file.url}");
+        background-repeat: no-repeat;
+        cursor: pointer;
+        
+        &.active {
+            background-position: -34px 0;
+        }
+    }
+    
+    > .score {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        transition: left 200ms, visibility 200ms;
+        
+        > .shadow {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: -4px;
+            height: 72px;
+
+            > .text {
+                position: absolute;
+                left: -4px;
+                right: 22px;
+                bottom: 0;
+                width: auto;
+                height: 4px;
+                background-color: @colorShadow;
+            }
+            > .right {
+                position: absolute;
+                right: 0;
+                height: 0;
+                border-left: 4px solid @colorShadow;
+                border-top: 72px solid @colorShadow;
+                border-right: 18px solid transparent;
+            }
+        }
+        > .left {
+            position: relative;
+            display: block;
+            min-width: 160px;
+            padding-left: 16px;
+            margin-right: 18px;
+            line-height: 72px;
+            background-color: @color2;
+            font-size: 48px;
+            font-weight: bold;
+            font-style: italic;
+            color: #fff;
+        }
+        > .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 0;
+            border-top: 72px solid @color2;
+            border-right: 18px solid transparent;
+        }
+    }
+    
+    > .speed {
+        position: absolute;
+        top: 80px;
+        color: @color1;
+        font-weight: bold;
+        font-style: italic;
+        transition: left 200ms, visibility 200ms;
+        
+        > .shadow {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: -4px;
+            height: 32px;
+
+            > .text {
+                position: absolute;
+                left: -4px;
+                right: 12px;
+                bottom: 0;
+                width: auto;
+                height: 4px;
+                background-color: @colorShadow;
+            }
+            > .right {
+                position: absolute;
+                right: 0;
+                height: 0;
+                border-top: 32px solid @colorShadow;
+                border-left: 4px solid @colorShadow;
+                border-right: 8px solid transparent;
+            }
+        }
+        > .left {
+            position: relative;
+            display: block;
+            padding: 0 16px 0 16px;
+            margin-right: 8px;
+            line-height: 32px;
+            background-color: @color3;
+            font-size: 16px;
+        }
+        > .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 0;
+            border-top: 32px solid @color3;
+            border-right: 8px solid transparent;
+        }
+    }
+    
+    > .poweredBy {
+        display: none;
+        position: absolute;
+        top: 16px;
+        left: ~"calc(50% - 93px)";
+    }
+    
+    > .gameOver {
+        position: absolute;
+        top: ~"calc(50% - 76px)";
+        left: ~"calc(50% - 160px)";
+        transform: scale(0, 0);
+        width: 320px;
+        height: 152px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms, transform 200ms, visibility 200ms;
+        
+        > .title {
+            position: absolute;
+            top: 0;
+            left: ~"calc(50% - 102px)";
+            width: 204px;
+            height: 48px;
+            
+            > .shadow {
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                right: -4px;
+                width: auto;
+                height: 48px;
+                
+                > .left {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 0;
+                    border-bottom: 4px solid @colorShadow;
+                    border-left: 1px solid transparent;
+                }
+                > .text {
+                    position: absolute;
+                    bottom: 0;
+                    left: 1px;
+                    right: 16px;
+                    width: auto;
+                    height: 4px;
+                    background-color: @colorShadow;
+                }
+                > .right {
+                    position: absolute;
+                    right: 0;
+                    height: 0;
+                    border-top: 48px solid @colorShadow;
+                    border-left: 4px solid @colorShadow;
+                    border-right: 12px solid transparent;
+                }
+            }
+            > .left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0;
+                border-bottom: 48px solid @color4;
+                border-left: 12px solid transparent;
+                z-index: 1;
+            }
+            > .text {
+                position: absolute;
+                top: 0;
+                left: 12px;
+                right: 12px;
+                width: auto;
+                line-height: 48px;
+                background-color: @color4;
+                font-size: 32px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+                color: @color1;
+                text-transform: uppercase;
+            }
+            > .right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 0;
+                border-top: 48px solid @color4;
+                border-right: 12px solid transparent;
+            }
+        }
+        > .score {
+            position: absolute;
+            top: 48px - 12px;
+            left: ~"calc(50% - 152px)";
+            width: 304px;
+            height: 100px;
+            
+            > .shadow {
+                position: absolute;
+                top: 4px;
+                bottom: 0;
+                left: 4px;
+                right: -4px;
+                width: auto;
+                height: auto;
+                
+                > .left {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 0;
+                    border-bottom: 4px solid @colorShadow;
+                    border-left: 1px solid transparent;
+                }
+                > .text {
+                    position: absolute;
+                    bottom: 0;
+                    left: 1px;
+                    right: 28px;
+                    width: auto;
+                    height: 4px;
+                    background-color: @colorShadow;
+                }
+                > .right {
+                    position: absolute;
+                    right: 0;
+                    height: 0;
+                    border-top: 96px solid @colorShadow;
+                    border-left: 4px solid @colorShadow;
+                    border-right: 24px solid transparent;
+                }
+            }
+            > .left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0;
+                border-bottom: 96px solid @color2;
+                border-left: 24px solid transparent;
+            }
+            > .text {
+                position: absolute;
+                top: 0;
+                left: 24px;
+                right: 24px;
+                width: auto;
+                line-height: 96px;
+                background-color: @color2;
+                font-size: 48px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            > .right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 0;
+                border-top: 96px solid @color2;
+                border-right: 24px solid transparent;
+            }
+        }
+        > .speed {
+            position: absolute;
+            top: 132px - 12px;
+            left: ~"calc(50% - 72px)";
+            width: 144px;
+            height: 32px;
+            
+            > .shadow {
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                right: -4px;
+                width: auto;
+                height: 32px;
+                
+                > .left {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 0;
+                    border-bottom: 4px solid @colorShadow;
+                    border-left: 1px solid transparent;
+                }
+                > .text {
+                    position: absolute;
+                    bottom: 0;
+                    left: 1px;
+                    right: 12px;
+                    width: auto;
+                    height: 4px;
+                    background-color: @colorShadow;
+                }
+                > .right {
+                    position: absolute;
+                    right: 0;
+                    height: 0;
+                    border-top: 32px solid @colorShadow;
+                    border-left: 4px solid @colorShadow;
+                    border-right: 8px solid transparent;
+                }
+            }
+            > .left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0;
+                border-bottom: 32px solid @color3;
+                border-left: 8px solid transparent;
+            }
+            > .text {
+                position: absolute;
+                top: 0;
+                left: 8px;
+                width: 128px;
+                line-height: 32px;
+                color: @color1;
+                background-color: @color3;
+                font-size: 16px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+            }
+            > .right {
+                position: absolute;
+                top: 0;
+                left: 136px;
+                height: 0;
+                border-top: 32px solid @color3;
+                border-right: 8px solid transparent;
+            }
+        }
+    }
+    
+    > .share {
+        position: absolute;
+/*         left: ~"calc(50% - 76px)"; */
+        left: ~"calc(50% - 119px)";
+        bottom: -48px;
+        height: 48px;
+        visibility: hidden;
+        transition: bottom 200ms, visibility 200ms;
+            
+        > .twitter,
+        > .facebook {
+            float: left;
+            
+            > .body {
+                > .middle {
+                    width: 48px;
+                    background-image: url("{asset[4283340].file.url}");
+                    background-repeat: no-repeat;
+                    background-size: 196px / 2 196px / 2;
+                }
+            }
+        }
+        > .twitter {
+/*             margin-right: 8px; */
+            
+            &:hover {
+                > .body > .middle {
+                    background-position: 0 -50px
+                }
+            }
+        }
+        > .facebook {
+            display: none;
+            
+            &:hover {
+                > .body > .middle {
+                    background-position: -50px -50px
+                }
+            }
+            > .body > .middle {
+                background-position: -50px 0;
+            }
+        }
+    }
+    
+    > .button.restart {
+        position: absolute;
+        bottom: -48px;
+        left: ~"calc(50% - 43px)";
+        width: 160px;
+        height: 48px;
+        visibility: hidden;
+        transition: bottom 200ms, visibility 200ms;
+        
+        > .body {
+            > .middle {
+                font-size: 24px;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+                line-height: 48px;
+                text-transform: uppercase;
+                width: 136px;
+            }
+        }
+    }
+    
+    .button {
+        position: relative;
+        height: 48px;
+        cursor: pointer;
+        
+        &:hover {
+            > .body {
+                > .middle {
+                    color: #fff;
+                }
+            }
+        }
+        > .shadow {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: -4px;
+            width: auto;
+            height: 48px;
+
+            > .left {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0;
+                border-bottom: 4px solid @colorShadow;
+                border-left: 1px solid transparent;
+            }
+            > .middle {
+                position: absolute;
+                bottom: 0;
+                left: 1px;
+                right: 16px;
+                width: auto;
+                height: 4px;
+                background-color: @colorShadow;
+            }
+            > .right {
+                position: absolute;
+                right: 0;
+                height: 0;
+                border-top: 48px solid @colorShadow;
+                border-left: 4px solid @colorShadow;
+                border-right: 12px solid transparent;
+            }
+        }
+        > .body {
+            display: block;
+            position: relative;
+            
+            > .left {
+                float: left;
+                height: 0;
+                border-bottom: 48px solid @color3;
+                border-left: 12px solid transparent;
+            }
+            > .middle {
+                float: left;
+                height: 48px;
+                line-height: 48px;
+                color: @color1;
+                background-color: @color3;
+                width: 136px;
+            }
+            > .right {
+                float: left;
+                height: 0;
+                border-top: 48px solid @color3;
+                border-right: 12px solid transparent;
+            }
+        }
+    }
+    
+    > .path {
+        position: absolute;
+        left: ~"calc(50% - 160px)";
+        bottom: 16px;
+        width: 320px;
+        height: auto;
+        height: 10px;
+        
+        > .checkpoints {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            > .checkpoint {
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: @color1;
+                flex-shrink: 0;
+                
+                &.active {
+                    background-color: @color3;
+                }
+            }
+        }
+        > .line {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            top: 4px;
+            bottom: 4px;
+            width: auto;
+            height: auto;
+            background-color: @color1;
+            
+            > .bar {
+                height: 2px;
+                width: 0%;
+                background-color: @color3;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    #ui {
+        > .path {
+            left: 16px;
+            right: 16px;
+            width: auto;
+        }
+    }
+}
+
+@media (max-height: 480px) {
+    #ui {
+        > .powered {
+            > .middle {
+                top: ~"calc(50% - 117px)";
+                
+                > .logo {
+                    width: 120px;
+                    margin: 0 auto;
+                }
+                > .playcanvas {
+                    margin-top: 16px;
+                }
+            }
+        }
+        > .poweredBy {
+            left: 16px;
+        }
+        > .gameOver {
+            top: 16px;
+            
+            > .title {
+                left: ~"calc(50% - 80px)";
+                width: 160px;
+                    
+                > .left {
+                    border-bottom-width: 48px;
+                    border-left-width: 12px;
+                }
+                > .text {
+                    line-height: 48px;
+                    font-size: 24px;
+                }
+                > .right {
+                    border-top-width: 48px;
+                    border-right-width: 12px;
+                }
+            }
+            > .score {
+                top: 48px - 8px;
+                width: 288px;
+                height: 68px;
+                left: ~"calc(50% - 144px)";
+                
+                > .shadow {
+                    > .text {
+                        right: 20px;
+                    }
+                    > .right {
+                        border-top-width: 64px;
+                        border-right-width: 16px;
+                    }
+                }
+                > .left {
+                    border-bottom-width: 64px;
+                    border-left-width: 16px;
+                }
+                > .text {
+                    line-height: 64px;
+                    font-size: 32px;
+                    left: 16px;
+                    right: 16px;
+                }
+                > .right {
+                    border-top-width: 64px;
+                    border-right-width: 16px;
+                }
+            }
+            > .speed {
+                top: 104px - 8px;
+            }
+        }
+    }
+}
+
+@media (min-height: 736px) {
+    #ui {
+        > .gameOver {
+            top: 20%;
+        }
+    }
+}

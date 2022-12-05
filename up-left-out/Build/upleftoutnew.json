@@ -1,0 +1,13 @@
+{
+"companyName": "Rainbow Train",
+"productName": "Up Left Out",
+"dataUrl": "upleftoutnew.data.unityweb",
+"asmCodeUrl": "upleftoutnew.asm.code.unityweb",
+"asmMemoryUrl": "upleftoutnew.asm.memory.unityweb",
+"asmFrameworkUrl": "upleftoutnew.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000"
+}

@@ -1,0 +1,17 @@
+{
+"companyName": "Rarykos",
+"productName": "WinterFalling",
+"productVersion": "1",
+"dataUrl": "winterfalling_prifeoflife_4.data.unityweb",
+"wasmCodeUrl": "winterfalling_prifeoflife_4.wasm.code.unityweb",
+"wasmFrameworkUrl": "winterfalling_prifeoflife_4.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "winterfalling_prifeoflife_4.jpg",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.0f1"
+}

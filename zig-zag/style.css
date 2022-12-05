@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'Roboto Thin';
+  font-style: normal;
+  font-weight: 400;
+  src: url(Roboto-Thin.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Roboto Thin Italic';
+  font-weight: 100;
+  src: url(Roboto-Thin-Italic.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+	overflow: hidden;
+}
+
+body, canvas {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+#help {
+	font-family: 'Roboto Thin Italic';
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.portrait #help {
+	font-size: 2.1vh;	
+	padding: 0 2.5vh;
+	bottom: 1.65vh;
+}
+
+.landscape #help {
+	font-size: 2.1vw;		
+	padding: 0 2.5vw;
+	bottom: 1.65vw;
+}
+
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#title {
+	position: absolute;
+	top: 50vh;
+	margin-top: -20.6vw;
+	font-family: 'Roboto Thin';
+	margin-left: -2vw;
+	font-size: 30.6vw;
+	
+	font-size: 15vw;
+	letter-spacing: 0.5em;
+	margin-left: 5.7vw;
+	top: 2.1vw;
+	margin-top: 0;
+}
+
+#title span {
+	position: relative;
+}
+
+#time {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-top: -0.65em;
+	font-family: 'Roboto Thin Italic';
+	white-space: nowrap;
+	display: none;
+}
+
+.portrait #time {
+	top: 5.9vh;
+	font-size: 7vh;	
+}
+
+.landscape #time {
+	top: 5.9vw;
+	font-size: 7vw;	
+}
+
+#time2 {
+	margin-left: 0.6em;
+	position: relative;
+	bottom: 0.45em;
+}
+
+.portrait #time2 {
+	font-size: 3vh;	
+}
+
+.landscape #time2 {
+	font-size: 3vw;
+}

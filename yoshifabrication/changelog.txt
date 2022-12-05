@@ -1,0 +1,16 @@
+[color=#000000]s3.7.2 Changelog
+
+Further bug fixes & improvements
+
+s3.7.1 Changelog
+
+Hotfix for previous update: fixed issues with egg chains involving slopes being broken. There's also a bunch of other bugfixes, and some quality of life features. Notable examples are that there's now a download button when viewing a level's code, you can place already cracked Rock Blocks, and the UI & UX have been changed a little based on community feedback. Oh, and deadly spike platforms are now in - double-click existing spike platforms to get them!
+
+s3.7 Changelog
+
+Woo, it's been a moment, but it's update time! This update adds Flutters, Snifits, Rock Blocks, Breakout Blocks, Spinning spiky platforms, a new castle palette, a new night gradient, silent music option for levels, overgrown cave background, and several, and I mean lots of UI tweaks & bug fixes!
+
+Spikes have also been overhauled. They're now tiles, not objects: this allows them to be extendable and layerable. Old spike objects exist for backwards compatibility, but are no longer in the editor.
+Find the new spike tiles in the castle tileset!
+
+Lastly, there's custom music - you can add any music to your song with the use of webm, ogg, or mp3 files hosted on the web. Enjoy![/color]

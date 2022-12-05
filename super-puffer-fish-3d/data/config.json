@@ -1,0 +1,19 @@
+{
+	"version": "0.0.49",
+	"instructions": [
+		{
+			"class": {
+				"desktop": "step-00-desktop",
+				"mobile": "step-00-mobile"
+			},
+			"text": {
+				"desktop": "You can move around with the arrow keys",
+				"mobile": "You can move with the joystick"
+			}
+		},
+		{
+			"class": "step-02",
+			"text": "Save all fishes. Be as fast as possible and try to collect all the coins to get a higher score!"
+		}
+	]
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Superhero IO</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="" />
+  <meta name="x5-orientation" content="">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.f3671.css" />
+  <!-- <script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script> -->
+  <script src="./src/PlatformAPI_browserify.js"></script>
+  <script src="sdk.js?1"></script>
+</head>
+
+<body>
+  <script>
+    console.log = ()=>{}
+    console.error = ()=>{}
+    console.warn = ()=>{}
+    PlatformAPI.init(1);
+    window['FBInstant'].initializeAsync().then(function () {
+      let i = 0
+      window.fakeloadingInterval = setInterval(() => {
+        if (i < 96 && Math.random() < 0.05) {
+          i++;
+          FBInstant.setLoadingProgress(i);
+        }
+      }, 50);
+    }).catch(function (t) {
+      console.error(t);
+    });
+    window.loadSrc = (src) => {
+      var loadNode = document.createElement('script');
+      loadNode.async = false;
+      loadNode.src = src
+      document.body.appendChild(loadNode);
+    }
+  </script>
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <script src="src/settings.d163fedf.js" charset="utf-8"></script>
+
+  <script src="main.64e55.js" charset="utf-8"></script>
+</body>
+
+</html>

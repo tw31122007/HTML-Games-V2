@@ -1,0 +1,80 @@
+<div class='powered' bind='powered'>
+    <div class='middle'>
+        <img class='logo' src='{asset[4239019].file.url}' />
+        <img class='playcanvas' src='{asset[4232076].file.url}' />
+    </div>
+</div>
+
+<div class='introduce' bind='introduce'>
+    <span class='shadow'><span class='left'></span><span class='text'></span><span class='right'></span></span>
+    <span class='left'></span>
+    <span class='text'>Tap Anywhere<br />To Turn</span>
+    <span class='right'></span>
+</div>
+
+<div class='score'>
+    <span class='shadow'><span class='text'></span><span class='right'></span></span>
+    <span class='left' bind='score'>0</span><span class='right'></span>
+</div>
+<div class='speed'>
+    <span class='shadow'><span class='text'></span><span class='right'></span></span>
+    <span class='left'><span bind='speed'>50</span><span class='middle'> km/h</span></span><span class='right'></span>
+</div>
+
+<img class='poweredBy' src='{asset[4239057].file.url}' />
+
+<div class='gameOver'>
+    <div class='score'>
+        <span class='shadow'><span class='left'></span><span class='text'></span><span class='right'></span></span>
+        <span class='left'></span><span class='text' bind='game-over.score'>0</span><span class='right'></span>
+    </div>
+    <div class='title'>
+        <span class='shadow'><span class='left'></span><span class='text'></span><span class='right'></span></span>
+        <span class='left'></span><span class='text'>Wasted!</span><span class='right'></span>
+    </div>
+    <div class='speed'>
+        <span class='shadow'><span class='left'></span><span class='text'></span><span class='right'></span></span>
+        <span class='left'></span><span class='text'><span bind='game-over.speed'>50</span><span class='middle'> km/h</span></span><span class='right'></span>
+    </div>
+</div>
+
+<div class='share'>
+    <a class='button twitter' bind='shareTwitter' target='_blank'>
+        <span class='shadow'><span class='left'></span><span class='middle'></span><span class='right'></span></span>
+        <span class='body'><span class='left'></span><span class='middle'></span><span class='right'></span></span>
+    </a>
+    <a class='button facebook' bind='shareFacebook' target='_blank'>
+        <span class='shadow'><span class='left'></span><span class='middle'></span><span class='right'></span></span>
+        <span class='body'><span class='left'></span><span class='middle'></span><span class='right'></span>
+    </a>
+</div>
+
+<div class='restart button' bind='restart'>
+    <span class='shadow'><span class='left'></span><span class='middle'></span><span class='right'></span></span>
+    <span class='body'>
+        <span class='left'></span>
+        <span class='middle'>Restart</span>
+        <span class='right'></span>
+    </span>
+</div>
+
+<div class='mute' bind='mute'></div>
+
+<div class='path'>
+    <div class='line'>
+        <div class='bar' bind='path'></div>
+    </div>
+    <div class='checkpoints' bind='checkpoints'>
+        <div class='checkpoint active'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+        <div class='checkpoint'></div>
+    </div>
+</div>

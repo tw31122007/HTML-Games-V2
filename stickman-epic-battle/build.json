@@ -1,0 +1,16 @@
+{
+"companyName": "Hihoy",
+"productName": "Stickman Epic Battle",
+"productVersion": "1.0.7",
+"dataUrl": "Stickman_Epic_Battle.data.unityweb",
+"wasmCodeUrl": "Stickman_Epic_Battle.wasm.code.unityweb",
+"wasmFrameworkUrl": "Stickman_Epic_Battle.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.16f1"
+}

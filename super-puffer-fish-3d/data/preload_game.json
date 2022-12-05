@@ -1,0 +1,277 @@
+{
+  	"audio": [
+		{
+			"id": "ball_collision",
+			"urls": [
+				"assets/snd/ball_collision.ogg",
+				"assets/snd/ball_collision.m4a"
+			]
+		},
+		{
+			"id": "ball_roll",
+			"urls": [
+				"assets/snd/ball_roll.ogg",
+				"assets/snd/ball_roll.m4a"
+			]
+		},
+		{
+			"id": "ball_bounce",
+			"urls": [
+				"assets/snd/ball_bounce.ogg",
+				"assets/snd/ball_bounce.m4a"
+			]
+		},
+		{
+		  "id": "bumper",
+		  "urls": [
+			"assets/snd/bumper.ogg",
+			"assets/snd/bumper.m4a"
+		  ]
+		},
+		{
+		  "id": "character_scream",
+		  "urls": [
+			"assets/snd/character_scream.ogg",
+			"assets/snd/character_scream.m4a"
+		  ]
+		},
+		{
+		  "id": "character_start",
+		  "urls": [
+			"assets/snd/character_start.ogg",
+			"assets/snd/character_start.m4a"
+		  ]
+		},
+		{
+		  "id": "character_victory",
+		  "urls": [
+			"assets/snd/character_victory.ogg",
+			"assets/snd/character_victory.m4a"
+		  ]
+		},
+		{
+			"id": "win_3_stars",
+			"urls": [
+			  "assets/snd/Win3Stars.ogg",
+			  "assets/snd/Win3Stars.m4a"
+			]
+		},
+		{
+		  "id": "character_tumble_enter",
+		  "urls": [
+			"assets/snd/character_tumble_enter.ogg",
+			"assets/snd/character_tumble_enter.m4a"
+		  ]
+		},
+		{
+		  "id": "character_collision",
+		  "urls": [
+			"assets/snd/character_collision.ogg",
+			"assets/snd/character_collision.m4a"
+		  ]
+		},
+		{
+		  "id": "pickup",
+		  "urls": [
+			"assets/snd/pickup.ogg",
+			"assets/snd/pickup.m4a"
+		  ]
+		}
+	],
+  	"json": [
+		{
+		  "id": "track_01",
+		  "url": "assets/tracks/track_01.json"
+		},
+		{
+		  "id": "track_02",
+		  "url": "assets/tracks/track_02.json"
+		},
+		{
+		  "id": "track_03",
+		  "url": "assets/tracks/track_03.json"
+		},
+		{
+		  "id": "track_04",
+		  "url": "assets/tracks/track_04.json"
+		},
+		{
+		  "id": "track_05",
+		  "url": "assets/tracks/track_05.json"
+		},
+		{
+		  "id": "track_06",
+		  "url": "assets/tracks/track_06.json"
+		},
+		{
+		  "id": "track_07",
+		  "url": "assets/tracks/track_07.json"
+		},
+		{
+		  "id": "track_08",
+		  "url": "assets/tracks/track_08.json"
+		},
+		{
+		  "id": "track_09",
+		  "url": "assets/tracks/track_09.json"
+		},
+		{
+		  "id": "track_10",
+		  "url": "assets/tracks/track_10.json"
+		},
+		{
+		  "id": "track_11",
+		  "url": "assets/tracks/track_11.json"
+		},
+		{
+		  "id": "track_12",
+		  "url": "assets/tracks/track_12.json"
+		},
+		{
+		  "id": "track_13",
+		  "url": "assets/tracks/track_13.json"
+		},
+		{
+		  "id": "track_14",
+		  "url": "assets/tracks/track_14.json"
+		},
+		{
+		  "id": "track_15",
+		  "url": "assets/tracks/track_15.json"
+		},
+		{
+		  "id": "track_16",
+		  "url": "assets/tracks/track_16.json"
+		},
+		{
+		  "id": "track_17",
+		  "url": "assets/tracks/track_17.json"
+		},
+		{
+		  "id": "track_18",
+		  "url": "assets/tracks/track_18.json"
+		},
+		{
+		  "id": "track_19",
+		  "url": "assets/tracks/track_19.json"
+		},
+		{
+		  "id": "track_20",
+		  "url": "assets/tracks/track_20.json"
+		},
+		{
+			"id": "fx_firework",
+			"url": "assets/fx/firework.json"
+		},
+		{
+			"id": "fx_spark",
+			"url": "assets/fx/spark.json"
+		},
+		{
+		  "id": "fx_glitter_trail",
+		  "url": "assets/fx/glitter_trail.json"
+		},
+		{
+			"id": "fx_goal_splash",
+			"url": "assets/fx/goal_splash.json"
+		},
+		{
+			"id": "fx_ocean_splash",
+			"url": "assets/fx/ocean_splash.json"
+		},
+		{
+			"id": "fx_torch",
+			"url": "assets/fx/torch.json"
+		},
+		{
+			"id": "layouts_phy",
+			"url": "assets/physics/layouts.phy"
+		}
+	],
+	"threeJson": [
+		{
+			"id": "char_01",
+			"url": "assets/model/char_01.json"
+		},
+		{
+			"id": "char_goal",
+			"url": "assets/model/char_goal.json"
+		}
+	],
+	"threeObject": [
+	  {
+		"id": "env_atlas_01",
+		"url": "assets/model/atlas_assets.json"
+	  }
+	],
+	"threeTexture": [
+		{
+		  "id": "env_atlas_01",
+		  "url": "assets/model/atlas_assets_texture.png"
+		},
+		{
+			"id": "char_01",
+			"url": "assets/model/char_01_tex.png"
+		},
+		{
+			"id": "char_goal_tex",
+			"url": "assets/model/char_goal_tex.png"
+		},
+		{
+			"id": "water_01",
+			"url": "assets/model/water_01.png"
+		},
+		{
+			"id": "ripples",
+			"url": "assets/model/ripples.png"
+		},
+		{
+		  "id": "particle_tex_glitter",
+		  "url": "assets/fx/particle_tex_glitter.png"
+		},
+		{
+			"id": "particle_tex_spark",
+			"url": "assets/fx/particle_tex_spark.png"
+		},
+		{
+			"id": "particle_tex_firework",
+			"url": "assets/fx/particle_tex_firework.png"
+		},
+		{
+		  "id": "particle_tex_smoke",
+		  "url": "assets/fx/particle_tex_smoke.png"
+		},
+		{
+		  "id": "fade_center",
+		  "url": "assets/model/fade/center.png"
+		},
+		{
+			"id": "sky_01_xp",
+			"url": "assets/model/skybox_01/px.png"
+		},
+		{
+			"id": "sky_01_xn",
+			"url": "assets/model/skybox_01/nx.png"
+		},
+		{
+			"id": "sky_01_yp",
+			"url": "assets/model/skybox_01/py.png"
+		},
+		{
+			"id": "sky_01_yn",
+			"url": "assets/model/skybox_01/ny.png"
+		},
+		{
+			"id": "sky_01_zp",
+			"url": "assets/model/skybox_01/pz.png"
+		},
+		{
+			"id": "sky_01_zn",
+			"url": "assets/model/skybox_01/nz.png"
+		},
+		{
+			"id": "fogmap_01",
+			"url": "assets/model/fogmap_01.png"
+		}
+	]
+}

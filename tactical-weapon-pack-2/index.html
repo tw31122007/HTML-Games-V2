@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tactical Weapon Pack 2 | 3kh0</title>
+    <!-- Fonts -->
+    <link rel="icon" href="index.png">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" />
+    <!-- Libraries -->
+    <script src="lib/phaser.min.js"></script>
+    <script src="lib/box2d/box2d-plugin-full.min.js"></script>
+    <!-- API files -->
+    <script src="lib/phaser-ads.min.js"></script>
+    <script src="lib/api/ng/newgroundsio.min.js"></script>
+    <script src="lib/api/ag/ag.min.js"></script>
+    <script src="https://cdn1.kongregate.com/javascripts/kongregate_api.js"></script>
+    <!-- Game files -->
+    <script src="TWP2.js"></script>
+    <script src="/js/main.js"></script>
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        font-family: Play;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+
+      body {
+        line-height: 1;
+        background-color: #cccccc;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      blockquote,
+      q {
+        quotes: none;
+      }
+
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5756835229788588" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-5756835229788588" data-ad-slot="6230603875" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </body>
+</html>
+<script>
+  window.onload = new (function () {
+    var game = new TWP2.Engine();
+    Phaser.Device.whenReady(function () {
+      //----------------------------
+      var bUseAds = false; //Disable GD ads because "site is blocked" message
+      var api = "newgrounds";
+      var adProvider = "yourmom";
+      console.log("location.hostname: " + location.hostname);
+      if (api == "newgrounds") {
+        if (location.hostname.indexOf("armorgames") >= 0) {
+          api = "armor_games";
+          console.log("Armor Games detected");
+        }
+        if (location.hostname.indexOf("kongregate") >= 0 || location.hostname.indexOf("konggames") >= 0) {
+          api = "kongregate";
+          console.log("Kongregate detected");
+        }
+
+        if (location.hostname.indexOf("gamejolt") >= 0) {
+          bUseAds = false;
+          console.log("Game Jolt detected");
+        }
+      }
+      if (api == "kongregate") {
+        bUseAds = false;
+      }
+      game.desiredAPI = api;
+      game.cpmstarAPI = cpmstarAPI;
+      if (cpmstarAPI) {
+        cpmstarAPI(function (api) {
+          api.game.setContentID("yourmom");
+        });
+        cpmstarAPI(function (api) {
+          api.game.setTarget(document.getElementById("content"));
+        });
+        cpmstarAPI({
+          kind: "game.createInterstitial",
+          onAdOpened: function () {
+            console.log("onAdOpened");
+            game.onAdOpened();
+          },
+          onAdClosed: function () {
+            console.log("onAdClosed");
+            game.onAdClosed();
+          },
+          fail: function () {
+            console.warn("Ad failed");
+            game.onAdClosed();
+          },
+        });
+      }
+      //----------------------------
+      if (bUseAds) {
+        game.plugins.add(PhaserAds.AdManager);
+        var provider = new PhaserAds.AdProvider.GameDistributionAds(game, "b87c4bc6e4604eeeb6fcc3d1b6bf844f", "ABD36C6C-E74B-4BA7-BE87-0AB01F98D30D-s1");
+        game.ads.setAdProvider(provider);
+        window["GD_OPTIONS"] = {
+          gameId: "b87c4bc6e4604eeeb6fcc3d1b6bf844f",
+          onEvent: function (event) {
+            game.onEvent(event.name);
+          },
+        };
+      }
+      if (api == "armor_games") {
+        document.domain = "armorgames.com";
+        var ag = null;
+        var agiChecks = 0;
+        function checkForAGI() {
+          if (agiChecks > 50 || game.ag != null) {
+            return;
+          }
+          try {
+            if (typeof parent.agi !== "undefined") {
+              console.log("AGI loaded!");
+              ag = new ArmorGames({
+                user_id: parent.apiAuth.user_id,
+                auth_token: parent.apiAuth.auth_token,
+                game_id: parent.apiAuth.game_id,
+                api_key: "76679B7B-E536-4C2A-A03F-82FFAB5E93A1",
+                agi: parent.agi,
+              });
+              game.ag = ag;
+            } else {
+              agiChecks++;
+              window.setTimeout(checkForAGI, 250);
+            }
+          } catch (err) {
+            agiChecks++;
+            window.setTimeout(checkForAGI, 250);
+            console.error(err);
+          }
+        }
+        checkForAGI();
+      } else if (api == "newgrounds") {
+        game.ngio = new Newgrounds.io.core("48774:hQOOPSki", "reK0A1NnB2dsqqScHwBzUA==");
+      } else if (api == "kongregate") {
+        console.log(kongregateAPI);
+        function kongConnect() {
+          kongregateAPI.loadAPI(function () {
+            window.kongregate = kongregateAPI.getAPI();
+            game.kong = window.kongregate;
+            game.initAPI();
+          });
+        }
+        window.setTimeout(kongConnect, 1000);
+      }
+    });
+  })();
+</script>

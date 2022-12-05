@@ -1,0 +1,17 @@
+{
+  "companyName": "Maksim Chmutov",
+  "productName": "Station 141",
+  "productVersion": "1",
+  "dataUrl": "WebGL.data.unityweb",
+  "wasmCodeUrl": "WebGL.wasm.code.unityweb",
+  "wasmFrameworkUrl": "WebGL.wasm.framework.unityweb",
+  "graphicsAPI": ["WebGL 2.0"],
+  "webglContextAttributes": {"preserveDrawingBuffer": false},
+  "backgroundUrl": "WebGL.jpg",
+  "splashScreenStyle": "Dark",
+  "backgroundColor": "#FFFFFF",
+  "cacheControl": {"default": "must-revalidate"},
+  "developmentBuild": false,
+  "multithreading": false,
+  "unityVersion": "2019.3.15f1"
+  }

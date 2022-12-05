@@ -1,0 +1,67 @@
+{
+     "spike": [
+        {"image": "spike", "x": 500, "y": 340},
+        {"image": "spike3", "x": 280, "y": 120},
+        {"image": "spike3", "x": 440, "y": 120}
+     ],
+    "platforms": [
+        {"image": "stone:4x1", "x": 0, "y": 558},
+        {"image": "stone:2x1", "x": 0, "y": 364},  
+        {"image": "stone:8x1", "x": 200, "y": 100},
+        {"image": "stone:8x1", "x": 200, "y": 0},
+        {"image": "stone:1x1", "x": 480, "y": 322},
+        {"image": "stone:1x1", "x": 280, "y": 322}, 
+        {"image": "stone:2x1", "x": 878, "y": 558},
+        {"image": "stone:16x1", "x": 536, "y": 0},
+        {"image": "stone:16x1", "x": 606, "y": 154}, 
+        {"image": "stone:16x1", "x": 606, "y": 42}
+    ],
+    "movingBlocks": [
+        {"image": "block", "x": 168, "y": 530},
+        {"image": "block", "x": 836, "y": 530},
+        {"image": "block", "x": 836, "y": 322}
+    ],
+    "lava": [
+        {"image": "lava", "x": 168, "y": 558},
+        {"image": "lava", "x": 210, "y": 558},
+        {"image": "lava", "x": 252, "y": 558},
+        {"image": "lava", "x": 294, "y": 558},
+        {"image": "lava", "x": 336, "y": 558},
+        {"image": "lava", "x": 378, "y": 558},
+        {"image": "lava", "x": 420, "y": 558},
+        {"image": "lava", "x": 462, "y": 558},
+        {"image": "lava", "x": 504, "y": 558},
+        {"image": "lava", "x": 546, "y": 558},
+        {"image": "lava", "x": 588, "y": 558},
+        {"image": "lava", "x": 630, "y": 558},
+        {"image": "lava", "x": 672, "y": 558},
+        {"image": "lava", "x": 714, "y": 558},
+        {"image": "lava", "x": 756, "y": 558},
+        {"image": "lava", "x": 798, "y": 558},
+        {"image": "lava", "x": 840, "y": 558}      
+    ],
+    "decoration": [
+        
+    ],
+    "rings": [     
+        {"x": 80, "y": 535}, {"x": 110, "y": 535}, {"x": 140, "y": 535},
+        {"x": 500, "y": 510}, {"x": 530, "y": 510}, {"x": 560, "y": 510},
+        {"x": 375, "y": 260}, {"x": 405, "y": 260}, {"x": 435, "y": 260},
+        {"x": 650, "y": 120}, {"x": 680, "y": 120}, {"x": 710, "y": 120}
+    ],
+    "hero": {"x": 21, "y": 525},
+    "enemies": [
+        {"image": "bug", "x": 700, "y": 140, "gravity": true},
+        {"image": "bat", "x": 900, "y": 290, "gravity": false},
+        {"image": "bat", "x": 100, "y": 260, "gravity": false},
+        {"image": "bat", "x": 390, "y": 60, "gravity": false}
+    ],
+    "finish": {"x": 930, "y": 154},
+    "spring": [
+        {"x": 920, "y": 542},
+        {"x": 15, "y": 348}
+    ],
+    "fireball": [ 
+        {"x": 530, "y": 570, "height": 190, "velocity": 120}
+    ]
+}

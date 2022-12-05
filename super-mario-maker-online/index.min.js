@@ -1,0 +1,2 @@
+var time=Date.now();document.onreadystatechange=function(a){if("complete"===a.target.readyState){var b=new UserWrappr.UserWrappr(FullScreenMario.FullScreenMario.prototype.proliferate({GameStartrConstructor:FullScreenMario.FullScreenMario},FullScreenMario.FullScreenMario.settings.ui,!0));console.log("It took "+(Date.now()-time)+" milliseconds to start."),b.displayHelpMenu()}};
+//# sourceMappingURL=index.min.js.map

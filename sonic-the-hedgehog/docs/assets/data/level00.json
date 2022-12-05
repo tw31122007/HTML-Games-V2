@@ -1,0 +1,57 @@
+{
+    "platforms": [
+        {"image": "stone:4x1", "x": 0, "y": 558},
+        {"image": "stone:4x1", "x": 294, "y": 558},
+        {"image": "stone:4x1", "x": 294, "y": 516},
+        {"image": "stone:16x1", "x": 588, "y": 558},
+        {"image": "stone:4x1", "x": 588, "y": 350},
+        {"image": "stone:4x1", "x": 294, "y": 300},
+        {"image": "stone:4x1", "x": 0, "y": 240},
+        {"image": "stone:4x1", "x": 300, "y": 120},
+        {"image": "stone:2x1", "x": 900, "y": 120}
+    ],
+    "movingBlocks": [
+        {"image": "block", "x": 400, "y": 120}
+    ],
+    "lava": [
+        {"image": "lava", "x": 168, "y": 558},
+        {"image": "lava", "x": 210, "y": 558},
+        {"image": "lava", "x": 252, "y": 558},
+        {"image": "lava", "x": 462, "y": 558},
+        {"image": "lava", "x": 504, "y": 558},
+        {"image": "lava", "x": 546, "y": 558}        
+    ],
+    "spike":[
+        {"image": "spike3", "x": 680, "y": 574},
+        {"image": "spike3", "x": 830, "y": 574},
+        {"image": "spike3", "x": 620, "y": 370},
+        {"image": "spike3", "x": 330, "y": 320},
+        {"image": "spike3", "x": 440, "y": 137}
+    ],
+    "decoration": [
+        
+    ],
+    "rings": [     
+        {"x": 70, "y": 535}, {"x": 100, "y": 535}, {"x": 130, "y": 535},
+        {"x": 350, "y": 495}, {"x": 380, "y": 495}, {"x": 410, "y": 495},
+        {"x": 670, "y": 325}, {"x": 700, "y": 325}, {"x": 730, "y": 325},
+        {"x": 50, "y": 190}, {"x": 80, "y": 190}, {"x": 110, "y": 190},
+        {"x": 650, "y": 85}, {"x": 680, "y": 85}, {"x": 710, "y": 85}
+    ],
+    "hero": {"x": 30, "y": 535},
+    "enemies": [
+        {"image": "bug", "x": 700, "y": 540, "gravity": true},
+        {"image": "bat", "x": 800, "y": 480, "gravity": false},
+        {"image": "bat", "x": 700, "y": 280, "gravity": false},
+        {"image": "bat", "x": 240, "y": 190, "gravity": false},
+        {"image": "bat", "x": 800, "y": 60, "gravity": false}
+    ],
+    "finish": {"x": 930, "y": 120},
+    "spring": [
+        {"x": 920, "y": 542}
+    ],
+    "fireball": [
+        {"x": 231, "y": 570, "height": 350, "velocity": 220},
+        {"x": 525, "y": 570, "height": 280, "velocity": 200}
+    ]
+}

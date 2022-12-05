@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="me when embed">
+  <meta name="author" content="3kh0, surely">
+  <title>select a rom...</title>
+  <link rel="icon" href="/favicon.ico">
+</head>
+  
+<body>
+  <style type="text/css">
+    html {
+      background: #30303a;
+      color: white;
+      font-family: sans-serif;
+    }
+  
+    .items > .rom > a {
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+
+    .items > .rom > a:hover {
+      text-decoration: underline;
+    }
+    
+    .items > .rom > a:hover { /* 👀 */
+      font-size: 6969px;
+      transition: 2323s;
+    }
+    
+    .items {
+      border-radius:10px;
+      display:flex;
+      flex-flow:row wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:10px;
+      padding:10px;
+      width:100%;
+    }
+    
+    .image {
+      opacity: 0.69;
+      display: block;
+      width: 150px;
+      height: auto;
+      border-radius: 6.9%;
+      transition: .69s ease;
+      backface-visibility: hidden;
+    }
+    
+    .rom:hover .image {
+      opacity: 1;
+    }
+    
+    .text {
+      background-color: #666666;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+
+    .rom {
+      width: 10rem;
+    }
+  </style>
+  
+  <div class="items">
+    <!-- TEMPLATE (anything in CAPS is a placeholder)
+    <div class="rom">
+      <a href="./index.html?core=autodetect&rom=ROM_FILE_NAME">
+          <img alt="TITLE" loading="lazy" data-loaded="1" class="image" src="./thumb/THUMBNAIL">
+          <p>
+            TITLE
+          </p>
+      </a>
+    </div>
+    -->
+    loading roms...
+  </div>
+  <script type="application/javascript" src="/js/main.js"></script>
+  <script>
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+    fetch("./roms.json").then((res) => {
+        res.json().then((roms) => {
+        document.querySelector('.items').innerHTML = "";
+        roms.listing.forEach(rom => {
+          document.querySelector('.items').innerHTML += `<div class="rom">
+            <a href="./index.html?core=autodetect&rom=${rom.filename}">
+              <img alt="${rom.title}" loading="lazy" data-loaded="1" class="image" src="./thumb/${rom.thumb}">
+              <p>
+                ${rom.title}
+              </p>
+          </a>
+      </div>`;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

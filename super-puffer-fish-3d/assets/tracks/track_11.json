@@ -1,0 +1,2826 @@
+{
+	"project": "pufferball3d",
+	"projectID": "E41C0D6A-9CB1-4CE4-BA83-85B415871615",
+	"scene": "track_10",
+	"sceneProperties": [],
+	"libraries": [
+		"asset_atlas.json",
+		"asset_atlas_mod.png"
+	],
+	"objects": [
+		{
+			"type": "Object3D",
+			"name": "Scene",
+			"id": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"libraries": {}
+		},
+		{
+			"type": "Object3D",
+			"name": "Start",
+			"id": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"source": "Group",
+			"parent": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_start",
+			"id": "30D8A36E-9416-4B39-8DC5-B77748ADDFA4",
+			"source": "logic_start",
+			"parent": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "795DE0EA-B688-4483-BD25-5DCA8FD5DEDE",
+			"source": "logic_coin",
+			"parent": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"position": {
+				"x": -8.005311012268066,
+				"y": 13.176614761352539,
+				"z": -7.986137390136719
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "8B7C0F3C-AAE8-4ABD-8C00-6A3F42F90C17",
+			"source": "logic_coin",
+			"parent": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"position": {
+				"x": -8.005311012268066,
+				"y": 13.176614761352539,
+				"z": 8.036364555358887
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "A3455C59-2CE2-44B5-95DD-11A051508E1D",
+			"source": "logic_coin",
+			"parent": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"position": {
+				"x": 8.007055282592773,
+				"y": 13.176614761352539,
+				"z": -7.986137390136719
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "80537C31-2433-4498-B105-423F52104391",
+			"source": "logic_coin",
+			"parent": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"position": {
+				"x": 8.007055282592773,
+				"y": 13.176614761352539,
+				"z": 8.036365509033203
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "E89A3CC4-5669-4A36-92FD-5D2CED66CEBF",
+			"source": "object_star",
+			"parent": "1E2C7456-B245-42A1-9447-374D1851B80C",
+			"position": {
+				"x": 0,
+				"y": 22.812013626098633,
+				"z": 0
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "start",
+					"value": "true"
+				},
+				{
+					"name": "star_time",
+					"value": "27"
+				},
+				{
+					"name": "falloutheight",
+					"value": "1"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Object3D",
+			"name": "End",
+			"id": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"source": "Group",
+			"parent": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "D532E3D8-EA49-4B13-B788-612897D227CF",
+			"source": "logic_coin",
+			"parent": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"position": {
+				"x": -13.420838356018066,
+				"y": 13.180000305175781,
+				"z": -112.2254409790039
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "9B09915C-C83C-4711-AC38-FF8EA39D2F7C",
+			"source": "logic_coin",
+			"parent": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"position": {
+				"x": 2.5891618728637695,
+				"y": 13.180000305175781,
+				"z": -112.22038269042969
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "82CFC6F1-87D8-470E-A6F6-13CBF5C35B60",
+			"source": "logic_coin",
+			"parent": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"position": {
+				"x": 2.749161720275879,
+				"y": 13.180000305175781,
+				"z": -128.20938110351562
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "649E7236-949A-4878-B13B-A9ABE26B411B",
+			"source": "logic_coin",
+			"parent": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"position": {
+				"x": -13.270837783813477,
+				"y": 13.180000305175781,
+				"z": -128.2454376220703
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_start",
+			"id": "B04438BD-D24C-477A-9D2E-983FEB407924",
+			"source": "logic_start",
+			"parent": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"position": {
+				"x": -5.3408379554748535,
+				"y": 0,
+				"z": -120.19741821289062
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_goal_bag",
+			"id": "2C88FB2E-0244-4252-BCAB-328D9DF025EE",
+			"source": "logic_goal_bag",
+			"parent": "F573F16D-3FC3-442A-92D9-81E3FFE6C390",
+			"position": {
+				"x": -5.340695858001709,
+				"y": 9.880000114440918,
+				"z": -120.28929138183594
+			},
+			"rotation": {
+				"x": -1.5707962069432622,
+				"y": -1.5973819489367713e-11,
+				"z": -0.0022280514522354288
+			},
+			"scale": {
+				"x": 1.0000000383149736,
+				"y": 1.0000000383149794,
+				"z": 1.000000000000006
+			},
+			"customProperties": [
+				{
+					"name": "goal",
+					"value": "true"
+				},
+				{
+					"name": "transparent",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Object3D",
+			"name": "Level",
+			"id": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"source": "Group",
+			"parent": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_cube",
+			"id": "290B6405-F143-4A71-A7BD-8D80E45779FB",
+			"source": "tile_cube",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -33.36670684814453,
+				"y": 0,
+				"z": -50.47999954223633
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "1BF95269-B90A-4B39-BF0F-8E7AE1701B86",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -26.35543441772461,
+				"y": 6.769999980926514,
+				"z": -48.970211029052734
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 1.232595164407831e-32,
+				"z": 3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "C8583567-1B42-410E-98C2-09F3C93AB013",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -1.77122962474823,
+				"y": 6.769999980926514,
+				"z": -38.3971061706543
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "3669131B-4A5F-41AF-8A64-62169534FCA0",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -35.1717643737793,
+				"y": 6.769999980926514,
+				"z": -43.266502380371094
+			},
+			"rotation": {
+				"x": -1.5707963267948957,
+				"y": 0,
+				"z": 1.5707963267948961
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_cube",
+			"id": "50D03AB4-537B-4139-ACEE-1A8B735720A5",
+			"source": "tile_cube",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -33.39830780029297,
+				"y": 0,
+				"z": -8.233489990234375
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "142E9321-55A4-4613-8895-BBE4D3590543",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -35.1717643737793,
+				"y": 6.769999980926514,
+				"z": -29.23250389099121
+			},
+			"rotation": {
+				"x": -1.5707963267948957,
+				"y": 0,
+				"z": 1.5707963267948961
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "8FBA3FD0-DC75-406D-AAE6-1B1B576079F5",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -31.779813766479492,
+				"y": 6.769999980926514,
+				"z": 26.657989501953125
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "E0CF498D-D90C-4159-94B8-6CEE62D56CE4",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -31.772842407226562,
+				"y": 6.769999980926514,
+				"z": 12.657989501953125
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "B4CFABE4-D4FA-48AE-8C34-53B4D9DE803C",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -7.225676536560059,
+				"y": 6.769999980926514,
+				"z": 37.20280456542969
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "559E9CFC-54AA-4262-914D-DC26F7D366F7",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 6.725602626800537,
+				"y": 6.769999980926514,
+				"z": 37.20280456542969
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "456E4A4B-8D0B-4F37-AAC4-4D66E69B3FAC",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 20.69601058959961,
+				"y": 6.769999980926514,
+				"z": 37.20280456542969
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "165FEF14-083D-4FF6-A71B-3CEDCD79F0CE",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 34.712440490722656,
+				"y": 6.769999980926514,
+				"z": 37.20280456542969
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_curve",
+			"id": "0AE5138E-6E04-4184-9584-A704BF1F248C",
+			"source": "object_swimline_curve",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -12.350000381469727,
+				"y": 6.769999980926514,
+				"z": -38.38923263549805
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_curve",
+			"id": "B3B1C215-8EAC-4F44-AE17-8CD511CAF0CD",
+			"source": "object_swimline_curve",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -21.213050842285156,
+				"y": 6.769999980926514,
+				"z": 26.646141052246094
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "34040BE8-9D05-48EE-8927-42EED4A97D19",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 45.170082092285156,
+				"y": 6.769999980926514,
+				"z": -29.15266227722168
+			},
+			"rotation": {
+				"x": -1.5707963267948957,
+				"y": 0,
+				"z": 1.5707963267948961
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "2C176199-6F1B-47C0-9540-58DD0C3D388B",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 45.170082092285156,
+				"y": 6.769999980926514,
+				"z": -43.16298294067383
+			},
+			"rotation": {
+				"x": -1.5707963267948957,
+				"y": 0,
+				"z": 1.5707963267948961
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "DCAD6B91-7702-4153-8530-B46A4A0FC146",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 45.170082092285156,
+				"y": 6.769999980926514,
+				"z": -57.185707092285156
+			},
+			"rotation": {
+				"x": -1.5707963267948957,
+				"y": 0,
+				"z": 1.5707963267948961
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "92D0A67B-3CD4-408D-9EDA-3B87AADF8A4E",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 20.58970832824707,
+				"y": 6.789581298828125,
+				"z": -81.77509307861328
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 2.465190328815662e-32,
+				"z": 3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_curve",
+			"id": "2DD590BD-684D-4FCC-9BDF-83E68CBD62C3",
+			"source": "object_swimline_curve",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 34.59514236450195,
+				"y": 6.789581298828125,
+				"z": -71.1941146850586
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "96F61B8D-A63D-4B73-BB85-568503196A5D",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 45.17391586303711,
+				"y": 6.789581298828125,
+				"z": -71.20198822021484
+			},
+			"rotation": {
+				"x": -1.5707963267948957,
+				"y": 0,
+				"z": 1.5707963267948961
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "AB3D98BF-4062-46C2-BCE4-F23502C279FF",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 6.620948791503906,
+				"y": 6.789581298828125,
+				"z": -81.77509307861328
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 2.465190328815662e-32,
+				"z": 3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_curve",
+			"id": "EED9A031-BC21-4500-BF23-B3D8BC8DD80D",
+			"source": "object_swimline_curve",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 6.66395378112793,
+				"y": 6.774078845977783,
+				"z": -95.74960327148438
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "204F6D59-2CFB-4F24-B1E1-93A2AE345EF4",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -3.9477200508117676,
+				"y": 6.791858196258545,
+				"z": -95.75163269042969
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_curve",
+			"id": "AA5931C3-1C63-4CAB-8357-58440765C246",
+			"source": "object_swimline_curve",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 34.69,
+				"y": 6.76,
+				"z": 26.65
+			},
+			"rotation": {
+				"x": -1.5707963267948966,
+				"y": 0,
+				"z": -1.5707963267948966
+			},
+			"scale": {
+				"x": "0.9999971985931108",
+				"y": "0.9999971843037189",
+				"z": "0.9999972289315613"
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "60EFBBB0-B5A2-4307-8B4B-18741A4F669D",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 45.297691345214844,
+				"y": 6.758195877075195,
+				"z": 12.66797924041748
+			},
+			"rotation": {
+				"x": -1.570761279387521,
+				"y": 0.0000017114946331284216,
+				"z": 1.5705671820738463
+			},
+			"scale": {
+				"x": 1.0000120576976435,
+				"y": 1.0000120533806283,
+				"z": 1.0000122791016983
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_swimline_straight",
+			"id": "8A7B1607-F3DA-4ECB-BD0B-F98874A09D34",
+			"source": "object_swimline_straight",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 45.297691345214844,
+				"y": 6.752752304077148,
+				"z": -1.3320207595825195
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_cube",
+			"id": "58FB0FAC-EF5D-4C3C-A143-E25ACC70C5BD",
+			"source": "tile_cube",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": -17.424463272094727
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_cube",
+			"id": "0F27ABD9-122E-4738-896C-67034A15B202",
+			"source": "tile_cube",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 46.873046875,
+				"y": 0,
+				"z": -8.128486633300781
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_sand_NoCol",
+			"id": "0AEA3FBD-7D6E-4F3A-A2B3-34A83D741EB5",
+			"source": "object_sand_NoCol",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 16.741451263427734,
+				"y": -2.1832571029663086,
+				"z": 11.928566932678223
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 4.640828609466553,
+				"y": 4.640828609466553,
+				"z": 2.7330257892608643
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_sand_NoCol",
+			"id": "F5065C93-56D3-4701-8614-21E0D445F0C6",
+			"source": "object_sand_NoCol",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": -0.08715013414621353,
+				"y": -2.1832571029663086,
+				"z": -5.662291049957275
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 4.640828609466553,
+				"y": 4.640828609466553,
+				"z": 2.7330257892608643
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_sand_NoCol",
+			"id": "FC374B52-40E3-4AA8-8731-5C6B567FDB91",
+			"source": "object_sand_NoCol",
+			"parent": "292B49DC-1B87-4131-BFFE-E5071A3A680B",
+			"position": {
+				"x": 5.833988666534424,
+				"y": -1.737112283706665,
+				"z": -132.55056762695312
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.9592386414084565e-17,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 5.895806312561035,
+				"y": 4.640828609466553,
+				"z": 2.7330257892608643
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Object3D",
+			"name": "Walls",
+			"id": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"source": "Group",
+			"parent": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "5B958A8E-FDEE-408E-B3B7-A83B7962566E",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -39.93317413330078,
+				"y": 7,
+				"z": -43.46620559692383
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "479A0289-B3E9-43A1-8534-159970D4C94D",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -39.93317413330078,
+				"y": 7,
+				"z": -50.469886779785156
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "B3933C37-2134-4324-8F6A-D5A8EF663A43",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -6.75660514831543,
+				"y": 7,
+				"z": -17.426681518554688
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "98B6E9A8-C1B2-40A7-AA30-24A98DF82937",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -6.75660514831543,
+				"y": 7,
+				"z": -10.423001289367676
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "977860B9-D99D-4BF8-AB00-595CE8BEA5AE",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": 6.745560169219971,
+				"y": 7,
+				"z": -17.426681518554688
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "6C12F6F7-F581-42F3-BB7D-AFD2BDCE08C9",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": 6.745560169219971,
+				"y": 7,
+				"z": -10.423001289367676
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_5m",
+			"id": "4ABAFDC6-FD8C-4202-895A-59A038657E5F",
+			"source": "tile_wall_5m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -26.671524047851562,
+				"y": 6.960000038146973,
+				"z": -43.5
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 0.800000011920929,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_5m",
+			"id": "1D2F9DFA-4A70-4C76-AAAD-532F06A3048A",
+			"source": "tile_wall_5m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -26.671524047851562,
+				"y": 6.960000038146973,
+				"z": -53.604278564453125
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 0.800000011920929,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_5m",
+			"id": "D8C5AC10-0F46-4C0F-B55B-42A5086C8071",
+			"source": "tile_wall_5m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -40.08000183105469,
+				"y": 6.960000038146973,
+				"z": -43.709999084472656
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 0.699999988079071,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_5m",
+			"id": "59B6D8BA-1CEC-4FFC-BA59-F8C35EB286F1",
+			"source": "tile_wall_5m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -30.02564811706543,
+				"y": 6.960000038146973,
+				"z": -43.709999084472656
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 0.699999988079071,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "E73B9DAF-E5F9-4A07-AB59-0CB697C8575D",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -36.749717712402344,
+				"y": 7,
+				"z": -57.22161102294922
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 1.5707963267948963
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "0B3AD98D-4EED-4486-8D0D-42846C40286E",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -40.0223388671875,
+				"y": 7,
+				"z": -4.562226295471191
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "tile_wall_7m",
+			"id": "36FC3E8D-5998-43F6-8813-B8D9A84A4EC8",
+			"source": "tile_wall_7m",
+			"parent": "3F4DA0DF-8BB2-4CDA-8FDB-03A58EACDB09",
+			"position": {
+				"x": -26.6737003326416,
+				"y": 7,
+				"z": -4.562226295471191
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Object3D",
+			"name": "Coins",
+			"id": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"source": "Group",
+			"parent": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "82337868-D0D9-4B74-8A4E-736181106FAB",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": -28.22443389892578,
+				"y": 8.439900398254395,
+				"z": -50.65796661376953
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "0BC9BFB4-30CD-4244-9889-EAC23769E19E",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": -33.36990737915039,
+				"y": 8.439900398254395,
+				"z": -46.29362869262695
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "C190B80C-5ACE-46D7-8075-8EAB90833488",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": -33.46477508544922,
+				"y": 8.439900398254395,
+				"z": -11.352747917175293
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "FE7EBAC5-7564-44A4-82FE-05166E8D59EA",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": -33.46477508544922,
+				"y": 8.439900398254395,
+				"z": -5.010504722595215
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "9BB5E438-047B-4B73-8C06-5396B5439510",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": 46.930450439453125,
+				"y": 8.439900398254395,
+				"z": -5.3170857429504395
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "A608B074-EAF0-42B8-B2D3-F802CEB0C090",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": 46.930450439453125,
+				"y": 8.439900398254395,
+				"z": -9.908502578735352
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "467F6E52-C2F4-494B-ABE3-037002E6E403",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": -8.627708435058594,
+				"y": 7.537281036376953,
+				"z": 38.741859436035156
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "DABE8540-E350-4AE5-93D7-DD700A19DE9D",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": 0.6395792961120605,
+				"y": 7.537281036376953,
+				"z": 38.741859436035156
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "794E400C-983F-42A5-ADBA-F4F8D0C073FA",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": 8.843337059020996,
+				"y": 7.537281036376953,
+				"z": 38.741859436035156
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "F054DFDB-ED79-464B-9CA7-744EF382AE62",
+			"source": "logic_coin",
+			"parent": "9D8417F1-C942-4A10-BD98-8402E016DBFA",
+			"position": {
+				"x": 19.04020881652832,
+				"y": 7.537281036376953,
+				"z": 38.741859436035156
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Object3D",
+			"name": "Deco",
+			"id": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"source": "Group",
+			"parent": "Root",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"rotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [],
+			"libraries": {}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_coin",
+			"id": "0D1ECBDC-BA61-4428-95C0-D688F1841D3E",
+			"source": "logic_coin",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -8.488082885742188,
+				"y": 8.641529083251953,
+				"z": -62.703678131103516
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -2.465190328815662e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "fx",
+					"value": "torch"
+				},
+				{
+					"name": "pickup",
+					"value": "4"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_torch",
+			"id": "FEE9E706-8F2E-49FE-8A4E-44CE008A8A96",
+			"source": "object_torch",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -7.774074554443359,
+				"y": 2.484886646270752,
+				"z": -62.73497009277344
+			},
+			"rotation": {
+				"x": -1.5692095816982812,
+				"y": -0.1084843374851167,
+				"z": 0.6647508490016716
+			},
+			"scale": {
+				"x": 0.999999997809925,
+				"y": 0.9999998218143052,
+				"z": 0.999999969203948
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "FFB948C8-3D66-44DB-A0E8-7BE43C6D96B3",
+			"source": "object_star",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 4.278419494628906,
+				"y": 1.3901668787002563,
+				"z": -72.73015594482422
+			},
+			"rotation": {
+				"x": -2.0916199537337414,
+				"y": 0.31081975151975155,
+				"z": -1.5235279785372053
+			},
+			"scale": {
+				"x": 0.49967520176789904,
+				"y": 0.49967519005538136,
+				"z": 0.4996752198657067
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "29EAA5CC-EFB8-4EC8-BAF1-8B77FD09A6A2",
+			"source": "object_star",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -1.033660650253296,
+				"y": 1.153523564338684,
+				"z": -57.63032150268555
+			},
+			"rotation": {
+				"x": -1.0480518523486313,
+				"y": 0.2873304970517518,
+				"z": -3.053073992410972
+			},
+			"scale": {
+				"x": 0.3154591184089827,
+				"y": 0.3154591156563023,
+				"z": 0.315459102773747
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "1899FB7B-6E70-46BB-9327-B01D4076AA53",
+			"source": "object_star",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -7.54435920715332,
+				"y": 1.5706101655960083,
+				"z": -61.19257354736328
+			},
+			"rotation": {
+				"x": -0.9272917795882275,
+				"y": -0.3786836384823308,
+				"z": 1.7268726326851762
+			},
+			"scale": {
+				"x": 0.2889119225399929,
+				"y": 0.28891154404127006,
+				"z": 0.2889125378541427
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "FE491859-3943-44D1-B0FA-A2C3964A30A6",
+			"source": "object_star",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -10.186241149902344,
+				"y": 1.4507170915603638,
+				"z": -67.35320281982422
+			},
+			"rotation": {
+				"x": -1.570796267526544,
+				"y": -0.7569809155508996,
+				"z": -2.5301959445562567
+			},
+			"scale": {
+				"x": 0.7119285460184468,
+				"y": 0.7119286592460513,
+				"z": 0.7119286066723974
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "14DDD093-229C-42A8-AC1C-7FE4ED00C6D9",
+			"source": "object_star",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 6.245802879333496,
+				"y": 1.2662001848220825,
+				"z": -69.72608947753906
+			},
+			"rotation": {
+				"x": -1.5361618539741877,
+				"y": 0.6182412299388336,
+				"z": 2.7528810018490066
+			},
+			"scale": {
+				"x": 0.8312120303032836,
+				"y": 0.8312120410800935,
+				"z": 0.8312119512282918
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_star",
+			"id": "60FFE8AD-3F0B-4D15-A3F5-6D7D6C539EB5",
+			"source": "object_star",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 1.685884714126587,
+				"y": 1.6278048753738403,
+				"z": -60.20938491821289
+			},
+			"rotation": {
+				"x": -1.04805190620095,
+				"y": 0.2873304970517518,
+				"z": 0.8814650270772263
+			},
+			"scale": {
+				"x": 0.5743129122125376,
+				"y": 0.5743129202688714,
+				"z": 0.5743129209671686
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_beachball",
+			"id": "465CADFA-4D13-4596-9950-22693AAD19F0",
+			"source": "object_beachball",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 3.0911648273468018,
+				"y": 2.8906521797180176,
+				"z": -67.39359283447266
+			},
+			"rotation": {
+				"x": -1.6383799800649723,
+				"y": 0.28047169965854485,
+				"z": 0.9574800571671801
+			},
+			"scale": {
+				"x": 1.000000014605528,
+				"y": 0.9999999939688173,
+				"z": 1.0000000197369416
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_pennat",
+			"id": "530C8913-2C34-421C-9BAF-256BC464AAA5",
+			"source": "object_pennat",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 2.0963025093078613,
+				"y": 1.8015700578689575,
+				"z": -70.63536834716797
+			},
+			"rotation": {
+				"x": -1.8077370563892956,
+				"y": 0.04357999047976113,
+				"z": -0.06731525317148745
+			},
+			"scale": {
+				"x": 1.0000000292304798,
+				"y": 0.9999997601550709,
+				"z": 0.9999998235846139
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_beachchair",
+			"id": "97E52587-22B2-406F-8BC2-5CCC95202766",
+			"source": "object_beachchair",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -3.8050107955932617,
+				"y": 3.5914182662963867,
+				"z": -69.27031707763672
+			},
+			"rotation": {
+				"x": -1.6281361021342076,
+				"y": 0.0014454621500023248,
+				"z": 0.6332431377584191
+			},
+			"scale": {
+				"x": 0.9999999499723742,
+				"y": 0.9999999816022818,
+				"z": 0.9999999070540911
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_sand",
+			"id": "4E2BA866-64E4-463B-A7FE-4D7972FB2CC8",
+			"source": "object_sand",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -1.600000023841858,
+				"y": 0.5025826692581177,
+				"z": -67.1500015258789
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 2.233403205871582,
+				"y": 2.233403205871582,
+				"z": 1.5
+			},
+			"customProperties": [],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "5FCA7533-CEF0-483D-A88F-BE7C9D64A72D",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -17.628408432006836,
+				"y": 1.6652594804763794,
+				"z": -103.56977081298828
+			},
+			"rotation": {
+				"x": -1.570796547069483,
+				"y": -1.29821032146538e-7,
+				"z": 1.1635567489874035
+			},
+			"scale": {
+				"x": 1.0000000018934654,
+				"y": 1.0000000018934758,
+				"z": 1.000000000000032
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "C3942C89-D17A-4B0C-9CB7-098244980A72",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 21.741666793823242,
+				"y": 1.6652594804763794,
+				"z": 21.59521484375
+			},
+			"rotation": {
+				"x": -1.5707963431766123,
+				"y": 3.1086244689504383e-15,
+				"z": -1.843799177670464
+			},
+			"scale": {
+				"x": 0.6574883472135424,
+				"y": 0.6574883472135424,
+				"z": 0.6574883460998536
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "70100707-22AE-4A64-A447-EDDB76041DFF",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 17.657533645629883,
+				"y": 1.6652594804763794,
+				"z": -124.24456024169922
+			},
+			"rotation": {
+				"x": -1.5707952060280999,
+				"y": 8.224670864366108e-7,
+				"z": 0.8925321994894623
+			},
+			"scale": {
+				"x": 0.6034699721785364,
+				"y": 0.6034699721790397,
+				"z": 0.6034700274473187
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "BCB62578-37A2-4382-947D-4BC7B6284769",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 11.728470802307129,
+				"y": 1.6652594804763794,
+				"z": -133.83694458007812
+			},
+			"rotation": {
+				"x": -1.5707954493651695,
+				"y": -4.170508418610673e-7,
+				"z": -0.9078181805346386
+			},
+			"scale": {
+				"x": 0.9999999856738999,
+				"y": 0.9999999856741828,
+				"z": 1.0000000000004594
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "BC3EDA1D-2C21-4BD6-83FA-042D349CA746",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -18.762409210205078,
+				"y": 1.6652594804763794,
+				"z": -23.993675231933594
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": -1.232595164407831e-32,
+				"z": -3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_ship",
+			"id": "14AFB917-D090-457B-BEFC-111BCFBE39E9",
+			"source": "object_ship",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 8.091448783874512,
+				"y": 0.5315495133399963,
+				"z": -60.67119598388672
+			},
+			"rotation": {
+				"x": -1.4555814805382425,
+				"y": 0.1584121701888657,
+				"z": 0.8767587037325653
+			},
+			"scale": {
+				"x": 0.20000000331445292,
+				"y": 0.1999999959780452,
+				"z": 0.20000002739108014
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "76193667-4166-41B5-9CC8-F7D5D8098A0E",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 54.51692199707031,
+				"y": 2.2013282775878906,
+				"z": -47.58688735961914
+			},
+			"rotation": {
+				"x": -1.5707968352675208,
+				"y": -7.175520977398271e-8,
+				"z": 0.3223768288897353
+			},
+			"scale": {
+				"x": 1.0000000103259614,
+				"y": 1.0000000103260822,
+				"z": 1.107185721397543
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "DA9ED7E5-8D28-4EC3-8EB0-4D9B05E07104",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": 5.35643196105957,
+				"y": 2.4645233154296875,
+				"z": 44.3914909362793
+			},
+			"rotation": {
+				"x": -1.5707963151224256,
+				"y": 1.7835393606446814e-8,
+				"z": -1.7523604606983263
+			},
+			"scale": {
+				"x": 1.0000000064047754,
+				"y": 1.0000000064047756,
+				"z": 1.2483880519866946
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "object_palms",
+			"id": "886E2877-6708-4EFC-8726-104767376ACD",
+			"source": "object_palms",
+			"parent": "6A4EE07B-989D-4442-B8D3-B13654CC942A",
+			"position": {
+				"x": -52.487125396728516,
+				"y": 1.6652594804763794,
+				"z": -54.2430305480957
+			},
+			"rotation": {
+				"x": -1.570795285772709,
+				"y": 2.2261663445988416e-7,
+				"z": 0.4364815289024425
+			},
+			"scale": {
+				"x": 0.9999999774953886,
+				"y": 0.9999999774958886,
+				"z": 1.0000000000005531
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_sign_left",
+			"id": "F7AC3386-886E-4E14-AD5A-BC84CC5A278F",
+			"source": "logic_sign_left",
+			"parent": "Root",
+			"position": {
+				"x": -39.59451675415039,
+				"y": 6.847408771514893,
+				"z": -50.38420867919922
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 0
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		},
+		{
+			"type": "Mesh",
+			"name": "logic_sign_left",
+			"id": "6663322C-6F62-43AC-8DF2-817FA90336A6",
+			"source": "logic_sign_left",
+			"parent": "Root",
+			"position": {
+				"x": 53.88163375854492,
+				"y": 6.849999904632568,
+				"z": -8.058796882629395
+			},
+			"rotation": {
+				"x": -1.5707963267948963,
+				"y": 0,
+				"z": 3.141592653589793
+			},
+			"scale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"customProperties": [
+				{
+					"name": "doubleside",
+					"value": "true"
+				}
+			],
+			"libraries": {
+				"meshes": "asset_atlas",
+				"textures": "asset_atlas_mod"
+			}
+		}
+	],
+	"paths": [],
+	"lights": [
+		{
+			"type": "DirectionalLight",
+			"color": {
+				"r": 1,
+				"g": 1,
+				"b": 1
+			},
+			"intensity": 0.8,
+			"position": {
+				"x": 0,
+				"y": 1,
+				"z": 0
+			}
+		},
+		{
+			"type": "AmbientLight",
+			"color": {
+				"r": 1,
+				"g": 1,
+				"b": 1
+			},
+			"intensity": 0.6,
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			}
+		}
+	],
+	"clearColor": "#387bbe",
+	"collisionMap": null
+}

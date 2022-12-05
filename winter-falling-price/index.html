@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="game/TemplateData/style.css">
+  <link rel="stylesheet" href="game/TemplateData/customStyle.css">
+  <script src="game/TemplateData/UnityProgress.js"></script>
+  <script src="game/Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "game/Build/winterfalling_prifeoflife_4.json", {
+      onProgress: UnityProgress
+    });
+  </script>
+</head>
+
+<body class="template">
+  <div class="fullWidth">
+      <div id="gameContainer"></div>
+  </div>
+</body>
+
+</html>
