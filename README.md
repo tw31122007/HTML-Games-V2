@@ -13,9 +13,12 @@ Welcome to BCHS Unblocked Games HTML Games Collection, your best option for unbl
 
 ## Live deployment
 
-You can access this project using the link below
+You can access my website using the links below:
 
 [https://sites.google.com/view/def-maths/home](https://sites.google.com/view/def-maths/home)
+[https://tw31120071857.github.io/BCHS-Unblocked-Games-V2/](https://tw31120071857.github.io/BCHS-Unblocked-Games-V2/)
+
+Please note that with the version of my website thats hosted on Github, A small percentage of the games won't work due to embedding issues.
 
 ## Host the games
 
