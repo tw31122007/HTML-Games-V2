@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="description" content="a standalone osu clone for web browsers">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title class="client-version">osw!</title>
+		<link rel="icon" href="./src/images/osw-small.png">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-always.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/forms.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/lib.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-loading-maps.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-menu.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-beatmap-selection.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-gameplay.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-pause-screen.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-fail-screen.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-results-screen.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/webpage-state-mods.css">
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="./src/stylesheets/mouse-states.css">
+	</head>
+	<body id="body">
+		<div class="webpage-state" id="webpage-state-always">
+			<!-- Prioritise loading splashscreen first -->
+			<div id="splash-screen">
+				<div id="heart-loader" class="lds-heart">
+					<div></div>
+				</div>
+				<div>
+					<img src="./src/images/osw-small.png" class="osw-logo-splash-screen" style="opacity: 0;">
+					<p style="margin: 0;"><span style="margin: 0;" class="client-version"></span> is in development</p>
+					<p style="margin: 0;" id="splash-screen-warning">This is not an official Osu! distribution</p>
+					
+					<p style="margin: 0;">Click to continue...</p>
+				</div>
+			</div>
+			<div id="orientation-vertical">
+				<p style="margin: 0;">rotate your device horizontally</p>
+			</div>
+			<div id="goodbye"></div>
+			<div id="background-dim">
+				<img decoding="async" id="background" src="./src/images/osw-background.png">
+			</div>
+			<div id="intro">
+				<div id="intro-text"></div>
+				<div id="triangles-container"></div>
+				<div id="intro-gamemodes-container">
+					<img class="intro-gamemodes" id="intro-standard" src="./src/images/standard.png">
+					<img class="intro-gamemodes" id="intro-taiko" src="./src/images/taiko.png">
+					<img class="intro-gamemodes" id="intro-catch" src="./src/images/catch.png">
+					<img class="intro-gamemodes" id="intro-mania" src="./src/images/mania.png">
+				</div>
+				<canvas id="intro-logo"></canvas>
+			</div>
+			<div class="sidenav" id="sidenav-left">
+				<div class="sidenav-padding">
+					<a href="javascript:void(0)" class="close-btn">&times;</a>
+					<p style="font-size: 5vh; padding: 0;">settings</p>
+					<p style="padding: 0; color: #FD67AE;">change the way osw! behaves</p>
+					<!-- Padding -->
+					<div style="padding-top: 5vh;"></div>
+					<!-- General Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">General</p>
+					<button type="button" class="settings-button triangle-background blue" onclick="window.open('https://github.com/Joshua-Usi/unofficial-osu-web', '_blank');">Visit Github repository</button>
+					<button type="button" class="settings-button triangle-background blue" onclick="window.open('https://github.com/Joshua-Usi/osw/issues/new/choose', '_blank');">Found a bug? Submit a bug report</button>
+					<button type="button" class="settings-button triangle-background blue" onclick="window.open('http://osu.ppy.sh/', '_blank');">Visit official osu! website</button>
+					<p>Client version: <span class="client-version"></span></p>
+					<!-- Audio Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">Audio</p>
+					<p id="settings-master-volume-text">Master volume: 100%</p>
+					<input type="range" id="settings-master-volume" class="slider" min="0" max="100" value="100">
+					<p id="settings-music-volume-text">Music volume: 100%</p>
+					<input type="range" id="settings-music-volume" class="slider" min="0" max="100" value="100">
+					<p id="settings-effects-volume-text">Effects volume: 100%</p>
+					<input type="range" id="settings-effects-volume" class="slider" min="0" max="100" value="100">
+					<!-- I`nput Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">Inputs</p>
+					<p class="inline-block">Keyboard left button</p>
+					<p class="inline-block character float-right" id="settings-keyboard-left-button">z</p>
+					<p class="inline-block">Keyboard right button</p>
+					<p class="inline-block character float-right" id="settings-keyboard-right-button">x</p>
+					<p style="color: #999;">Sensitivity only applies during gameplay</p>
+					<p id="settings-mouse-sensitivity-text">Mouse sensitivity: 1.0x</p>
+					<input type="range" id="settings-mouse-sensitivity" class="slider" min="0" max="1000" value="100">
+					<p style="color: #999;">Highly recommended if you are using tablet</p>
+					<p class="inline-block">Use tablet raw position</p>
+					<input type="checkbox" id="settings-use-raw-position" class="checkbox inline-block float-right">
+					<!-- User Interface Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">User Interface</p>
+					<!-- Triangles or Circles -->
+					<p>Intro sequence</p>
+					<div>
+						<p class="inline-block">Menu parallax</p>
+						<input type="checkbox" id="settings-menu-parallax" class="checkbox inline-block float-right" checked>
+					</div>
+					<p id="settings-background-blur-text">Background blur: 8px</p>
+					<input type="range" id="settings-background-blur" class="slider" min="0" max="16" value="8">
+					<!-- Gameplay Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">Gameplay</p>
+					<p>Notelock style</p>
+					<div class="select-box" id="settings-notelock-style">
+						<div class="select-box-selected-container">
+							<!-- Default option -->
+							<p class="select-box-selected">Full (original osu! implementation)</p>
+							<p class="select-box-arrow">&#709;</p>
+						</div>
+						<div class="select-box-selections">
+							<p class="selected">Full (original osu! implementation)</p>
+							<p>Miss previous objects</p>
+							<p>None</p>
+						</div>
+					</div>
+					<p id="settings-background-dim-text">Background dim: 80%</p>
+					<input type="range" id="settings-background-dim" class="slider" min="0" max="100" value="80">
+					<div>
+						<p class="inline-block">Draw 300 hits</p>
+						<input type="checkbox" id="settings-draw300-hits" class="checkbox inline-block float-right" checked>
+					</div>
+					<div>
+						<p class="inline-block">Snaking in sliders</p>
+						<input type="checkbox" id="settings-snaking-sliders-in" class="checkbox inline-block float-right" checked>
+					</div>
+					<p>Cursor trails</p>
+					<div class="select-box" id="settings-cursor-trails">
+						<div class="select-box-selected-container">
+							<!-- Default option -->
+							<p class="select-box-selected">Interpolated</p>
+							<p class="select-box-arrow">&#709;</p>
+						</div>
+						<div class="select-box-selections">
+							<p class="selected">Interpolated</p>
+							<p>Positional</p>
+							<p>None</p>
+						</div>
+					</div>
+					<!-- Performance Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">Performance</p>
+					<!-- setTimeout has a minimum timeout time of 4ms, thus making 250fps the limit -->
+					<!-- Vsync, 2x Vsync, Browser maximum (250fps) -->
+					<p>Max frame rate</p>
+					<div class="select-box" id="settings-max-frame-rate">
+						<div class="select-box-selected-container">
+							<!-- Default option -->
+							<p class="select-box-selected">VSync</p>
+							<p class="select-box-arrow">&#709;</p>
+						</div>
+						<div class="select-box-selections">
+							<p class="selected">VSync</p>
+							<p>2x VSync</p>
+							<p>Browser maximum (250fps)</p>
+						</div>
+					</div>
+					<div>
+						<p class="inline-block">Show FPS</p>
+						<input type="checkbox" id="settings-show-fps" class="checkbox inline-block float-right">
+					</div>
+					<!-- Full, Half, Quarter, Eighth, Sixteenth -->
+					<p id="settings-slider-resolution-text">Slider resolution: Full</p>
+					<input type="range" id="settings-slider-resolution" class="slider" min="1" max="5" value="1">
+					<p>Score update rate</p>
+					<div class="select-box" id="settings-score-update-rate">
+						<div class="select-box-selected-container">
+							<!-- Default option -->
+							<p class="select-box-selected">Equal to frame rate</p>
+							<p class="select-box-arrow">&#709;</p>
+						</div>
+						<div class="select-box-selections">
+							<p class="selected">Every frame</p>
+							<p>Only on change (fastest)</p>
+						</div>
+					</div>
+					<!-- Skin Settings -->
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">Skin</p>
+					<p>Current skin</p>
+					<div class="select-box" id="settings-current-skin">
+						<div class="select-box-selected-container">
+							<!-- Default option -->
+							<p class="select-box-selected">Ajax Transparent</p>
+							<p class="select-box-arrow">&#709;</p>
+						</div>
+						<div class="select-box-selections">
+							<p class="selected">Ajax Transparent</p>
+						</div>
+					</div>
+					<button type="button" id="settings-button-upload-skin" class="settings-button triangle-background blue" onclick="document.getElementById('upload-skin').click();">Upload skin</button>
+				<input type="file" id="upload-skin" style="display: none;">
+					<div class="sidenav-divider"></div>
+					<p class="sidenav-title-text">Maintenance</p>
+					<p style="color: #999;">Note! developer mode is performance heavy</p>
+					<div>
+						<p class="inline-block">Developer mode</p>
+						<input type="checkbox" id="settings-developer-mode" class="checkbox inline-block float-right">
+					</div>
+					<div id="developer-mode-details"></div>
+					<p style="color: #999;">Warning! these options can affect</p>
+					<p style="color: #999;">your client in unintended ways</p>
+					<p style="color: #999;">Once done they cannot be reversed</p>
+					<button type="button" id="settings-button-clear-options" class="settings-button triangle-background red">Clear local storage</button>
+					<button type="button" id="settings-button-delete-scores" disabled class="settings-button triangle-background red">Delete all scores</button>
+					<button type="button" id="settings-button-delete-replays" disabled class="settings-button triangle-background red">Delete all replays</button>
+					<button type="button" id="settings-button-delete-beatmap-cache" class="settings-button triangle-background red">Delete beatmap cache</button>
+					<button type="button" id="settings-button-delete-all-beatmaps" class="settings-button triangle-background red">Delete all beatmaps</button>
+				</div>
+			</div>
+			<div class="sidenav" id="sidenav-right">
+				<div class="sidenav-padding">
+					<a href="javascript:void(0)" class="close-btn">&times;</a>
+					<p class="sidenav-title-text">Notifications</p>
+					<div id="sidenav-notifications"></div>
+				</div>
+			</div>
+			<div id="top-bar">
+				<div class="span-top-bar-text" style="float: left;">
+					<img id="settings-icon" class="gamemode-icons" src="./src/images/settings.png">
+				</div>
+				<div class="span-top-bar-text float-right">
+					<img id="notifications-icon" class="gamemode-icons" src="./src/images/notifications.png">
+				</div>
+			</div>
+			<p id="frame-rate">0 / 60 fps</p>
+		</div>
+		<div class="webpage-state" id="webpage-state-loading-maps">
+			<p>Your beatmaps are being processed</p>
+			<p>Give it a moment, it should not take long</p>
+		</div>
+		<div class="webpage-state" id="webpage-state-menu">
+			<div class="beat-bar" id="left-beat"></div>
+			<div class="beat-bar" id="right-beat"></div>
+			<div id="menu-parallax">
+				<img id="logo" src="./src/images/osw.png">
+				<canvas id="audio-visualiser"></canvas>
+				<span id="snow"></span>
+				<div id="menu-bar">
+					<div class="menu-bar-buttons-parent" id="menu-bar-settings">
+						<div class="menu-bar-anti-skew">
+							<div class="menu-bar-image-move">
+								<img src="./src/images/settings.png" class="menu-bar-buttons-icon">
+							</div>
+							<div class="menu-bar-buttons">settings</div>
+						</div>
+					</div>
+					<div id="menu-right-side">
+						<div class="menu-bar-buttons-parent" id="menu-bar-play">
+							<div class="menu-bar-anti-skew">
+								<div class="menu-bar-image-move">
+									<img src="./src/images/osw-small.png" class="menu-bar-buttons-icon">
+								</div>
+								<div class="menu-bar-buttons">play</div>
+							</div>
+						</div>
+						<div class="menu-bar-buttons-parent" id="menu-bar-edit">
+							<div class="menu-bar-anti-skew">
+								<div class="menu-bar-image-move">
+									<img src="./src/images/osw-small.png" class="menu-bar-buttons-icon">
+								</div>
+								<div class="menu-bar-buttons">edit</div>
+							</div>
+						</div>
+						<div class="menu-bar-buttons-parent" id="menu-bar-direct" onclick="window.open('https://osu.ppy.sh/home', '_blank');">
+							<div class="menu-bar-anti-skew">
+								<div class="menu-bar-image-move">
+									<img src="./src/images/osw-small.png" class="menu-bar-buttons-icon">
+								</div>
+								<div class="menu-bar-buttons">osu! official</div>
+							</div>
+						</div>
+						<div class="menu-bar-buttons-parent" id="menu-bar-exit">
+							<div class="menu-bar-anti-skew">
+								<div class="menu-bar-image-move">
+									<img src="./src/images/exit.png" class="menu-bar-buttons-icon">
+								</div>
+								<div class="menu-bar-buttons">exit</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="bottom-bar-client-version">
+				<p id="version" class="client-version"></p>
+			</div>
+		</div>
+		<div id="bottom-bar">
+			<div class="inline-block" style=" width: 15vw; float: left;">
+				<div id="back-button">
+					<div style="transform: skew(10deg);">
+						<div id="back-button-image-container">
+							<img src="./src/images/back.png" id="back-button-image">
+						</div>
+						<p id="back-button-text">Back</p>
+					</div>
+				</div>
+			</div>
+			<div style="width: 15vw;" class="bottom-bar-buttons" id="bottom-bar-upload" onclick="document.getElementById('upload-beatmap').click();">
+				<input type="file" id="upload-beatmap" style="display: none;" multiple>
+				<p class="bottom-bar-buttons-text">Upload a beatmap</p>
+			</div>
+			<div class="bottom-bar-buttons" id="bottom-bar-mods">
+				<p class="bottom-bar-buttons-text">Mods</p>
+			</div>
+			<div class="bottom-bar-buttons" id="bottom-bar-random">
+				<p class="bottom-bar-buttons-text">Random</p>
+			</div>
+			<div class="bottom-bar-buttons" id="bottom-bar-options">
+				<p class="bottom-bar-buttons-text">Options</p>
+			</div>
+			<div class="bottom-bar-buttons" id="bottom-bar-watch-replay">
+				<p class="bottom-bar-buttons-text">watchReplay</p>
+			</div>
+		</div>
+		<div class="webpage-state" id="webpage-state-beatmap-selection">
+			<div id="beatmap-selection-top">
+				<div id="beatmap-image-wrapper">
+					<div id="beatmap-image"></div>
+					<div id="beatmap-statistics-row">
+						<p id="beatmap-statistics-version">Version</p>
+						<p id="beatmap-statistics-title">Title</p>
+						<p id="beatmap-statistics-artist">Artist</p>
+						<p style="font-weight: bold; font-size: 1.5vh; margin: 1vh 0;">mapped by <span id="beatmap-statistics-creator" style="color: #77b9e3;">Noone</span></p>
+					</div>
+					<div style="font-size: 1.75vh;" id="beatmap-statistics-row-2">
+						<img class="beatmap-statistics-images" src="./src/images/beatmap-selection/drain-time.png">
+						<p class="beatmap-statistics" id="beatmap-statistics-drain-time">0:00</p>
+						<img class="beatmap-statistics-images" src="./src/images/beatmap-selection/bpm.png">
+						<p class="beatmap-statistics" id="beatmap-statistics-bpm">0</p>
+						<img class="beatmap-statistics-images" src="./src/images/beatmap-selection/circle-count.png">
+						<p class="beatmap-statistics" id="beatmap-statistics-circle-count">0</p>
+						<img class="beatmap-statistics-images" src="./src/images/beatmap-selection/slider-count.png">
+						<p class="beatmap-statistics" id="beatmap-statistics-slider-count">0</p>
+						<img class="beatmap-statistics-images" src="./src/images/beatmap-selection/spinner-count.png">
+						<p class="beatmap-statistics" id="beatmap-statistics-spinner-count">0</p>
+					</div>
+					<div id="beatmap-image-difficulty-border"></div>
+					<div id="beatmap-image-difficulty-border-2"></div>
+				</div>
+				<div id="beatmap-search">
+					<input type="text" placeholder="type to search" class="inline-block" id="beatmap-search-bar">
+					<img src="./src/images/magnifying-glass.png" id="beatmap-search-magnifying-glass">
+				</div>
+			</div>
+			<div id="beatmap-selection-left">
+				<div style="position: relative; top: 45vh; font-size: 2vh; height: 40vh; width: 40vw; background-color: #0003;">
+					<div style="float: left; box-sizing: border-box; display: inline-block; padding: 1vh; width: 25vw; background-color: #0003;">
+						<div style="clear: both;">
+							<p class="inline-block beatmap-difficulty-text">Circle Size</p>
+							<div class="inline-block beatmap-difficulty-bar-background">
+								<div id="circle-size-difficulty" class="beatmap-difficulty-bar"></div>
+							</div>
+							<p id="circle-size-difficulty-value" class="inline-block beatmap-difficulty-value">0</p>
+						</div>
+						<div style="clear: both;">
+							<p class="inline-block beatmap-difficulty-text">HP Drain</p>
+							<div class="inline-block beatmap-difficulty-bar-background">
+								<div id="hp-drain-difficulty" class="beatmap-difficulty-bar"></div>
+							</div>
+							<p id="hp-drain-difficulty-value" class="inline-block beatmap-difficulty-value">0</p>
+						</div>
+						<div style="clear: both;">
+							<p class="inline-block beatmap-difficulty-text">Accuracy</p>
+							<div class="inline-block beatmap-difficulty-bar-background">
+								<div id="accuracy-difficulty" class="beatmap-difficulty-bar"></div>
+							</div>
+							<p id="accuracy-difficulty-value" class="inline-block beatmap-difficulty-value">0</p>
+						</div>
+						<div style="clear: both;">
+							<p class="inline-block beatmap-difficulty-text">Approach Rate</p>
+							<div class="inline-block beatmap-difficulty-bar-background">
+								<div id="approach-rate-difficulty" class="beatmap-difficulty-bar"></div>
+							</div>
+							<p id="approach-rate-difficulty-value" class="inline-block beatmap-difficulty-value">0</p>
+						</div>
+						<div style="clear: both;">
+							<p class="inline-block beatmap-difficulty-text">Star Difficulty</p>
+							<div class="inline-block beatmap-difficulty-bar-background">
+								<div id="star-rating-difficulty" class="beatmap-difficulty-bar"></div>
+							</div>
+							<p id="star-rating-difficulty-value" class="inline-block beatmap-difficulty-value">0</p>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div style="float: left; box-sizing: border-box; display: inline-block; padding: 0 1vh 1vh 1vh; width: 15vw;">
+						<p>Description</p>
+						<p style="font-size: 1.75vh;" id="description-text"></p>
+						<p>Source</p>
+						<p style="font-size: 1.75vh;" id="source-text"></p>
+						<p>Tags</p>
+						<p style="font-size: 1.75vh;" id="tags-text"></p>
+					</div>
+				</div>
+			</div>
+			<div id="beatmap-selection-right"></div>
+		</div>
+		<div class="webpage-state" id="webpage-state-gameplay">
+			<img id="grade" src="//:0">
+			<span id="score-container"></span>
+			<span id="accuracy-container"></span>
+			<span id="combo-container"></span>
+			<div id="skip-button">Press <div id="skip-button-space-bar">SPACE</div> to skip</div>
+			<canvas id="gameplay-flashlight"></canvas>
+			<canvas id="gameplay"></canvas>
+			<!-- a legacy to an older, better time -->
+			<div style="display: none; position: absolute; top: 45vh; left: 0; background: #111; width: 100vw; padding: 2vh 0; font-size: 3vh;text-align: center; transition: opacity 2s;">
+				<p style="margin: 0;">Deleting backgrounds makes osw! ANGGGGGGGRRRRRRRRRRYYYYYYYYYYYYYYYY!</p>
+				<p style="margin: 0;">Please use the "Background Dim" setting instead.</p>
+			</div>
+		</div>
+		<div class="webpage-state" id="webpage-state-mods">
+			<div id="mods-blue-one" class="mods-blue"></div>
+			<div id="mods-blue-two" class="mods-blue"></div>
+			<div id="mods-blue-three" class="mods-blue"></div>
+			<div id="mods-blue-four" class="mods-blue"></div>
+			<div id="mods-ui" class="triangle-background">
+				<div id="mods-text">
+					<div id="width-limiter">
+						<p style="font-weight: bold;">Gameplay Mods</p>
+						<p>Mods provide different ways to enjoy gameplay. Some have an effect on the score you can achieve. Others	are just for fun</p>
+					</div>
+				</div>
+				<div id="mods">
+					<p style="font-size: 1.75vh;"><b>Difficulty Reduction</b></p>
+					<!-- difficulty reduction -->
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-easy" src="./src/images/mod-icons/mod-easy.png">
+						</div>
+						<p class="mods-text">Easy</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-noFail" src="./src/images/mod-icons/mod-nofail.png">
+						</div>
+						<p class="mods-text">No Fail</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-halfTime" src="./src/images/mod-icons/mod-halftime.png">
+						</div>
+						<p class="mods-text">Half Time</p>
+					</div>
+					<p style="font-size: 1.75vh;"><b>Difficulty Increase</b></p>
+					<!-- difficulty increasing -->
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-hardRock" src="./src/images/mod-icons/mod-hardrock.png">
+						</div>
+						<p class="mods-text">Hard Rock</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-suddenDeath" src="./src/images/mod-icons/mod-suddendeath.png">
+						</div>
+						<p class="mods-text">Sudden Death</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-perfect" src="./src/images/mod-icons/mod-perfect.png">
+						</div>
+						<p class="mods-text">Perfect</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-doubleTime" src="./src/images/mod-icons/mod-doubletime.png">
+						</div>
+						<p class="mods-text">Double Time</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-nightcore" src="./src/images/mod-icons/mod-nightcore.png">
+						</div>
+						<p class="mods-text">Nightcore</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-hidden" src="./src/images/mod-icons/mod-hidden.png">
+						</div>
+						<p class="mods-text">Hidden</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-flashlight" src="./src/images/mod-icons/mod-flashlight.png">
+						</div>
+						<p class="mods-text">Flashlight</p>
+					</div>
+					<p style="font-size: 1.75vh;"><b>Automation</b></p>
+					<!-- automation mods -->
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-auto" src="./src/images/mod-icons/mod-auto.png">
+						</div>
+						<p class="mods-text">Auto</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-relax" src="./src/images/mod-icons/mod-relax.png">
+						</div>
+						<p class="mods-text">Relax</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-autopilot" src="./src/images/mod-icons/mod-autopilot.png">
+						</div>
+						<p class="mods-text">AutoPilot</p>
+					</div>
+					<div class="mod-container">
+						<div class="mod-height-limiter">
+							<img loading="lazy" decoding="async" class="mod-icons" id="mod-spunOut" src="./src/images/mod-icons/mod-spunout.png">
+						</div>
+						<p class="mods-text">Spun Out</p>
+					</div>
+				</div>
+				<div id="mod-buttons-container">
+					<button type="button" style="margin-left: 10vw;" class="mods-button triangle-background blue" id="mods-deselect-all">Deselect All</button>
+					<button type="button" disabled class="mods-button triangle-background blue">Customisation</button>
+					<button type="button" class="mods-button triangle-background blue" id="mods-close-button">Close</button>
+					<p class="inline-block" id="mod-score-multiplier">Score Multiplier: <b>1.00x</b></p>
+				</div>
+			</div>
+		</div>
+		<div class="webpage-state" id="webpage-state-pause-screen">
+			<div id="pause-menu-pause-text-container">
+				<div>
+					<p id="pause-menu-pause-text">paused</p>
+					<p id="pause-menu-pause-text-2">taking a break?</p>
+				</div>
+			</div>
+			<div id="pause-menu-container">
+				<div id="pause-menu-continue" class="pause-menu-button triangle-background">
+					<p class="pause-menu-anti-skew">Continue</p>
+				</div>
+				<div id="pause-menu-retry" class="pause-menu-button triangle-background">
+					<p class="pause-menu-anti-skew">Retry</p>
+				</div>
+				<div id="pause-menu-quit" class="pause-menu-button triangle-background">
+					<p class="pause-menu-anti-skew">Quit</p>
+				</div>
+			</div>
+		</div>
+		<div class="webpage-state" id="webpage-state-fail-screen">
+			<div id="fail-menu-fail-text-container">
+				<div>
+					<p id="fail-menu-fail-text">oh no! you failed</p>
+					<p id="fail-menu-fail-text-2">but thats ok, you'll do better next time</p>
+				</div>
+			</div>
+			<div id="fail-menu-container">
+				<div id="fail-menu-retry" class="fail-menu-button triangle-background">
+					<p class="fail-menu-anti-skew">Retry</p>
+				</div>
+				<div id="fail-menu-quit" class="fail-menu-button triangle-background">
+					<p class="fail-menu-anti-skew">Quit</p>
+				</div>
+			</div>
+		</div>
+		<div class="webpage-state" id="webpage-state-results-screen">
+			<div id="end-results">
+				<p id="end-results-map-name">MAP_NAME</p>
+				<p id="end-results-artist-name">ARTIST_NAME</p>
+				<img id="end-results-grade" src="//:0">
+				<p id="end-results-score">0</p>
+				<div id="end-results-accuracy">
+					<div id="end-results-accuracy-bar">ACCURACY_VALUE</div>
+				</div>
+				<p id="end-results-difficulty-name">DIFFICULTY_NAME</p>
+				<p id="end-results-mapper-name">MAPPER_NAME</p>
+				<div class="end-results-section">
+					<div class="end-results-3-part">
+						<p class="end-results-header">ACCURACY</p>
+						<p id="end-results-accuracy-header">0.00%</p>
+					</div>
+					<div class="end-results-3-part">
+						<p class="end-results-header">COMBO</p>
+						<div>
+							<p id="end-results-max-combo" class="inline-block">0</p>
+							<p id="end-results-combo-type" class="inline-block">PERFECT</p>
+						</div>
+					</div>
+					<div class="end-results-3-part">
+						<p class="end-results-header">PP</p>
+						<p id="end-results-pp">0</p>
+					</div>
+				</div>
+				<div class="end-results-section">
+					<div class="end-results-4-part">
+						<p class="end-results-header" style="color: #93c4e3;">GREAT</p>
+						<p id="end-results-great">0</p>
+					</div>
+					<div class="end-results-4-part">
+						<p class="end-results-header" style="color: #6a7a28;">OK</p>
+						<p id="end-results-ok">0</p>
+					</div>
+					<div class="end-results-4-part">
+						<p class="end-results-header" style="color: #baa855;">MEH</p>
+						<p id="end-results-meh">0</p>
+					</div>
+					<div class="end-results-4-part">
+						<p class="end-results-header" style="color: #710008;">MISS</p>
+						<p id="end-results-miss">0</p>
+					</div>
+				</div>
+				<div class="end-results-section">
+					<div class="end-results-3-part">
+						<p class="end-results-header">SLIDER END</p>
+						<p id="end-results-slider-ends">0/0</p>
+					</div>
+					<div class="end-results-3-part">
+						<p class="end-results-header">UNSTABLE RATE</p>
+						<p id="end-results-unstable-rate">0</p>
+					</div>
+					<div class="end-results-3-part">
+						<p class="end-results-header">COMBO BREAKS</p>
+						<p id="end-results-combo-breaks">0</p>
+					</div>
+				</div>
+				<p id="end-results-date-played">played on </p>
+			</div>
+		</div>
+		<audio id="menu-audio"></audio>
+		<script src="src/scripts/libs/jszip.js"></script>
+		<script type="module" src="./main.js"></script>
+		<!-- deferred css -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela%20Round">
+	</body>
+</html>

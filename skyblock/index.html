@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Skyblock</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<meta name="generator" content="Construct 3">
+	<meta name="author" content="Loregret">
+	<meta name="description" content="Skyblock">
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+	<link rel="icon" type="image/png" href="icons/icon-256.png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="fb-root"></div>
+
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+		<script src="scripts/project/smapi.js"></script>
+	 <script>
+		window.scorenga.setPauseCallback(function() {
+		 c3_runtimeInterface._GetLocalRuntime().SetSuspended(true);
+		});
+		window.scorenga.setResumeCallback(function() {
+		 c3_runtimeInterface._GetLocalRuntime().SetSuspended(false);
+		});
+		window.scorenga.setMuteCallback(function() {
+		 c3_callFunction("Mute");
+		});
+		window.scorenga.setUnMuteCallback(function() {
+		 c3_callFunction("UnMute");
+		});
+	 </script>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/register-sw.js"></script>
+</body>
+</html>

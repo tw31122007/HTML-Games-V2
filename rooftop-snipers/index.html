@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Rooftop Snipers</title>
+		<link rel="canonical" href="http://www.snokido.com/game/rooftop-snipers" />
+    <link href="../preloader/TemplateData/style.css" rel="stylesheet">
+	  <script src="../preloader/TemplateData/UnityProgress.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/Rooftop Snipers WebGL V1.0.data",
+    codeUrl: "Release/Rooftop Snipers WebGL V1.0.js",
+    memUrl: "Release/Rooftop Snipers WebGL V1.0.mem",
+  };
+  </script>
+  <script src="Release/UnityLoader.js"></script>
+  </body>
+</html>

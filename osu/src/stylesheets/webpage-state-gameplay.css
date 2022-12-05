@@ -1,0 +1,78 @@
+#webpage-state-gameplay {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #000;
+}
+
+#score-container {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 100vh;
+}
+
+#combo-container {
+	position: absolute;
+	z-index: 100;
+	top: calc(100vh - 2vh);
+}
+
+#accuracy-container {
+	position: absolute;
+	z-index: 100;
+	top: 5vh;
+}
+
+#grade {
+	position: absolute;
+	z-index: 100;
+	top: 7.5vh;
+	left: 91vw;
+
+	width: 2vw;
+}
+
+#score-container img {
+	width: 2vw;
+}
+
+#combo-container img {
+	width: 2vw;
+}
+
+#accuracy-container img {
+	width: 1vw;
+}
+
+#gameplay {
+	position: absolute;
+}
+
+#gameplay-flashlight {
+	position: absolute;
+	z-index: 10;
+}
+
+#skip-button {
+	position: absolute;
+	bottom: 10vh;
+	right: 5vw;
+	z-index: 101;
+
+	color: #fff9;
+	opacity: 0;
+
+	transition: opacity 1s;
+}
+
+#skip-button-space-bar {
+	display: inline-block;
+	width: 15vw;
+	border: 2px solid #fff3;
+	padding: 0.5em;
+
+	background: #fff1;
+
+	text-align: center;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+    Credit to Two Twelve for Pop cat!
+    github: https://github.com/two-twelve/popcat-classic
+    The licence file can be found in this directory
+  -->
+  <head>
+    <title>POPCAT CLASSIC | 3kh0</title>
+    <meta name="author" content="Joshua O'Sullivan, Freddy Heppell, Edward Hails" />
+    <meta charset="UTF-8" />
+    <!-- Social Card Info -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pop Cat Classic" />
+    <meta property="og:url" content="/" />
+    <meta property="og:description" content="Wide-Mouthed Popping Cat (Classic)" />
+    <meta property="og:image" content="imgs/og-card.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="imgs/twitter-card.jpg" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#b721ff" />
+    <meta name="theme-color" content="#b721ff" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW87QK5SRD"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BW87QK5SRD');
+        </script> -->
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap&text=0123456789" rel="stylesheet" />
+
+    <style>
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #bdaa90;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        position: relative;
+        overflow: hidden;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%) rotate(-3deg);
+        background-image: url("imgs/bg.jpg");
+        background-repeat: repeat-x;
+        background-size: contain;
+      }
+
+      .title {
+        margin: 2em 0 0;
+        width: min(600px, 80%);
+      }
+
+      .cat-img {
+        height: 0;
+        flex-grow: 1;
+        width: 100%;
+        max-width: 800px;
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        touch-action: manipulation;
+        text-align: center;
+        color: white;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: black;
+        font-weight: 900;
+        font-size: 80px;
+        font-family: "Nunito", sans-serif;
+        word-wrap: break-word;
+      }
+      @media (min-width: 1000px) {
+        .title {
+          width: min(400px, 80%);
+        }
+        .cat-img {
+          font-size: 40px;
+          -webkit-text-stroke-width: 1.5px;
+        }
+      }
+      #p {
+        background-image: url("imgs/p.png");
+      }
+      #op {
+        background-image: url("imgs/op.png");
+      }
+    </style>
+  </head>
+
+  <body>
+    <img class="title" src="imgs/popcat.svg" alt="POPCAT" />
+
+    <div class="cat-img" id="p"></div>
+
+    <script>
+      /*Preloading alternate cat image*/
+      preload = new Image();
+      preload.src = "imgs/op.png";
+
+      /*Cat elem*/
+      cat = document.getElementById("p");
+
+      /*Pop mp3s*/
+      pops = ["pops/pop1.mp3", "pops/pop2.mp3", "pops/pop3.mp3", "pops/pop4.mp3"];
+      pop_i = 0;
+
+      /*Cookie utils*/
+      function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      pop_count = getCookie("pop_count");
+      cat.innerHTML = pop_count > 0 ? pop_count : "";
+
+      op_func = function () {
+        /*Chance cat image to op.jpg via css*/
+        cat.id = "op";
+
+        /*Play pop noise*/
+        a = new Audio(pops[pop_i]);
+        a.load();
+        a.play();
+
+        /*Increment index for next pop noise*/
+        pop_i = (pop_i + 1) % pops.length;
+
+        /*Increment pop count*/
+        pop_count++;
+        cat.innerHTML = pop_count;
+        setCookie("pop_count", pop_count, 365);
+
+        /*Fire google analytics event for pop*/
+        // gtag('event', 'pop');
+      };
+      p_func = () => setTimeout(() => (cat.id = "p"), 25);
+
+      document.addEventListener("pointerup", p_func);
+      document.addEventListener("keyup", p_func);
+      document.addEventListener("pointerdown", op_func);
+      document.addEventListener("keydown", op_func);
+    </script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

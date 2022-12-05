@@ -1,0 +1,515 @@
+{ "height":17,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 0, 0, 0, 0, 0, 30, 30, 30, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 30, 0, 30, 30, 30, 30, 0, 0, 0, 0, 0, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30, 30, 30, 30, 30, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30, 30, 0, 0, 0, 0, 0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 0, 0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":17,
+         "id":9,
+         "name":"Terrain",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":22,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":10,
+         "name":"Entities",
+         "objects":[
+                {
+                 "gid":1,
+                 "height":16,
+                 "id":8,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":80,
+                 "y":224
+                }, 
+                {
+                 "gid":2147483675,
+                 "height":16,
+                 "id":9,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":288,
+                 "y":144
+                }, 
+                {
+                 "gid":79,
+                 "height":16,
+                 "id":15,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":208,
+                 "y":208
+                }, 
+                {
+                 "gid":53,
+                 "height":16,
+                 "id":17,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":160,
+                 "y":160
+                }, 
+                {
+                 "gid":53,
+                 "height":32,
+                 "id":18,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":48,
+                 "y":160
+                }, 
+                {
+                 "gid":53,
+                 "height":64,
+                 "id":20,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":80,
+                 "y":160
+                }, 
+                {
+                 "gid":53,
+                 "height":16,
+                 "id":21,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":16,
+                 "y":48
+                }, 
+                {
+                 "gid":53,
+                 "height":16,
+                 "id":22,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":16,
+                 "y":80
+                }, 
+                {
+                 "gid":53,
+                 "height":64,
+                 "id":24,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":80,
+                 "x":112,
+                 "y":112
+                }, 
+                {
+                 "gid":53,
+                 "height":16,
+                 "id":26,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":96,
+                 "y":192
+                }, 
+                {
+                 "gid":53,
+                 "height":32,
+                 "id":27,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":208,
+                 "y":48
+                }, 
+                {
+                 "gid":53,
+                 "height":32,
+                 "id":28,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":256,
+                 "y":48
+                }, 
+                {
+                 "gid":53,
+                 "height":48,
+                 "id":29,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"dist tiles x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"dist tiles y",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"vel move",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"wait steps destiny",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps origin",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"wait steps start",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":256,
+                 "y":192
+                }, 
+                {
+                 "gid":79,
+                 "height":16,
+                 "id":30,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":48,
+                 "y":128
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":11,
+ "nextobjectid":31,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.2.4",
+ "tileheight":16,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"Tileset.json"
+        }],
+ "tilewidth":16,
+ "type":"map",
+ "version":1.2,
+ "width":22
+}

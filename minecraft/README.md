@@ -1,0 +1,1 @@
+Since the offical repo for eaglercraft has been deleted, I have a copy of it at https://github.com/3kh0/eaglercraft-backup if you need it for anything! Thank you LAX1DUDE for this amazing game!

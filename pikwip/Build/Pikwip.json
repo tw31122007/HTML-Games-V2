@@ -1,0 +1,16 @@
+{
+"companyName": "Cookiecrayon",
+"productName": "Pikwip",
+"productVersion": "0.1",
+"dataUrl": "Pikwip.data.unityweb",
+"wasmCodeUrl": "Pikwip.wasm.code.unityweb",
+"wasmFrameworkUrl": "Pikwip.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.1f1"
+}

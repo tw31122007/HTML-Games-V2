@@ -1,0 +1,13 @@
+{
+"companyName": "Rainbow Train",
+"productName": "Klocki Free",
+"dataUrl": "Klocki_Demo_Armor.data.unityweb",
+"asmCodeUrl": "Klocki_Demo_Armor.asm.code.unityweb",
+"asmMemoryUrl": "Klocki_Demo_Armor.asm.memory.unityweb",
+"asmFrameworkUrl": "Klocki_Demo_Armor.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "rolling_sky_trip_v18.data.unityweb",
+"wasmCodeUrl": "rolling_sky_trip_v18.wasm.code.unityweb",
+"wasmFrameworkUrl": "rolling_sky_trip_v18.wasm.framework.unityweb",
+"asmCodeUrl": "rolling_sky_trip_v18.asm.code.unityweb",
+"asmMemoryUrl": "rolling_sky_trip_v18.asm.memory.unityweb",
+"asmFrameworkUrl": "rolling_sky_trip_v18.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

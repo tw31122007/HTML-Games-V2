@@ -1,0 +1,160 @@
+/* scrollbar css */
+::-webkit-scrollbar-track {
+	background-color: #222;
+}
+
+::-webkit-scrollbar {
+	width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 1vw;
+
+	background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover:active {
+	background: #777;
+}
+
+/* slider css */
+.slider::-webkit-slider-thumb {
+	position: relative;
+	top: -1vh;
+
+	width: 4vw;
+	height: 1vw;
+	border-radius: 1vw;
+	margin-top: calc(3.3vh / 2);
+	border: 0.4vh solid #FD67AE;
+
+	background: #0d0d0d;
+
+	outline: none;
+	-webkit-appearance: none;
+	transition: background border-color box-shadow;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+	box-shadow: -3px -3px 6px #FD67AE55, 3px -3px 6px #FD67AE55, 3px 3px 6px #FD67AE55, -3px 3px 6px #FD67AE55;
+
+	border-color: #ffc4ff;
+}
+
+.slider::-webkit-slider-thumb:hover:active {
+	background: #ffc4ff;
+}
+
+.slider {
+	width: 100%;
+	height: 0.4vh;
+	border-radius: 2.5vh;
+
+	background: linear-gradient(to right, #FD67AE 0%, #FD67AE 100%);
+
+	-webkit-appearance: none;
+	outline: none;
+}
+
+/* checkbox css*/
+.checkbox {
+	width: 4vw;
+	height: 1vw;
+	margin-top: 1.5vh;
+	border-radius: 1vw;
+	border: 0.4vh solid #FD67AE;
+
+	background-color: #0d0d0d;
+
+	-webkit-appearance: none;
+	outline: none;
+	transition: width border-color background-color box-shadow;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+
+.checkbox:hover {
+	width: 5vw;
+
+	border-color: #ffc4ff;
+
+	box-shadow: -5px -5px 10px #FD67AE99, 5px -5px 10px #FD67AE99, 5px 5px 10px #FD67AE99, -5px 5px 10px #FD67AE99;
+}
+
+.checkbox:checked {
+	background-color: #FD67AE;
+}
+
+.checkbox:checked:hover {
+	background-color: #ffc4ff;
+}
+
+/* custom select box css */
+.select-box-selected-container {
+	border-radius: 1vh;
+	padding: 0.5vw 0.5vw 0 0.5vw;
+
+	background: #060606;
+
+	transition: background 0.2s;
+}
+
+.select-box-selected-container:hover {
+	background: #FD67AE;
+}
+
+.select-box-selected {
+	display: inline-block;
+	position: relative;
+	bottom: 0.25em;
+}
+
+.select-box-arrow {
+	display: inline-block;
+	float: right;
+
+	transform: scale(2.25, 1.25);
+}
+
+.select-box-selections {
+	width: 100%;
+	height: 0px;
+	border-radius: 1vh;
+	padding: 2.5% 0 2.5% 0;
+	overflow: hidden;
+	opacity: 0;
+
+	background: #060606;
+
+	transition: height 0.3s, opacity 0.3s;
+}
+
+.select-box-selections p {
+	margin: 0 1vh 0 1vh !important;
+	border-radius: 1vh;
+	padding: 0.5vh !important;
+	
+	transition: background 0.2s;
+}
+
+.select-box-selections p:hover {
+	background: #FD67AE;
+}
+
+.selected {
+	background: #FD67AE;
+}
+
+button:disabled {
+	background-color: #666 !important;
+}
+
+button:disabled:hover {
+	background-color: #777 !important;
+}

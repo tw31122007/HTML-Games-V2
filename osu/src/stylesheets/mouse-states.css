@@ -1,0 +1,59 @@
+.span-top-bar-text {
+	cursor: pointer;
+}
+
+#logo {
+	cursor: pointer;
+}
+
+.settings-button {
+	cursor: pointer;
+}
+
+.slider {
+	cursor: pointer;
+}
+
+.character {
+	cursor: pointer;
+}
+
+.checkbox {
+	cursor: pointer;
+}
+
+.select-box {
+	cursor: pointer;
+}
+
+button:disabled:hover {
+	cursor: not-allowed;
+}
+
+.menu-bar-buttons-parent {
+	cursor: pointer;
+}
+
+#back-button {
+	cursor: pointer;
+}
+
+.bottom-bar-buttons {
+	cursor: pointer;
+}
+
+.beatmap-selection-group {
+	cursor: pointer;
+}
+
+.beatmap-selection-map-pane {
+	cursor: pointer;
+}
+
+.mod-icons {
+	cursor: pointer;
+}
+
+.mods-button {
+	cursor: pointer;
+}

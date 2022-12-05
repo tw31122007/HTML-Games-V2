@@ -1,0 +1,859 @@
+#speed
+Speed
+
+#power
+Attack
+
+#defence
+Defence
+
+#maxHp
+Health
+
+#hp
+Health
+
+#lookDistSelfOnly
+Vision
+
+#Language
+Language
+
+#Inventory
+Inventory
+
+#Menu
+Menu
+
+#Level
+Level
+
+#Expirience
+Experience
+
+
+#Floor
+Floor
+
+#Game Speed
+Game Speed
+
+#Battle Speed
+Battle Speed
+
+#slower
+slower
+
+#faster
+faster
+
+#New game
+New Game
+
+#New Game Prompt
+A You sure you want to start new game? Your current game data will be erased.
+
+#Yes
+Yes
+
+#No
+No
+
+#miss
+miss
+
+#You Die!
+You Died!
+
+#poisoned
+poisoned
+
+#Too heavy
+Too heavy
+
+#Timer disabled
+Timer disabled
+
+#paralized
+paralysed
+
+
+#crit
+crit
+
+#invisible
+invisible
+
+#Level reached!
+Level % reached!
+
+#no place for
+no slot in your inventory for
+
+
+#Regeneration
+regeneration
+
+#Accelerated
+accelerated
+
+#Mad
+mad
+
+#Drink
+Drink
+
+#Drop
+Drop
+
+#Throw
+Throw
+
+#set fast slot:
+set fast slot:
+
+#for you
+for you
+
+#Read
+Read
+
+
+
+
+
+
+#Guediarra
+Guediarra
+
+#Potionello
+Potionello
+
+#Activate 5 sec
+Activate 5 sec
+
+#Activate 10 sec
+Activate 10 sec
+
+#Plant
+Plant
+
+#DRINK PROMPT
+A you sure you want to drink
+
+#Yes i know
+Yes I am sure
+
+
+#Equip
+Equip
+
+#Unequip
+Unequip
+
+#defeated!
+defeated!
+
+#Entrance is locked.
+Entrance is locked.
+
+#Ok
+Ok
+
+#You reached level
+You reached level %
+
+#CHOOSE_SKILL
+choose one of two skills to improve:
+
+
+
+#skillAttack
+Attack +1
+
+#skillAttack_D
+Increases damage to enemies
+
+#skillDefence
+Defence +1
+
+#skillDefence_D
+Decreases damage received
+
+#skillHP
+HP +5
+
+#skillHP_D
+Increases hero's maximal health points
+
+#skillVision
+Vision +1
+
+#skillVision_D
+Increases hero's vision range
+
+#skillInventory
+Inventory +5
+
+#skillInventory_D
+Increases hero's backpack by 5 inventory slots
+
+#skillSpear
+Spear throwing +1
+
+#skillSpear_D
+Gain skill: kill enemies by throwing spear
+
+#burnt
+burnt
+
+#level:
+level:
+
+#wood
+Wood
+
+#iron
+Iron
+
+#gold
+Gold
+
+#emerald
+Emerald
+
+#ruby
+Ruby
+
+#obsidian
+Obsidian
+
+#ground_stone
+Stone Ground
+
+#brick
+Brick
+
+#swamp
+Swamp
+
+#clay
+Clay
+
+#gravy
+Gravy
+
+#water1
+Water
+
+#grass
+Grass
+
+#fogtoxic
+Toxic Fog
+
+#fog
+Fog
+
+#glass
+Glass
+
+#flesh
+Flesh
+
+#cinder
+Cinder
+
+#stem
+Stem
+
+#fur
+Fur
+
+#squama
+Scale
+
+
+#meat
+Meat
+
+#cotton
+Cotton
+
+#silver
+Silver
+
+#platinum
+Platinum
+
+#bronze
+Bronze
+
+#copper
+Copper
+
+#rustyIron
+Rusty Iron
+
+#garnet
+Garnet
+
+#beam
+Beam
+
+#chitin
+Carapace
+
+
+#poisonedFlesh
+Poisoned Flash
+
+#opal
+Opal
+
+#amber
+Amber
+
+#invisibility
+Invisible
+
+#paper
+Paper
+
+#ink
+Ink
+
+#leather
+Leather
+
+#CHOOSE_TO_THROW
+Choose where to throw
+
+#Sword
+Sword
+
+#Long Sword
+Long Sword
+
+#CHANCETOCRIT
+% chance for a critical attack
+
+#Broad Sword
+Broad Sword
+
+#Spear
+Spear
+
+#Shuriken
+Shuriken
+
+#Simple Ring
+Simple Ring
+
+#Armor
+Armor
+
+#Shield
+Shield
+
+#Boots
+Boots
+
+#Pants
+Pants
+
+#Helmet
+Helmet
+
+#Amulet
+Amulet
+
+#Scroll of Expirience
+Scroll of Experience
+
+#INCHEROLEVEL
+Increase hero's level by one
+
+#Scroll of Teleportation
+Scroll of Teleportation
+
+#TELEPORTHERO
+Teleportes hero to a random location on the current level
+
+
+#Scroll of Fire
+Scroll of Fire
+
+#Burn all visible enemy
+Burn all visible enemies
+
+#Scroll of Madness
+Scroll of Madness
+
+#MADSCROLLDESC
+All visible enemies start to attack the nearest unit
+
+#Scroll of Dreams
+Scroll of Dreams
+
+#Lulls everyone around
+Puts nearby enemies to sleep
+
+
+#Scroll of Mindvision
+Scroll of Mind-Vision
+
+#Allow you to see by enemies eyes
+Allow you to see all enemies eyes
+
+#Scroll of Alchemy
+Scroll of Alchemy
+
+#Make any metalic item golden
+Make any metalic item turn to gold
+
+#Scroll of Upgrade
+Scroll of Upgrade
+
+#Improves item
+Improves an item
+
+#Scroll of Summon
+Scroll of Summon
+
+#Summons evil creature
+Summons an evil creature ally
+
+#Scroll of Tower
+Scroll of Tower
+
+#Summons tower
+Summons a tower
+
+#Bomb
+Bomb
+
+#Fire Bomb
+Fire Bomb
+
+#Shock Bomb
+Shock Bomb
+
+#Dynamite with a timer
+Dynamite with a timed fuse
+
+#Stair
+Stairs
+
+#Locked Stair
+Locked Stairs
+
+#Heal Potion
+Heal Potion
+
+#Antidote Potion
+Antidote Potion
+
+#ANTIDOTE_DESC
+Removes all bad effects
+
+#Potion of Speed
+Potion of Speed
+
+#Potion of Invisibility
+Potion of Invisibility
+
+#Paralytic Gas
+Paralytic Gas
+
+#Fire Potion
+Fire Potion
+
+#Toxic Potion
+Toxic Potion
+
+#Skull Key
+Skull Key
+
+#seed
+seed
+
+#Fireflower seed
+Fireflower seed
+
+#Toxicflower seed
+Toxicflower seed
+
+#Healgrass seed
+Healgrass seed
+
+#Paraligrass seed
+Paraligrass seed
+
+#Poisongrass seed
+Poisongrass seed
+
+#Choose item for Gilding
+Choose an item to turn to Gold
+
+
+#Choose item to Improve
+Choose an item to Improve
+
+#KnightsShield
+Knight's Shield
+
+#SpikedShield
+Spiked Shield
+
+#LiteArmor
+Lite Armor
+
+#PlateArmor
+Plate Armor
+
+#Knife
+Knife
+
+#Tower
+Tower
+
+#bone
+Bone
+
+#improved
+this item is improved
+
+#Knuckles
+Knuckles
+
+
+#Club
+Club
+
+#Hammer
+Hammer
+
+#Mace
+Mace
+
+#Trident
+Trident
+
+#VikingsHelmet
+Viking's Helmet
+
+#of_HP
+of Health
+
+#of_speed
+of Speed
+
+#Precious Ring
+Precious Ring
+
+#Rare Ring
+Rare Ring
+
+#Kings Ring
+King's Ring
+
+#of_Fire
+of Fire
+
+#chanceToFire
+$% chance to set fire to an enemy by attacking
+
+#of_Paralyze
+of Immobilize
+
+#chanceToParalize
+$% chance to immobilize an enemy by attacking
+
+#of_Poison
+of Poison
+
+#chanceToPoison
+$% chance to poison an enemy by attacking
+
+#sapphire
+Sapphire
+
+#of_defence
+of Defence
+
+#of_attack
+of Attack
+
+#Dew
+Dew
+
+#BloodsuckerBoss
+Bloodsucker-Quin
+
+#Replay level
+Replay Level (attempt %)
+
+#aspen
+Aspen
+
+#pens_aspen
+Pennsylvanian Aspen
+
+
+#vapiricEffect
+This weapon has Vampiric aura
+
+#ScrolStoneDesc
+Turns all visible enemies to stone
+
+#Scroll of Stone
+Scroll of Stone
+
+#Hive
+Hive
+
+#Honey Potion
+Jar of Honey
+
+#honey
+Honey
+
+#unlocked
+Unlocked
+
+#knifeDesc
+fast attack
+
+#KnucklesDesc
+very fast attack
+
+#money
+coins
+
+#MoneySmall
+a handful of coins
+
+#moneyBig
+a heap of coins
+
+#StoreTitle
+DWARF'S STORE
+
+#shop
+Store Entrance
+
+#Shop was burned
+Shop was burned
+
+#SUBMIT
+SUBMIT REPORT
+
+#Report Error
+Report Error
+
+#submit_desc
+Describe you error here. Your game data will be attached to your message.
+
+#tanksForReport
+Thank you for your report!
+
+#buyFor
+Buy for % coins
+
+#notEnoughtMoney
+Not enough money. The price is % coins
+
+#Buying
+Buying
+
+#Selling
+Selling
+
+#sellFor
+Sell for % coins
+
+#sellAllFor
+Sell all for % coins
+
+#wasBroken
+was broken
+
+#broken
+Broken
+
+#canBeBroken
+Can break while fighting
+
+
+#onGround:
+Items on the ground:
+
+#PickUp
+Pickup
+
+#dew
+Dew
+
+#angryShoper1
+My Shop!!!
+
+#angryShoper2
+I will kill you!!!
+
+#becomeRusty
+become rusty
+
+#stone
+Stone
+
+#Thor
+Thor
+
+#ThorsHammerTake
+Thor's hammer hurt your hand
+
+#stunned
+stunned
+
+#Thors Hammer
+Thors Hammer
+
+#grayFur
+Gray Fur
+
+#WAS_BROKEN
+was broken!
+
+#HolyCross
+Sacrificial Cross
+
+
+#HolyCrossD
+Resurrects a hero after dying.
+
+
+#BlindGuardian
+Blind Guardian
+
+#blindSay0
+Where are you?
+
+#blindSay1
+Show yourself!
+
+#blindSay2
+I don't see you!
+
+#toxicFur
+Toxic Fur
+
+#toxicCotton
+Toxic Cotton
+
+#GasMask
+Gas Mask
+
+#noToxic
+Neutralizes effect of toxic gas
+
+#noParalize
+Neutralizes effect of paralysing gas
+
+#speed up
+speed up
+
+#debuff
+de-buff
+
+
+#Fullscreen
+Full-screen
+
+
+#on
+On
+
+#off
+Off
+
+#LATEST_ATTEMPT
+Last attempt!
+
+#ATTEMPT
+Attempt %1 of %2
+
+#GAME_OVER
+Game Over
+
+#NOT_ENOUGHT_FREE_SPACE
+Not enough free space to summon creature.
+
+#NOT_FIREABLE_ARROUND
+No enemies are visible to set fire to.
+
+
+#NO_UENEMY_ARROUND
+No visible enemies nearby to target.
+
+#NO_UENEMY_ONLEVEL
+No enemies on this level to target.
+
+#firstLevelName
+My Backyard
+
+#Scrag
+Scrag
+
+#Egg
+Egg
+
+#Needle
+Needle
+
+#RatMutant
+Wererat
+
+#ratsHearth
+Wererat's Hearth
+
+#Eat
+Eat
+
+#DoYouWantPassCage
+Do you want to pass between the bars?
+
+#rooted
+bound feet
+
+#SCRAGS_SCEAM
+Nooo-o-o-o-a-a-a-u-h-h-h!
+
+#RatKing
+Storeroom's King
+
+#OMGitsme
+OMG. I am me again.
+
+#pi pi pipi
+pi pi pipi
+
+#anotherRatsHearth
+Another Hearth
+
+#Locked Door
+Locked Door
+
+#BOSS_ALERT
+BOSS!!!
+
+#InheritChestLocked
+Chest of inheritance is empty.
+
+#inheritanceChest
+Chest of inheritance
+
+#chooseInherit
+Choose item to pass as inheritance.
+
+

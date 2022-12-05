@@ -1,0 +1,321 @@
+#beatmap-selection-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #0005;
+
+	clip-path: polygon(60% 0, 55% 50%, 60% 100%, 0 100%, 0 0);
+}
+
+#beatmap-selection-right {
+	position: absolute;
+	right: 0;
+
+	display: inline-block;
+	width: 45vw;
+	height: 20vh;
+	margin: 0;
+	padding-top: 30vh;
+	padding-bottom: 30vh;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+#beatmap-selection-top {
+	position: relative;
+	top: 4.25vh;
+	left: 0;
+	height: 13.75vh;
+	width: 100vw;
+	background: #0009;
+	z-index: 150;
+}
+
+#beatmap-selection-play {
+	position: absolute;
+	z-index: 103;
+	top: calc(100vh - 16vh);
+	left: calc(100vw - 22vh);
+
+	width: 25vh;
+	border-radius: 50%;
+	background-size: 50vh;
+
+	background-color: #FD67AE;
+
+	transition: width top left background-size filter;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0, .65, .6, 1.3);
+}
+
+.beatmap-selection-group-pane {
+	position: relative;
+	left: 5vw;
+	width: 50vw;
+	margin-bottom: 1vh;
+	border: 0.25vh solid #0000;
+	border-radius: 1.25vw 0 0 1.25vw;
+	padding: 0.5vh 1vh;
+	background: url("../../src/images/triangles.png"), linear-gradient(to right, #396f82, #061b24); 
+	background-size: 100%;
+
+	color: #e4ecef;
+	transition-timing-function: ease-in;
+	transition: filter 2s, box-shadow 0.2s, left 2s;
+}
+
+.beatmap-selection-map-pane {
+	position: relative;
+	left: 10vw;
+
+	width: 45vw;
+	margin-bottom: 1vh;
+	border: 0.25vh solid #0000;
+	border-radius: 1.25vw 0 0 1.25vw;
+	padding: 0.5vh 1vh;
+	background: url("../../src/images/triangles.png"), linear-gradient(to right, #396f82, #061b24);
+	background-size: 100%;
+
+	color: #e4ecef;
+	transition-timing-function: ease-in;
+	transition: filter 2s, box-shadow 0.2s, left 2s;
+}
+
+.beatmap-selection-selected {
+	border: 0.25vh solid #e4ecef;
+	background: url("../../src/images/triangles.png"), linear-gradient(to right, #4c95ae, #061b24);
+	background-size: 100%;
+
+	box-shadow: -0.5vh -0.5vh 1vh #d5fbff99, 0.5vh -0.5vh 1vh #d5fbff99, 0.5vh 0.5vh 1vh #d5fbff99, -0.5vh 0.5vh 1vh #d5fbff99;
+}
+
+.beatmap-selection-map-pane:hover {
+	filter: brightness(125%);
+	left: 7.5vw;
+	transition: filter 0.2s, box-shadow 0.2s, left 0.2s;
+}
+
+.beatmap-selection-group-pane:hover {
+	filter: brightness(125%);
+	left: 2.5vw;
+	transition: filter 0.2s, box-shadow 0.2s, left 0.2s;
+}
+
+
+.beatmap-selection-group-pane-artist {
+	font-size: 1.75vh;
+}
+
+.beatmap-selection-group-pane-difficulties-icon {
+	position: relative;
+	top: calc(1vh / 3);
+
+	width: 3vh;
+	padding: 0 0.2vw;
+
+	transform-origin: center center;
+}
+
+.beatmap-selection-group-pane-status {
+	position: relative;
+	bottom: 0.5vh;
+
+	display: inline;
+	padding: 0.75vh;
+	border-radius: 1vw;
+
+	font-size: 1.75vh;
+
+	background: #19191955;
+}
+
+.beatmap-selection-group-pane-difficulties-icon-container {
+	display: inline;
+}
+
+.beatmap-selection-map-pane-difficulty-icon {
+	display: inline;
+	float: left;
+	height: 6vh;
+	padding-right: 1vh;
+	padding-top: 1vh;
+}
+
+.beatmap-selection-map-pane-right-pane {
+	display: inline-block;	
+}
+
+.beatmap-selection-group-map-difficulty-name {
+	font-size: 3vh;
+}
+
+.beatmap-selection-map-pane-mapper {
+	display: inline;
+}
+
+.beatmap-selection-group-pane-maps {
+	transition: opacity height;
+	transition-duration: 0.2s;
+}
+
+.beatmap-difficulty-text {
+	float: left;
+	
+	width: 8vw;
+	margin: 0.5vh 0;
+}
+
+.beatmap-difficulty-bar-background {
+	float: left;
+	position: relative; 
+	top: 0.625em;
+
+	width: 10vw;
+	height: 0.375em; 
+
+	background-color: #666; 
+}
+
+.beatmap-difficulty-bar {
+	/* default size */
+	width: 0vw;
+	max-width: 10vw;
+	height: 0.375em;
+
+	background-color: #e4ecef;
+
+	transition: width 0.5s;
+}
+
+.beatmap-difficulty-value {
+	float: left;
+	width: 5vw;
+	margin: 0.5vh 0;
+
+	text-align: center;
+}
+
+#beatmap-search {
+	position: absolute;
+	top: 4vh;
+	right: 2vw;
+
+	display: inline-block;
+	border-radius: 1vh;
+
+	background: #111;
+}
+
+#beatmap-search-bar {
+	float: left;
+	height: 5vh;
+	width: 40vw;
+	padding-left: 0.75vh;
+	outline: none;
+	border: none;
+	border-radius: 1vh;
+
+	background: #111;
+	color: #e4ecef;
+}
+
+#beatmap-search-magnifying-glass {
+	float: left;
+	height: 3vh;
+	padding: 1vh;
+}
+
+#beatmap-image-wrapper {
+	z-index: 140;
+	position: relative;
+	top: 4vh;
+	width: 45vw;
+	height: 35vh;
+	background: #e4ecef;
+	box-shadow: -0.5vh -0.5vh 1vh #d5fbff99, 0.5vh -0.5vh 1vh #d5fbff99, 0.5vh 0.5vh 1vh #d5fbff99, -0.5vh 0.5vh 1vh #d5fbff99;
+	clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+	border: 0.25vh solid #e4ecef;
+}
+
+#beatmap-image {
+	width: calc(100% - 0.25vh);
+	height: calc(100% - 0.25vh);
+	margin: 0.125vh;
+	background-position: center;
+	background-size: cover;
+	transition: all .3s ease-in-out;
+	background-image: linear-gradient(#0d0d0d, #0d0d0d);
+	clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+	filter: brightness(75%);
+}
+
+#beatmap-image-difficulty-border {
+	position: absolute;
+	top: -0.25vh;
+	left: -0.25vh;
+	width: 0.75vw;
+	height: calc(100% + 0.5vh);
+	background-color: #515151;
+	transition: background 0.3s;
+}
+
+#beatmap-image-difficulty-border-2 {
+	position: absolute;
+	top: -0.25vh;
+	left: calc(-0.25vh + 0.75vw);
+	width: 0.5vw;
+	height: calc(100% + 0.5vh);
+	background-color: #515151;
+	filter: brightness(75%);
+	transition: background 0.3s;
+}
+
+.beatmap-statistics {
+	display: inline-block;
+	color: #e1d991;
+	font-weight: bold;
+	margin-right: 1vw;
+	margin-left: 0.25vw;
+}
+
+.beatmap-statistics-images {
+	height: 2em;
+	position: relative;
+	top: 0.5em;
+}
+
+#beatmap-statistics-row {
+	position: absolute;
+	top: 0;
+	left: 1.55vw;
+}
+
+#beatmap-statistics-row-2 {
+	position: absolute;
+	bottom: 0;
+	left: 1.55vw;
+}
+
+#beatmap-statistics-artist {
+	font-size: 1.75vh;
+	margin: 0;
+}
+
+#beatmap-statistics-title {
+	font-size: 4vh;
+	margin: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 37.5vw;
+}
+
+#beatmap-statistics-version {
+	margin-bottom: 11vh;
+	margin-top: 1vh;
+	font-size: 3vh;
+}

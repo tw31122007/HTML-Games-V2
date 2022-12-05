@@ -1,0 +1,19 @@
+{
+  "supportedLanguages": [ "en", "de", "es", "fr", "it", "pt", "ru", "tr" ],
+  "checkLanguageEveryTime": true,
+  "showLanguages": false,
+  "fullscreenOption": false,
+  "unlockLevels": false,
+
+  "showTutorial": false,
+  "showTutorialEverytime": false,
+
+  "resetScores": true,
+  "resetScoresUrlType": "yahoo",
+  "resetScoresUrls": {
+    "yahoo": "http://games.wkb.jp/ykg/time",
+    "sugotoku": "http://games.wkb.jp/ykg/time",
+    "ameba": "https://ame.wkb.jp/ame/time",
+    "test": "http://ytest.livinggames.jp/ydev/time2"
+  }
+}

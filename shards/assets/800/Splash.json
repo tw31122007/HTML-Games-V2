@@ -1,0 +1,122 @@
+{"frames": [
+{
+	"filename": "Splash_Logo",
+	"frame": {"x":1,"y":1,"w":362,"h":254},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":362,"h":254},
+	"sourceSize": {"w":362,"h":254},
+	"anchor": {"w":0.50000,"h":0.50000}
+},
+{
+	"filename": "Splash_Bar",
+	"frame": {"x":365,"y":1,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32},
+	"anchor": {"w":0.50000,"h":0.50000}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":453,"y":1,"w":19,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":29},
+	"sourceSize": {"w":19,"h":29},
+	"anchor": {"w":0.47368,"h":0.48276}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":495,"y":1,"w":12,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":28},
+	"sourceSize": {"w":12,"h":28},
+	"anchor": {"w":0.50000,"h":0.50000}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":399,"y":33,"w":19,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":28},
+	"sourceSize": {"w":19,"h":28},
+	"anchor": {"w":0.47368,"h":0.50000}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":474,"y":1,"w":19,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":29},
+	"sourceSize": {"w":19,"h":29},
+	"anchor": {"w":0.47368,"h":0.48276}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":431,"y":1,"w":20,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":28},
+	"sourceSize": {"w":20,"h":28},
+	"anchor": {"w":0.50000,"h":0.50000}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":365,"y":35,"w":19,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":28},
+	"sourceSize": {"w":19,"h":28},
+	"anchor": {"w":0.47368,"h":0.50000}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":431,"y":31,"w":19,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":29},
+	"sourceSize": {"w":19,"h":29},
+	"anchor": {"w":0.47368,"h":0.48276}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":420,"y":62,"w":19,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":28},
+	"sourceSize": {"w":19,"h":28},
+	"anchor": {"w":0.47368,"h":0.50000}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":452,"y":32,"w":19,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":29},
+	"sourceSize": {"w":19,"h":29},
+	"anchor": {"w":0.47368,"h":0.48276}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":473,"y":32,"w":19,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":29},
+	"sourceSize": {"w":19,"h":29},
+	"anchor": {"w":0.47368,"h":0.48276}
+},
+{
+	"filename": "LoadingFont",
+	"frame": {"x":399,"y":1,"w":30,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30},
+	"anchor": {"w":0.50000,"h":0.50000}
+}],
+"meta": {
+	"app": "Spritor"
+}
+}

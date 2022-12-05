@@ -1,0 +1,15 @@
+#webpage-state-loading-maps {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	text-align: center;
+	
+	z-index: 10000;
+
+	background: url("../images/osw-background.png");
+	background-size: 100vw;
+}

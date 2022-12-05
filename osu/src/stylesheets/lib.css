@@ -1,0 +1,23 @@
+.red {
+	background-color: #FD67AE;
+}
+
+.blue {
+	background-color: #2ca4cc;
+}
+
+.red:hover {
+	background-color: #ff9ccb;
+}
+
+.blue:hover {
+	background-color: #45b0de;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.float-right {
+	float: right;
+}

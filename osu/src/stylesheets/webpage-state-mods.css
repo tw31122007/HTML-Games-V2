@@ -1,0 +1,129 @@
+#mods-ui {
+	position: absolute;
+	display: inline-block;
+	bottom: -76vh;
+	z-index: 900;
+
+	width: 100vw;
+	height: 76vh;
+	background-size: 100vw;
+
+	background-color: #313e4f;
+	color: #e4ecef;
+
+	transition: bottom;
+}
+
+#mods-text {
+	height: 21vh;
+	background-size: 100vw;
+
+	background-color: #0003;
+}
+
+.mods-text {
+	text-align: center;
+	font-size: 2vh;
+}
+
+#width-limiter {
+	width: 60%;
+	padding: 1vh 0 1vh 10vw;
+}
+
+#mods {
+	height: 40vh;
+	padding-left: 10vw;
+	overflow-y: scroll;
+}
+
+#mod-buttons-container {
+	height: 16vh;
+
+	background-color: #FD67AE99;
+}
+
+.mods-button {
+	width: 15%;
+	height: calc(5vh + 1em);
+	margin: 1.5vh 1vw;
+	border: none;
+	border-radius: 1.5vh;
+	outline: none;
+	background-size: 25vw;
+
+	background-color: #2ca4cc;
+	color: #e4ecef;
+
+	text-align: center;
+	font-family: inherit;
+	font-size: 1.75vh;
+
+	transition: background 0.2s;
+}
+
+.mod-icons {
+	display: block;
+	width: 12vh;
+	margin: auto;
+
+	transition: transform width;
+	transition-duration: 0.05s;
+	transition-timing-function: cubic-bezier(.7,.6,.5,1.3);
+}
+
+.mod-selected {
+	width: 14vh;
+
+	filter: brightness(1.25);
+	transform-origin: center;
+	transform: rotate(10deg);
+}
+
+.mod-container {
+	display: inline-block;
+	width: 17.5vh;
+}
+
+.mod-height-limiter {
+	width: 17.5vh;
+	height: 8vh;
+}
+
+.mods-blue {
+	position: absolute;
+	bottom: -70vh;
+	
+	height: 70vh;
+	width: 100vw;
+
+	transition: bottom;
+}
+
+#mods-blue-one {
+	background: #1ab0e2;
+	clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+	z-index: 896;
+}
+
+#mods-blue-two {
+	background: #2181a1;
+	clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+	z-index: 897;
+}
+
+#mods-blue-three {
+	background: #005673;
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+	z-index: 898;
+}
+
+#mods-blue-four {
+	background: #00394f;
+	clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+	z-index: 899;
+}
+
+.mod-score-transition {
+	transition: color 0.5s;
+}

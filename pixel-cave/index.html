@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PIXEL CAVE</title>
+		<meta name="yandex-verification" content="bdc2b43d59cdc08a" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="google" content="notranslate" />
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		
+		<link href='https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		
+		<link href='https://fonts.googleapis.com/css?family=Rubik+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<script>
+			window.errorssLimit =0;
+			window.occuredErrorsInGame = [];
+			window.onerror = function(msg, url, line, col, error) {
+/*
+				ui.prompt(div(null,
+					h3(null, msg),
+					div(null,url+ ' ('+line+':'+col+')'),
+					msg
+				
+				));*/
+				
+				debugger;
+				
+				window.errorssLimit++;
+				if (window.errorssLimit<=3) {
+					var m = 'unhandled ERROR: ' + url+' ('+line+':'+col+') '+msg;
+					
+					window.occuredErrorsInGame.push(m);
+					
+					alert(m);
+				}
+			};
+
+		</script>
+		
+	</head>
+	
+	<body>
+		<canvas id="mapCanvas" width="300" height="150"></canvas>
+		
+		<div id="ui"></div>
+		<div id="modal"></div>
+		
+		<div id="wait-fader">
+			<div class="bg">
+				<img src="data/title.png" style="margin: 40px auto; width:60vh; height:30vh">
+				<br>
+				<span class="loading">Loading...</span>
+				<br>
+				<span class="desc">
+					<span class="version"></span>
+					<br>
+					free online roguelike game "pixel cave".
+					<br>
+					Available for platforms: iOS, Android, Windows, Mac.
+					<br>
+					Programming and graphics - Vasiliy Kostin
+					<br>
+					testing - Tatyana Kostina, Andrey Stepanov
+					<br>
+					translation - Marcus Hadlock
+					<br>
+					<a href="https://pixel-cave.com">www.pixel-cave.com</a>
+					<br>
+					2016
+					
+				</span>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script src="js/lib/jquery.min.js"></script>
+
+
+
+
+<script src="js/lib/react.min.js"></script>
+<script src="js/lib/react-dom.min.js"></script>
+<script src="js/code.js"></script>
+
+
+
+
+

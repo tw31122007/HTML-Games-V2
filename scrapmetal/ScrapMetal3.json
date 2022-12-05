@@ -1,0 +1,13 @@
+{
+"companyName": "3kh0",
+"productName": "ScrapMetal 3",
+"dataUrl": "ScrapMetal3.data.unityweb",
+"wasmCodeUrl": "ScrapMetal3.wasm.code.unityweb",
+"wasmFrameworkUrl": "ScrapMetal3.wasm.framework.unityweb",
+"TOTAL_MEMORY": 486539264,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

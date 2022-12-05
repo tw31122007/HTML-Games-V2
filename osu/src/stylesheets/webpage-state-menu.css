@@ -1,0 +1,215 @@
+#audio-visualiser {
+	position: absolute;
+	z-index: 5;
+	top: -6vh;
+	left: calc(55vw - 56vh);
+
+	width: calc(70vh * 1.6);
+	height: calc(70vh * 1.6);
+
+	transition: left top width height;
+	transition-timing-function: ease;
+	transition-duration: 0.05s;
+}
+
+#bottom-bar-client-version {
+	position: fixed;
+	z-index: 10;
+	top: calc(100vh - 3vh);
+	left: 0;
+
+	width: 100vw;
+	height: 3vh;
+	background-size: 25vw;
+
+	background: #191919;
+
+	clip-path: polygon(43% 0, 57% 0, 62% 50%, 100% 50%, 100% 100%, 0 100%, 0 50%, 38% 50%);
+}
+
+#logo {
+	position: absolute;
+	z-index: 50;
+	top: calc(50vh - 70vh / 2);
+	left: calc(55vw - 70vh / 2);
+
+	width: 70vh;
+	background: url('../../src/images/triangles.png');
+	background-color: #FD67AE;
+	background-size: 50vh;
+	clip-path: polygon(50% 0, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0 50%, 15% 15%);
+	
+	transition: width top left background-size filter;
+	transition-duration: 0.25s;
+	transition-timing-function: cubic-bezier(0, .65, .25, 1.5);
+	will-change: width top left background-size filter;
+}
+
+#menu-bar {
+	position: relative;
+	top: 50vh;
+
+	display: inline-block;
+	width: 120vw;
+	opacity: 0;
+
+	background-color: #323232;
+
+	transition: opacity top;
+	transition-duration: 0.2s;
+}
+
+.menu-bar-buttons-parent {
+	position: relative;
+	z-index: 9;
+	float: left;
+
+	display: inline-block;
+	width: 10vw;
+	height: calc(10vh + 1em);
+	margin: 0;
+	border-collapse: collapse;
+	box-sizing: border-box;
+
+	color: #e4ecef;
+
+	text-align: center;
+
+	transition: padding width left;
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(.0, .7, .65, 1.9);
+	transform: skewX(-20deg);
+	box-shadow: inset 5px 0px 5px -1px #0004;
+}
+
+.menu-bar-anti-skew {
+	transform: skewX(20deg);
+}
+
+.menu-bar-buttons {
+	overflow: hidden;
+
+	font-size: 2vh;
+}
+
+.menu-bar-buttons-icon {
+	width: 4vh;
+	margin: auto;
+
+	transform-origin: center center;
+}
+.menu-bar-buttons-icon-animation {
+	animation-name: icon-rotate;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+	animation-iteration-count: infinite;
+}
+
+@keyframes icon-rotate {
+	0% {
+		transform: rotate(15deg);
+	}
+	25% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	75% {
+		transform: rotate(-15deg);
+	}
+	100% {
+		transform: rotate(15deg);
+	}
+}
+
+.menu-bar-image-move {
+	position: relative;
+	bottom: 1vh;
+}
+
+.menu-bar-image-move-animation {
+	animation-name: icon-bounce;
+	animation-duration: 375ms;
+	animation-timing-function: cubic-bezier(0.68, -0.2, 0.32, 1.2);
+	animation-iteration-count: infinite;
+}
+
+@keyframes icon-bounce {
+	0% {
+		bottom: 1vh;
+		transform: scaleY(0.9);
+	}
+	50% {
+		bottom: 2.5vh;
+		transform: scaleY(1);
+	}
+	100% {
+		bottom: 1vh;
+		transform: scaleY(0.9);
+	}
+}
+
+#menu-right-side {
+	position: absolute;
+	left: 38vw;
+}
+
+#menu-bar-play {
+	width: 12.5vw !important;
+
+	background-color: #6644cc;
+}
+
+#menu-bar-play:hover {
+	width: 20vw !important;
+}
+
+#menu-bar-edit {
+	background-color: #eeaa01;
+}
+
+#menu-bar-direct {
+	background-color: #a5cc01;
+}
+
+#menu-bar-exit {
+	background-color: #ee3499;
+}
+
+#menu-bar-settings {
+	left: 17.5vw;
+
+	width: 15vw;
+
+	background-color: #555555;
+}
+
+.menu-bar-buttons-parent:hover {
+	width: 17.5vw;
+}
+
+#menu-bar-settings:hover {
+	left: 12.5vw;
+
+	width: 20vw;
+}
+
+.beat-bar {
+	position: absolute;
+	top: 0;
+
+	width: 12.5vw;
+	height: 100vh;
+	opacity: 0;
+}
+
+#left-beat {
+	left: 0;
+	background: linear-gradient(to right, #348feb22, #348feb00);
+}
+
+#right-beat {
+	right: 0;
+	background: linear-gradient(to left, #348feb22, #348feb00);
+}
