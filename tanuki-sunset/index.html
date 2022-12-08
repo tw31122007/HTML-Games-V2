@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title>Tanuki Sunset | 3kh0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="img/cover.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/cover.png" />
-    <script src="js/UnityLoader.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Tanuki Sunset</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "tanuki.json");
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body style="margin: 0; overflow: hidden;">
+  <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Tanuki Sunset</div>
+      </div>
     </div>
-    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>
