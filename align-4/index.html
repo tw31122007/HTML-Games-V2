@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Align 4 Game</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="sidebar">
+        <h1>Align 4.</h1>
+        <div class="panel dif">
+          <h2>Difficulty : </h2>
+          <div class="dif-options">
+            <div>
+              <input id="dif1" type="radio" name="dif-options" value="1">
+              <label for="dif1">1</label>
+            </div>
+            <div>
+              <input id="dif2" type="radio" name="dif-options" value="2">
+              <label for="dif2">2</label>
+            </div>
+            <div>
+              <input id="dif3" type="radio" name="dif-options" value="3" checked>
+              <label for="dif3">3</label>
+            </div>
+            <div>
+              <input id="dif4" type="radio" name="dif-options" value="4">
+              <label for="dif4">4</label>
+            </div>
+            <div>
+              <input id="dif5" type="radio" name="dif-options" value="5">
+              <label for="dif5">5</label>
+            </div>
+          </div>
+          <div class="start">
+            <button>Start Game</button>
+          </div>
+        </div>
+        <div class="panel info">
+          <h2></h2>
+          <div class="blurb blurbStyle"></div>
+          <div class="outlook"></div>
+        </div>
+
+        <div class="credits">
+          <h2>About.</h2>
+          <div class="blurb blurbStyle"><span id="about">Designed and translated by </span><a class="me" href="https://github.com/totocptbgn">Thomas Copt-Bignon</a>.<br><span id="about2">Gameplay from : </span><br><a href="https://codepen.io/lonekorean">https://codepen.io/lonekorean</a></div>
+          <div class="outlook"></div>
+        </div>
+        <button class="translate">FR <img src="img/FrFlag.png" class="flag"></button>
+
+      </div>
+      <div class="board">
+        <div class="lit-columns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="lit-cells"></div>
+        <div class="chips"></div>
+        <div class="click-columns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
