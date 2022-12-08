@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "target": "ES6"
+  },
+  "exclude": [
+      "JimothyPiggertonCompiled/compiled.js",
+      "**compiled*.js",
+      "node_modules",
+      "**/node_modules/*"
+  ]
+}

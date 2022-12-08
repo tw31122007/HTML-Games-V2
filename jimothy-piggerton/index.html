@@ -1,0 +1,89 @@
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'"> -->
+  <title>Jimothy Piggerton</title>
+  <meta name="author" content="Brian Marcelus Dizon">
+  <meta name="keywords" content="Web Games,Game,Video Game,Mobile Games,mobile web,game,
+  games,Brian Dizon,Brian,Dizon,Cute,wobbly,difficult,html,javascript,pure javascript,
+  scratch,code golf,Indie,Indie Games,UCI,Marcelus,Brian M Dizon,Brian Marcelus Dizon,BMD,
+  Platformer,Games by Brian Dizon,Jimothy,Piggerton,Jimothy Piggerton,VGDC,UCI,Adventure">
+  <link rel="stylesheet" href="./JimothyPiggertonCompiled/style.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet"> -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143849635-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143849635-1');
+</script>
+  <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+
+</head>
+<div id="level-editor-editor" class="hidden">
+  <label id="level-editor-prompt-label"></label>
+  <input type="text" id="level-editor-level-name">
+  <input type="file" id="level-editor-file-selector">
+</div>
+<canvas id="gc" width="1000" height="600"></canvas>
+<!-- <canvas id="gc" width="800" height="600"></canvas> -->
+<script>
+  var debug = 0;
+  var DEBUG = true;
+  var DASHON = false;
+  var SOUNDASSETS = "./JimothyPiggertonCompiled/SoundAssets/";
+  var IMAGEASSETS = "./JimothyPiggertonCompiled/Images/";
+  function debugLog(...args) {
+    for(var i in args)
+    debug = debug+','+args[i];
+  }
+var concat = 'cat ';
+
+function loadScript (dir, file) {
+ var scr = document.createElement("script");
+ var url = dir + file;
+ scr.src = url + '?' + Date.now();
+ concat += url + " ";
+ document.body.appendChild(scr);
+ return scr;
+}
+function getCompileScript() {
+  concat += "> JimothyPiggertonCompiled/compiled.js";
+  console.log(concat);
+}
+function loadFolder (dir, preNum, num, postNum) {
+  var file = preNum + num + postNum;
+  var scr = document.createElement("script");
+  scr.src = dir + file;
+  document.body.appendChild(scr);
+  scr.onload = function() {
+    loadFolder(dir, preNum, num+1, postNum);
+  }
+}
+function loadSequentially (dir, list) {
+    var file = list.shift();
+    loadScript(dir, file).onload = function() {
+      if(list.length!=0)
+      loadSequentially(dir, list);
+    };
+}
+loadScript('./', 'math.js');
+loadScript('./Animations/', 'Animation.js');
+</script>
+<script src="./Sounds/index.js"></script>
+<script src="./Levels/index.js"></script>
+<script src="./Blocks/0index.js"></script>
+<script src="./Worlds/index.js"></script>
+<script src="./Art/index.js"></script>
+<script src="./Entities/index.js"></script>
+<script src="./Scenes/index.js"></script>
+<script src="./GUI/index.js"></script>
+<script src="./Dialogue/index.js"></script>
+<script src="./Util/index.js"></script>
+<script>
+loadScript("./", "main.js");
+// window.addEventListener('load', function() {
+//   document.getElementById("gc").focus();
+// })
+</script>
