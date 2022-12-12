@@ -1,0 +1,108 @@
+
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from yell0wsuit.github.io/html5-games/games/ctr2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2022 18:16:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+    <link rel="icon" type="image/png" href="ctr2.png">
+    <title>Cut the Rope 2 (HTML5 edition)</title>
+    <style>
+        html,
+        body {
+            position: fixed;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: url(tilebg.jpg);
+        background-repeat:   repeat;
+        }
+
+        * {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+            -ms-touch-action: none;
+            -ms-content-zooming: none;
+            touch-action: none;
+            outline: none;
+        }
+
+        #background {
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+         }
+
+         #background, #loading {
+             background-color: transparent;
+             background: url(tilebg.jpg);
+             background-repeat:   repeat;
+         }
+    .ctrCursor {
+        cursor: url(cursors/cursor.cur), url(cursors/cursor.png), auto
+    }
+    @font-face {
+            font-family: Inter;
+            src: url("../../../fonts/Inter.var.woff2") format("woff2-variations");
+            font-weight: 300 900;
+            font-stretch: 35% 100%;
+            font-style: normal;
+    }
+</style>
+    <script src="gamepix.js"></script></head>
+
+<body class="ctrCursor">
+    <div id="background"></div>
+    <canvas id="canvas" tabindex="0"></canvas>
+    <script>
+        function getParameterByName(name, url) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        };
+
+        if (getParameterByName("autorun", window.location.href) !== "0") {
+            const createScript = function() {
+                const el = document.createElement("script");
+                el.onload = function() {
+                    tinyLoader.load();
+                };
+                el.src = "tiny-loader.js";
+                return el;
+            }
+
+            const corsScript = createScript();
+            corsScript.onerror = function() {
+                document.body.removeChild(corsScript);
+                const el = createScript();
+                el.onerror = console.error;
+                document.body.appendChild(el);
+            };
+
+            corsScript.setAttribute("crossorigin", "anonymous");
+            document.body.appendChild(corsScript);
+        }
+    </script>
+
+
+</body>
+<!-- Mirrored from yell0wsuit.github.io/html5-games/games/ctr2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 May 2022 18:16:31 GMT -->
+</html>
