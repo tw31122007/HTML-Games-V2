@@ -1,5 +1,5 @@
 # HTML-Games-Collection
-Welcome to BCHS Unblocked Games HTML Games Collection, your best option for unblocked games on the internet. This is the GitHub repo which is used to host the website. If you want to use the games on here on your website, please message me on discord and we can talk! Tw31122007#4450
+Welcome to BCHS Unblocked Games HTML Games Collection, your best option for unblocked games on the internet. This is the GitHub repo which is used to host the games for the github pages version of the website. If you want to use the games on here on your website, please message me on discord and we can talk! Tw31122007#4450
 
 ## Features
 
