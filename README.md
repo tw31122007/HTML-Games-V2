@@ -1,27 +1,10 @@
 # HTML-Games-Collection
-Welcome to BCHS Unblocked Games HTML Games Collection, your best option for unblocked games on the internet. This is the GitHub repo which is used to host the games for the github pages version of the website.
-
-## Features
-
-- Site-wide tab cloaking
-- Easy to deploy
-- Clean UI
-- Cross platform
-- Easy to use
-- Light on host resources
-- And so much more!
-
-## Live deployment
+Welcome to the BCHS Unblocked Games HTML Games Collection, your best option for unblocked games on the internet. This GitHub repo is a copy of the HTML games used on the site.
 
 You can access my website using the links below:
 
 [https://sites.google.com/view/def-maths/home](https://sites.google.com/view/def-maths/home)
-[https://tw31120071857.github.io/BCHS-Unblocked-Games-V2/](https://tw31120071857.github.io/BCHS-Unblocked-Games-V2/)
-
-Please note that with the version of my website thats hosted on Github, A small percentage of the games won't work due to embedding issues.
-
-> **Note**
-> If you have any problems please open a issue!
+[https://bchs.apges.dev/](https://bchs.pages.dev/)
 
 ## Credits
 All of the sources of the games:
