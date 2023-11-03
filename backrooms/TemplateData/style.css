@@ -10,9 +10,23 @@
 .webgl-content .logo.Dark {background-image: url('progressLogo.Dark.png');}
 .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
 .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
-
-.webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;} 
-.webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;} 
-.webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
-.webgl-content .footer .title {margin-right: 10px; float: right;}
-.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .webgl-content {
+    width: 100%;
+    height: 100%;
+    position: relative; /* changed to relative to allow footer to position at the bottom */
+  }
+  #gameContainer {
+    width: 100%;
+    height: calc(100% - 38px); /* Adjust for footer height */
+  }
+  .webgl-content .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0; /* Positioned at the bottom */
+  }
