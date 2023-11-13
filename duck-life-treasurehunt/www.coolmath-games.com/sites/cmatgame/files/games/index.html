@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Duck Life: Treasure Hunt</title>
+        <script src="/assets/ruffle/ruffle.js"></script>
+        <style>
+            body { background-color: #000000; height: 100%; margin: 0; }
+            embed { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+        </style>
+    </head>
+    <body>
+        <style>
+            #swf-container {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            embed {
+              display: block;
+              margin: 0 auto;
+            }
+          </style>
+          <div id="swf-container"></div>
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    // Use the hardcoded SWF URL
+                    const swfUrl = '/games/html5/duck-life-treasurehunt/www.coolmath-games.com/sites/cmatgame/files/games/cm_ducklifetreasurehunt_2.swf';
+                    
+                    // Ensure SWF URL is available
+                    if (swfUrl) {
+                        // Create the embed element
+                        let embedElem = document.createElement('embed');
+                        embedElem.src = swfUrl;
+                        embedElem.type = 'application/x-shockwave-flash';
+                        const maxWidth = window.innerWidth;
+                        const maxHeight = window.innerHeight - 10;
+                        const originalWidth = 800;
+                        const originalHeight = 450;
+                        const aspectRatio = originalWidth / originalHeight;
+                
+                        if (maxWidth / aspectRatio <= maxHeight) {
+                            embedElem.width = maxWidth;
+                            embedElem.height = maxWidth / aspectRatio;
+                        } else {
+                            embedElem.width = maxHeight * aspectRatio;
+                            embedElem.height = maxHeight;
+                        }
+                        
+                        document.getElementById('swf-container').appendChild(embedElem);
+                    } else {
+                        alert("No SWF URL found!");
+                    }
+                });
+                
+            </script>
+    </body>
+</html>

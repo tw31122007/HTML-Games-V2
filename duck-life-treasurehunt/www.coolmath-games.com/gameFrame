@@ -1,0 +1,127 @@
+<html>
+ <head>
+  <META NAME='ROBOTS' CONTENT='NOINDEX, NOFOLLOW'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js'></script>
+  <script src='/sites/cmatgame/modules/custom/swfembed/jquery.swfembed.js'></script>
+  </head>
+  <body>
+    <div id='gameContent'></div>
+      <script type='text/javascript'>
+      var swf_1_game_url_relative = getUrlParameter('u');
+      var gameType = getUrlParameter('t');
+      var hostname = window.location.hostname;
+      if(hostname.match(/stage/)) {
+        var domain = 'https://stage.coolmath-games.com';
+      } else if(hostname.match(/dev|local/)) {
+        var domain = hostname;
+      } else {
+        var domain = 'http://www.coolmath-games.com';
+      }
+      game_element = document.getElementById('gameContent');
+
+      //swf game
+      if(gameType == '') {
+        var swf_1_game_url = domain + '/' + swf_1_game_url_relative;
+        swf_1_game_url = swf_1_game_url.replace('http:',window.location.protocol);
+  			isMSIE = /*@cc_on!@*/false;
+  			obj = (isMSIE) ? createIeObject(swf_1_game_url) : document.createElement('object');
+  			if (!isMSIE) {
+  			 obj.setAttribute('type', 'application/x-shockwave-flash');
+  			 obj.setAttribute('data', swf_1_game_url);
+  			}
+  			//Add attributes to <object>
+  			obj.setAttribute('id', 'swfObjID');
+  			obj.setAttribute('width', '100%');
+  			obj.setAttribute('height', '100%');
+  			var param = document.createElement('param');
+  			param.setAttribute('name','allowScriptAccess');
+  			param.setAttribute('value','always');
+  			obj.appendChild(param);
+  			var param3 = document.createElement('param');
+  			param3.setAttribute('name','movie');
+  			param3.setAttribute('value', getUrlParameter('f'));
+  			obj.appendChild(param3);
+  			var param4 = document.createElement('param');
+  			param4.setAttribute('name','menu');
+  			param4.setAttribute('value','false');
+  			obj.appendChild(param4);
+  			var param5 = document.createElement('param');
+  			param5.setAttribute('name','quality');
+  			param5.setAttribute('value','high');
+  			obj.appendChild(param5);
+  			var param6 = document.createElement('param');
+  			param6.setAttribute('name','wmode');
+  			param6.setAttribute('value','direct');
+  			obj.appendChild(param6);
+  			var param7 = document.createElement('param');
+  			param7.setAttribute('name','scale');
+  			param7.setAttribute('value','exactfit');
+  			obj.appendChild(param7);
+  			console.log('gameFrame.html. Loading swf object into gameContent element from '+swf_1_game_url_relative);
+  			game_element.parentNode.replaceChild(obj, game_element);
+			} else {
+        //html5 game
+        console.log('gameFrame: html5game --- load it in iframe');
+        var iframe = document.createElement('iframe');
+        var html5_game_url = domain + '/' + swf_1_game_url_relative;
+        html5_game_url = html5_game_url.replace('http:',window.location.protocol);
+        iframe.src = html5_game_url;
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '100%');
+        iframe.setAttribute('style', 'border: none;');
+    		iframe.setAttribute('scrolling', 'no');
+    		iframe.setAttribute('marginwidth', '0');
+    		iframe.setAttribute('vspace', '0');
+    		iframe.setAttribute('frameborder', '0');
+    		iframe.setAttribute('hspace', '0');
+    		iframe.setAttribute('marginheight', '0');
+        iframe.setAttribute('id', 'html5game');
+        game_element.parentNode.replaceChild(iframe, game_element);
+      }
+
+			//Handle swf game event calls 
+			function cmgGameEvent(cm_game_evt, cm_game_lvl) {
+			  gDate = new Date();
+			  console.log('gameFrame.html: Game event from swf in iFrame. Time: '+gDate +' Timestamp: '+gDate.getTime() );
+			  //Post a message to the parent
+			  console.log('gameFrame.html: Posting cmgGameEvent message to parent. Event='+cm_game_evt + '. Level='+cm_game_lvl)
+			  if(typeof cm_game_lvl !== 'undefined' && cm_game_lvl !== '') {
+			    window.parent.postMessage({'cmg_game_u': getUrlParameter('u'), 'cm_game_evt' : cm_game_evt, 'cm_game_lvl': cm_game_lvl}, '*');
+			  } else {
+			    window.parent.postMessage({'cmg_game_u': getUrlParameter('u'), 'cm_game_evt' : cm_game_evt, 'cm_game_lvl': ''}, '*');
+			  }
+			}
+			function getUrlParameter(name) {
+			  name = name.replace(/[\[]/, '\[').replace(/[\]]/, '\]');
+			  var regex = new RegExp('[\?&]' + name + '=([^&#]*)');
+			  var results = regex.exec(location.search);
+			  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			};
+		  //addEventListener support for IE8
+			function bindEvent(element, eventName, eventHandler) {
+			  if (element.addEventListener){
+			    element.addEventListener(eventName, eventHandler, false);
+			  } else if (element.attachEvent) {
+			    element.attachEvent('on' + eventName, eventHandler);
+			  }
+			}
+			//Listen to message from parent window
+			bindEvent(window, 'message', function (e) {
+			  gDate = new Date();
+			  cmgOrigin = /coolmath-games.com|coolmathgames.com|cmatgame.local/;
+        game = 'swf';
+        if(getUrlParameter('t') !== '') {
+          game = getUrlParameter('t');
+        }
+			  if(cmgOrigin.test(e.origin) && e.data === 'unlockAllLevels') {
+			    console.log('gameFrame.html: Received a message from parent window. Check if it is unlockAllLevels (game :'+game+')... ' + e.data + ' Date: '+gDate + ' Timestamp: '+gDate.getTime());
+          if(game === 'swf') {
+	         document.getElementById('swfObjID').unlockAllLevels();
+          } else if(game === 'h') {
+            document.getElementById('html5game').contentWindow.unlockAllLevels();
+          }
+			  }
+			});
+  </script>
+  </body>
+</html>
