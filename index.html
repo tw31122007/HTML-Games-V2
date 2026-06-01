@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atharv's Unblocked HTML5 Games</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap');
+
+ :root {
+ --bg: #0a0a0f;
+ --surface: #111118;
+ --card: #16161f;
+ --border: #2a2a3a;
+ --accent: #e8ff47;
+ --accent2: #ff4f7b;
+ --text: #f0f0f5;
+ --muted: #6b6b80;
+ --glow: rgba(232,255,71,0.15);
+ }
+
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+
+ body {
+ background: var(--bg);
+ color: var(--text);
+ font-family: 'DM Sans', sans-serif;
+ min-height: 100vh;
+ overflow-x: hidden;
+ }
+
+ /* Noise overlay */
+ body::before {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+ pointer-events: none;
+ z-index: 1000;
+ opacity: 0.4;
+ }
+
+ header {
+ padding: 48px 40px 32px;
+ position: relative;
+ border-bottom: 1px solid var(--border);
+ }
+
+ .header-inner {
+ max-width: 1400px;
+ margin: 0 auto;
+ display: flex;
+ align-items: flex-end;
+ justify-content: space-between;
+ gap: 24px;
+ flex-wrap: wrap;
+ }
+
+ .logo {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: clamp(56px, 8vw, 100px);
+ line-height: 0.9;
+ letter-spacing: 2px;
+ color: var(--accent);
+ text-shadow: 0 0 60px rgba(232,255,71,0.3);
+ }
+
+ .logo span {
+ color: var(--text);
+ opacity: 0.15;
+ }
+
+ .tagline {
+ color: var(--muted);
+ font-size: 14px;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ margin-top: 8px;
+ }
+
+ .stats {
+ display: flex;
+ gap: 32px;
+ padding-bottom: 4px;
+ }
+
+ .stat {
+ text-align: right;
+ }
+
+ .stat-num {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 36px;
+ color: var(--accent);
+ line-height: 1;
+ }
+
+ .stat-label {
+ font-size: 11px;
+ color: var(--muted);
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ }
+
+ .controls {
+ padding: 24px 40px;
+ max-width: 1400px;
+ margin: 0 auto;
+ display: flex;
+ gap: 16px;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+
+ .search-wrap {
+ position: relative;
+ flex: 1;
+ min-width: 240px;
+ }
+
+ .search-wrap svg {
+ position: absolute;
+ left: 14px;
+ top: 50%;
+ transform: translateY(-50%);
+ color: var(--muted);
+ pointer-events: none;
+ }
+
+ input[type="search"] {
+ width: 100%;
+ background: var(--surface);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ padding: 10px 14px 10px 40px;
+ color: var(--text);
+ font-family: 'DM Sans', sans-serif;
+ font-size: 14px;
+ outline: none;
+ transition: border-color 0.2s;
+ }
+
+ input[type="search"]:focus {
+ border-color: var(--accent);
+ box-shadow: 0 0 0 3px var(--glow);
+ }
+
+ input[type="search"]::placeholder { color: var(--muted); }
+
+ .filter-btns {
+ display: flex;
+ gap: 8px;
+ flex-wrap: wrap;
+ }
+
+ .filter-btn {
+ background: var(--surface);
+ border: 1px solid var(--border);
+ color: var(--muted);
+ border-radius: 6px;
+ padding: 8px 16px;
+ font-family: 'DM Sans', sans-serif;
+ font-size: 13px;
+ cursor: pointer;
+ transition: all 0.15s;
+ white-space: nowrap;
+ }
+
+ .filter-btn:hover, .filter-btn.active {
+ background: var(--accent);
+ border-color: var(--accent);
+ color: #000;
+ font-weight: 600;
+ }
+
+ .grid {
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 8px 40px 60px;
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+ gap: 12px;
+ }
+
+ .game-card {
+ background: var(--card);
+ border: 1px solid var(--border);
+ border-radius: 10px;
+ overflow: hidden;
+ cursor: pointer;
+ transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+ position: relative;
+ group: true;
+ }
+
+ .game-card:hover {
+ transform: translateY(-3px);
+ border-color: var(--accent);
+ box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 0 1px var(--accent);
+ }
+
+ .game-card:active {
+ transform: translateY(0);
+ }
+
+ .card-icon {
+ height: 90px;
+ background: linear-gradient(135deg, #1a1a28 0%, #0d0d1a 100%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 36px;
+ border-bottom: 1px solid var(--border);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .card-icon::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: radial-gradient(circle at 50% 120%, var(--glow) 0%, transparent 60%);
+ }
+
+ .card-body {
+ padding: 10px 12px 12px;
+ }
+
+ .card-name {
+ font-size: 13px;
+ font-weight: 600;
+ color: var(--text);
+ line-height: 1.3;
+ display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ }
+
+ .card-play {
+ margin-top: 8px;
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ font-size: 11px;
+ color: var(--accent);
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ opacity: 0;
+ transform: translateY(4px);
+ transition: all 0.15s;
+ }
+
+ .game-card:hover .card-play {
+ opacity: 1;
+ transform: translateY(0);
+ }
+
+ .no-results {
+ grid-column: 1/-1;
+ text-align: center;
+ color: var(--muted);
+ padding: 60px 0;
+ font-size: 16px;
+ }
+
+ .no-results span {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 48px;
+ color: var(--border);
+ display: block;
+ margin-bottom: 8px;
+ }
+
+ /* Cloak info banner */
+ .cloak-banner {
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 0 40px;
+ }
+
+ .cloak-info {
+ background: rgba(232,255,71,0.06);
+ border: 1px solid rgba(232,255,71,0.2);
+ border-radius: 8px;
+ padding: 10px 16px;
+ font-size: 13px;
+ color: var(--muted);
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+
+ .cloak-info strong { color: var(--accent); }
+
+ @media (max-width: 600px) {
+ header { padding: 32px 20px 24px; }
+ .controls, .grid, .cloak-banner { padding-left: 20px; padding-right: 20px; }
+ .grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+ }
+</style>
+</head>
+<body>
+
+<header>
+ <div class="header-inner">
+ <div>
+ <div class="logo">ATHARV'S<br><span style="color:var(--text);opacity:1;font-size:0.55em;letter-spacing:4px;">UNBLOCKED HTML5 GAMES</span></div>
+ <p class="tagline">Free · Unblocked · No Install Required</p>
+ </div>
+ <div class="stats">
+ <div class="stat">
+ <div class="stat-num" id="total-count">0</div>
+ <div class="stat-label">Games</div>
+ </div>
+ </div>
+ </div>
+</header>
+
+<div class="cloak-banner">
+ <div class="cloak-info" style="margin:20px 0 0">
+ ⚡ <strong>Cloaked:</strong> Games open in a new tab at <strong>about:blank</strong> — URL bar stays clean
+ </div>
+</div>
+
+<div class="controls">
+ <div class="search-wrap">
+ <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+ <input type="search" id="search" placeholder="Search games…" autocomplete="off">
+ </div>
+ <div class="filter-btns" id="filters">
+ <button class="filter-btn active" data-filter="all">All</button>
+ <button class="filter-btn" data-filter="action">Action</button>
+ <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+ <button class="filter-btn" data-filter="arcade">Arcade</button>
+ <button class="filter-btn" data-filter="sports">Sports</button>
+ <button class="filter-btn" data-filter="strategy">Strategy</button>
+ <button class="filter-btn" data-filter="idle">Idle/Clicker</button>
+ </div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script>
+const BASE = 'https://raw.githack.com/tw31122007/HTML-Games-V2/main/';
+
+const games = [
+ { name: '1', folder: '1', icon: '🎮', tags: ['arcade'] },
+ { name: '10 Minutes Till Dawn', folder: '10-minutes-till-dawn', icon: '🌙', tags: ['action'] },
+ { name: '100 Ninja Girls', folder: '100ng', icon: '⚔️', tags: ['action'] },
+ { name: '1v1.LOL', folder: '1v1lol', icon: '🔫', tags: ['action'] },
+ { name: '1v1 Space', folder: '1v1space', icon: '🚀', tags: ['action'] },
+ { name: '2020 Game', folder: '2020-game', icon: '📅', tags: ['puzzle'] },
+ { name: '2048 Multitask', folder: '2048-multitask', icon: '🔢', tags: ['puzzle'] },
+ { name: '2048', folder: '2048', icon: '🟨', tags: ['puzzle'] },
+ { name: '8-Ball Billiards Classic', folder: '8ball-billards-classic', icon: '🎱', tags: ['sports'] },
+ { name: '9007199254740992', folder: '9007199254740992', icon: '♾️', tags: ['puzzle'] },
+ { name: 'Doge Miner', folder: 'DogeMiner', icon: '🐕', tags: ['idle'] },
+ { name: 'FullScreen Mario', folder: 'FullScreenMario/Source', icon: '🍄', tags: ['arcade'] },
+ { name: 'HexGL', folder: 'HexGL', icon: '🏎️', tags: ['action'] },
+ { name: 'Offline Paradise', folder: 'OfflineParadise', icon: '🏝️', tags: ['idle'] },
+ { name: 'Squid Gun Fest', folder: 'Squid Gun Fest', icon: '🦑', tags: ['action'] },
+ { name: 'Stickman Survival', folder: 'Stickman-Survival', icon: '🏃', tags: ['action'] },
+ { name: 'Achievement Unlocked', folder: 'achievementunlocked', icon: '🏆', tags: ['arcade'] },
+ { name: 'A Dark Room', folder: 'adarkroom', icon: '🕯️', tags: ['idle', 'strategy'] },
+ { name: 'Adrenaline Challenge', folder: 'adrenalinechallenge', icon: '⚡', tags: ['action'] },
+ { name: 'Age of War', folder: 'age-of-war', icon: '⚔️', tags: ['strategy'] },
+ { name: 'Alien Invaders IO', folder: 'alien-invaders-io', icon: '👽', tags: ['arcade', 'action'] },
+ { name: 'Alien Hominid', folder: 'alienhominid', icon: '🛸', tags: ['action'] },
+ { name: 'Align 4', folder: 'align-4', icon: '🔵', tags: ['puzzle'] },
+ { name: 'Among Us', folder: 'among-us', icon: '🫘', tags: ['action'] },
+ { name: 'Angry Birds', folder: 'angry-birds', icon: '🐦', tags: ['puzzle'] },
+ { name: 'Anti-Terrorist Rush', folder: 'anti-terrorist-rush', icon: '💥', tags: ['action'] },
+ { name: 'Arcade Wizard', folder: 'arcade-wizard', icon: '🧙', tags: ['arcade'] },
+ { name: 'ASCII Space', folder: 'asciispace', icon: '🌌', tags: ['arcade'] },
+ { name: 'Aspiring Artist', folder: 'aspiring-artist', icon: '🎨', tags: ['puzzle'] },
+ { name: 'Asteroids', folder: 'asteroids', icon: '☄️', tags: ['arcade'] },
+ { name: 'Astray', folder: 'astray', icon: '🌀', tags: ['puzzle'] },
+ { name: 'Avalanche', folder: 'avalanche', icon: '🏔️', tags: ['action'] },
+ { name: 'Awesome Tanks 2', folder: 'awesome-tanks-2', icon: '🪖', tags: ['action'] },
+ { name: 'Backcountry', folder: 'backcountry', icon: '🎿', tags: ['sports'] },
+ { name: 'Backflip Dive 3D', folder: 'backflip-dive-3d', icon: '🤸', tags: ['sports'] },
+ { name: 'Backrooms', folder: 'backrooms', icon: '🚪', tags: ['action'] },
+ { name: 'Bad Ice Cream', folder: 'bad-ice-cream', icon: '🍦', tags: ['arcade'] },
+ { name: 'Bad Ice Cream 2', folder: 'bad-ice-cream-2', icon: '🍧', tags: ['arcade'] },
+ { name: 'Bad Ice Cream 3', folder: 'bad-ice-cream-3', icon: '🍨', tags: ['arcade'] },
+ { name: "Baldi's Basics", folder: 'baldis-basics', icon: '📚', tags: ['action'] },
+ { name: 'Basket Bros IO', folder: 'basket-bros-io', icon: '🏀', tags: ['sports'] },
+ { name: 'Basketball IO', folder: 'basketball-io', icon: '🏀', tags: ['sports'] },
+ { name: 'Basketball Legends 2020', folder: 'basketball-legends-2020', icon: '🏀', tags: ['sports'] },
+ { name: 'Basketball Stars', folder: 'basketball-stars', icon: '⭐', tags: ['sports'] },
+ { name: 'Battle for Gondor', folder: 'battleforgondor', icon: '🏰', tags: ['strategy'] },
+ { name: 'Big Red Button', folder: 'bigredbutton', icon: '🔴', tags: ['arcade'] },
+ { name: 'Binding of Isaac', folder: 'binding-of-isaac', icon: '😢', tags: ['action'] },
+ { name: 'BitLife', folder: 'bitlife', icon: '👤', tags: ['idle'] },
+ { name: 'Blackhole Square', folder: 'blacholesquare', icon: '⬛', tags: ['puzzle'] },
+ { name: 'Blackhole Square 2', folder: 'blackholesquare', icon: '🕳️', tags: ['puzzle'] },
+ { name: 'Black Knight', folder: 'blackknight', icon: '🗡️', tags: ['action'] },
+ { name: 'Blocky Snakes', folder: 'blocky-snakes', icon: '🐍', tags: ['arcade'] },
+ { name: 'Bloons TD', folder: 'bloonstd', icon: '🎈', tags: ['strategy'] },
+ { name: 'Bloons TD 2', folder: 'bloonstd2', icon: '🎈', tags: ['strategy'] },
+ { name: 'Bloxors', folder: 'bloxors', icon: '📦', tags: ['puzzle'] },
+ { name: 'Bounce Back', folder: 'bounceback', icon: '⚽', tags: ['arcade'] },
+ { name: 'Boxel Rebound', folder: 'boxel-rebound', icon: '🟦', tags: ['arcade'] },
+ { name: 'Boxhead 2Play', folder: 'boxhead2play', icon: '🧟', tags: ['action'] },
+ { name: 'Brave Explorers', folder: 'brave-explorers', icon: '🗺️', tags: ['action'] },
+ { name: 'Breaking the Bank', folder: 'breakingthebank', icon: '🏦', tags: ['puzzle'] },
+ { name: 'Breaklock', folder: 'breaklock', icon: '🔓', tags: ['puzzle'] },
+ { name: 'Breakout', folder: 'breakout', icon: '🧱', tags: ['arcade'] },
+ { name: 'BTD 4', folder: 'btd4', icon: '🎈', tags: ['strategy'] },
+ { name: 'BTTS', folder: 'btts', icon: '🎯', tags: ['arcade'] },
+ { name: 'Burning Man 2', folder: 'burning-man-2', icon: '🔥', tags: ['action'] },
+ { name: 'Cannon Basketball 4', folder: 'cannon-basketball-4', icon: '💣', tags: ['sports'] },
+ { name: 'Canyon Defense', folder: 'canyondefense', icon: '🏜️', tags: ['strategy'] },
+ { name: 'Captain Callisto', folder: 'captaincallisto', icon: '👨‍🚀', tags: ['action'] },
+ { name: 'Cars Simulator', folder: 'cars-simulator', icon: '🚗', tags: ['sports'] },
+ { name: 'Cell Machine', folder: 'cell-machine', icon: '🔬', tags: ['puzzle', 'strategy'] },
+ { name: 'Champion Archer', folder: 'championarcher', icon: '🏹', tags: ['sports'] },
+ { name: 'Chess', folder: 'chess', icon: '♟️', tags: ['strategy'] },
+ { name: 'Chill Radio', folder: 'chill-radio', icon: '🎵', tags: ['arcade'] },
+ { name: 'Chroma Incident', folder: 'chromaincident', icon: '🌈', tags: ['puzzle'] },
+ { name: 'Chrome Dino', folder: 'chrome-dino', icon: '🦕', tags: ['arcade'] },
+ { name: 'Chrome Dino 2', folder: 'chromedino', icon: '🦖', tags: ['arcade'] },
+ { name: 'Circlo', folder: 'circlo', icon: '⭕', tags: ['arcade'] },
+ { name: 'City Blocks 2', folder: 'city-blocks-2', icon: '🏙️', tags: ['puzzle'] },
+ { name: 'Clean Up IO', folder: 'clean-up-io', icon: '🧹', tags: ['arcade'] },
+ { name: 'Cluster Rush', folder: 'cluster-rush', icon: '🚛', tags: ['action'] },
+ { name: 'Color Switch 2', folder: 'color-switch-2-challenges', icon: '🔵', tags: ['arcade'] },
+ { name: 'Connect 3', folder: 'connect3', icon: '🔗', tags: ['puzzle'] },
+ { name: 'Cookie Clicker', folder: 'cookie-clicker', icon: '🍪', tags: ['idle'] },
+ { name: 'Cookie Clicker 2', folder: 'cookieclicker', icon: '🍪', tags: ['idle'] },
+ { name: 'Core Ball', folder: 'core-ball', icon: '🎱', tags: ['arcade'] },
+ { name: 'Craft Mine', folder: 'craftmine', icon: '⛏️', tags: ['idle'] },
+ { name: 'Creative Kill Chamber', folder: 'creativekillchamber', icon: '💀', tags: ['action'] },
+ { name: 'Crossy Road', folder: 'crossyroad', icon: '🐔', tags: ['arcade'] },
+ { name: 'Crowd City 2', folder: 'crowd city 2', icon: '👥', tags: ['arcade'] },
+ { name: 'CSGO Clicker', folder: 'csgo-clicker', icon: '🔫', tags: ['idle'] },
+ { name: 'CTR Holiday', folder: 'ctr-holiday', icon: '🎄', tags: ['sports'] },
+ { name: 'CTR TR', folder: 'ctr-tr', icon: '🏁', tags: ['sports'] },
+ { name: 'CTR', folder: 'ctr', icon: '🏎️', tags: ['sports'] },
+ { name: 'Cubefield', folder: 'cubefield', icon: '🟪', tags: ['arcade'] },
+ { name: 'Cupcake 2048', folder: 'cupcake2048', icon: '🧁', tags: ['puzzle'] },
+ { name: 'Cut the Rope', folder: 'cuttherope', icon: '🍬', tags: ['puzzle'] },
+ { name: 'Cut the Rope 2', folder: 'cuttherope2', icon: '🍬', tags: ['puzzle'] },
+ { name: 'Dadish', folder: 'dadish', icon: '🥬', tags: ['arcade'] },
+ { name: 'Dadish 3', folder: 'dadish3', icon: '🥬', tags: ['arcade'] },
+ { name: 'Dadish 2', folder: 'dadishtwo', icon: '🥬', tags: ['arcade'] },
+];
+
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('search');
+const filterBtns = document.querySelectorAll('.filter-btn');
+let activeFilter = 'all';
+
+document.getElementById('total-count').textContent = games.length;
+
+function formatName(folder) {
+ return folder
+ .replace(/[-_]/g, ' ')
+ .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function launchGame(folder, name) {
+ const gameUrl = BASE + encodeURIComponent(folder) + '/index.html';
+ const tab = window.open('about:blank', '_blank');
+ if (!tab) { alert('Please allow popups for this site!'); return; }
+ tab.document.open();
+ tab.document.write(`<!DOCTYPE html>
+<html>
+<head>
+<title>${name}</title>
+<style>
+ * { margin:0; padding:0; box-sizing:border-box; }
+ html, body { width:100%; height:100%; overflow:hidden; background:#000; }
+ iframe { width:100%; height:100%; border:none; display:block; }
+</style>
+</head>
+<body>
+<iframe src="${gameUrl}" allowfullscreen allow="autoplay; fullscreen; gamepad"></iframe>
+</body>
+</html>`);
+ tab.document.close();
+}
+
+function renderGames() {
+ const q = searchInput.value.toLowerCase().trim();
+ const filtered = games.filter(g => {
+ const matchesSearch = !q || g.name.toLowerCase().includes(q) || g.folder.toLowerCase().includes(q);
+ const matchesFilter = activeFilter === 'all' || g.tags.includes(activeFilter);
+ return matchesSearch && matchesFilter;
+ });
+
+ grid.innerHTML = '';
+
+ if (filtered.length === 0) {
+ grid.innerHTML = '<div class="no-results"><span>404</span>No games found</div>';
+ return;
+ }
+
+ filtered.forEach(g => {
+ const card = document.createElement('div');
+ card.className = 'game-card';
+ card.innerHTML = `
+ <div class="card-icon">${g.icon}</div>
+ <div class="card-body">
+ <div class="card-name">${g.name}</div>
+ <div class="card-play">▶ Play Now</div>
+ </div>
+ `;
+ card.addEventListener('click', () => launchGame(g.folder, g.name));
+ grid.appendChild(card);
+ });
+}
+
+searchInput.addEventListener('input', renderGames);
+
+filterBtns.forEach(btn => {
+ btn.addEventListener('click', () => {
+ filterBtns.forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ activeFilter = btn.dataset.filter;
+ renderGames();
+ });
+});
+
+renderGames();
+</script>
+</body>
+</html>
